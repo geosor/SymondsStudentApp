@@ -1,0 +1,16 @@
+disabled_rules:
+  - file_length
+  - type_body_length
+opt_in_rules:
+  
+
+included:
+  
+excluded:
+  
+line_length:
+  warning: 100
+  error: 180
+opening_brace: error
+trailing_whitespace:
+  ignores_empty_lines: true

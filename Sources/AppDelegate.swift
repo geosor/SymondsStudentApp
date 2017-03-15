@@ -9,7 +9,12 @@
 import UIKit
 
 @UIApplicationMain
+/// :nodoc:
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    // MARK: - UIApplicationDelegate
+    
+    // MARK: Properties
     
     var window: UIWindow?
     
