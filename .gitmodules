@@ -1,0 +1,3 @@
+[submodule "SymondsStudentApp"]
+	path = SymondsStudentApp
+	url = git@github.com:geosor/SymondsStudentApp.git
