@@ -2,6 +2,7 @@ bundle install
 git submodule update --remote
 
 bundle exec jazzy \
+  -o ./ \
   --source-directory SymondsStudentApp/ \
   --readme SymondsStudentApp/README.md \
   --module SymondsStudentApp \
