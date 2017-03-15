@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymondsStudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AFDD591E785C5C003D0618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -80,9 +81,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4501993E1E79704400B768E6 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				4501993F1E79705400B768E6 /* Gemfile */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		45AFDD4D1E785C5C003D0618 = {
 			isa = PBXGroup;
 			children = (
+				4501993E1E79704400B768E6 /* Metadata */,
 				45AFDD581E785C5C003D0618 /* Sources */,
 				45F23E031E785C8A005503EF /* Tests */,
 				45AFDD571E785C5C003D0618 /* Products */,
@@ -200,7 +210,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Søren Mortensen";
+				ORGANIZATIONNAME = "Søren Mortensen, George Taylor";
 				TargetAttributes = {
 					45AFDD551E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
