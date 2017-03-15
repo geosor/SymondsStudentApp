@@ -1,0 +1,20 @@
+language: objective-c
+
+xcode_project: SymondsStudentApp.xcodeproj
+xcode_scheme: SymondsStudentApp
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
+
+before_install:
+  - ./Scripts/travis-before-install
+
+install:
+  - ./Scripts/travis-install
+
+script:
+  - ./Scripts/travis
