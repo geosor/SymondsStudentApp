@@ -12,7 +12,7 @@ before_install:
 install:
 - bundle install
 script:
-- xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp -destination "platform=iOS Simulator,id=$SIMULATOR_ID,OS=10.2" ONLY_ACTIVE_ARCH=NO | xcpretty && exit ${PIPESTATUS[0]}
+- xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp -destination "platform=iOS Simulator,OS=10.2" ONLY_ACTIVE_ARCH=NO | xcpretty && exit ${PIPESTATUS[0]}
 env:
   global:
     secure: QSS8zftQQ9Gdla3EtEroD9gNnsFNQ3a/jAxd2ZtnuSpSaG9sD2qdwAReEVxGCd5FhYkEt+ZN/YNrOscewGKDGu1lPuWMGOvS74dOGJVslHZnSi7SYxZQmeWGsWuGqVq9l6RGm1LMIunMeIQdF1utRBfdEb2qPgIhDimAl9/j0gEnWDMK3Y9I4iqXlT59i1aMSb65Sc01FOyC44Mg58hpYcRAVmxFo/L95UXawUFlGw188Y4gMBJ+KpwLnnseqWV+jFBXqlMWfWxUL97ENxLPP/RotCmL5dpv4ePQjnGK+pvmtS4PTg0oF4SUz/CbYvXh26fOz9GmwR+LwQBSmk1Q2foRkWaSNMQt/aD7PnrlqFt0LQYzsLqcwRnFGI2saWR8gBKIdpJUv2IIb2sERMelprHPlVrx8LHvi8us9N6vrqZ1HagVXZELDn100eC0Gx/BDyOifuYN0zZ9bz6Yg+jPHflC2thgba0Spdrq+R7pANRSeFiiksp/rrziBiS2FjrABdXZWJqtc863laEOdyv1MnQBGTMXk0m0LJwvHAyf83UX+1/GeCO/91Sfq11vnpwvDh0XObK4BRcozR5zaZ9yGQRlMUArFimykiPZWuNEg5JZk22PVf546MWMX7k8qDDRdRx5KX9E8aoItl10tp4tv+jKjsPqCHtfYaEi4Q/dbY8=
