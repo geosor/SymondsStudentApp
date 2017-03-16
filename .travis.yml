@@ -11,10 +11,13 @@ notifications:
   email: false
 
 before_install:
-  - ./Scripts/travis-before-install
+  - SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 7 (10.0) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
+  - echo "Prelaunching iOS simulator with UDID $SIMULATOR_ID"
+  - open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
+  - gem update bundler
 
 install:
   - bundle install
 
 script:
-  - ./Scripts/travis
+  - xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp | xcpretty && exit ${PIPESTATUS[0]}

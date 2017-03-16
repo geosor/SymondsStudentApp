@@ -1,4 +1,0 @@
-SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 7 (10.0) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
-echo "Prelaunching iOS simulator with UDID $SIMULATOR_ID"
-open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
-gem update bundler

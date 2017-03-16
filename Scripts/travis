@@ -1,1 +1,0 @@
-xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp
