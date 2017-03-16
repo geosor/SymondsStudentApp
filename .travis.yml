@@ -1,7 +1,7 @@
 language: objective-c
 xcode_project: SymondsStudentApp.xcodeproj
 xcode_scheme: SymondsStudentApp
-xcode_sdk: iphonesimulator10.2
+xcode_sdk: iphonesimulator10.1
 branches:
   only:
   - master
