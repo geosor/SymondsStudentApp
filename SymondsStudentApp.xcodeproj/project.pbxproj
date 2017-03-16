@@ -156,6 +156,7 @@
 				45AFDD531E785C5C003D0618 /* Frameworks */,
 				45AFDD541E785C5C003D0618 /* Resources */,
 				4501993D1E79595100B768E6 /* Lint */,
+				45073E4D1E7A94F800D3AEA0 /* Decrypt and Copy Keys */,
 			);
 			buildRules = (
 			);
@@ -292,6 +293,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  exit 1\nfi";
+		};
+		45073E4D1E7A94F800D3AEA0 /* Decrypt and Copy Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Decrypt and Copy Keys";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Scripts/decrypt-keys\necho $BUILT_PRODUCTS_DIR";
 		};
 /* End PBXShellScriptBuildPhase section */
 
