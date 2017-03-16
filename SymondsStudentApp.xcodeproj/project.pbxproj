@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45073E4F1E7B120800D3AEA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E4E1E7B120800D3AEA0 /* DataService.swift */; };
 		45AFDD5A1E785C5C003D0618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD591E785C5C003D0618 /* AppDelegate.swift */; };
 		45AFDD5C1E785C5C003D0618 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */; };
 		45AFDD5F1E785C5C003D0618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD5D1E785C5C003D0618 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		45073E4E1E7B120800D3AEA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymondsStudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AFDD591E785C5C003D0618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				45AFDD591E785C5C003D0618 /* AppDelegate.swift */,
 				45AFDD5D1E785C5C003D0618 /* Main.storyboard */,
 				45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */,
+				45073E4E1E7B120800D3AEA0 /* DataService.swift */,
 				4501993C1E79559C00B768E6 /* Supporting Files */,
 			);
 			path = Sources;
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45073E4F1E7B120800D3AEA0 /* DataService.swift in Sources */,
 				45AFDD5C1E785C5C003D0618 /* SplashViewController.swift in Sources */,
 				45AFDD5A1E785C5C003D0618 /* AppDelegate.swift in Sources */,
 			);
