@@ -1,23 +1,20 @@
 language: objective-c
-
 xcode_project: SymondsStudentApp.xcodeproj
 xcode_scheme: SymondsStudentApp
-
 branches:
   only:
-    - master
-
+  - master
 notifications:
   email: false
-
 before_install:
-  - SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 7 (10.0) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
-  - echo "Prelaunching iOS simulator with UDID $SIMULATOR_ID"
-  - open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
-  - gem update bundler
-
+- SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 7 (10.0) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
+- echo "Prelaunching iOS simulator with UDID $SIMULATOR_ID"
+- open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
+- gem update bundler
 install:
-  - bundle install
-
+- bundle install
 script:
-  - xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp | xcpretty && exit ${PIPESTATUS[0]}
+- xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
+env:
+  global:
+    secure: EATn4q486ApHYLHAxeqqZWUWkElyVufAnBhygiNXHzay5TUaEfCtwcbiBNSVaEtqN2c+Zqd1mmZw8Ce1ViReWCZzHurX3Pobg3J2rEoTjFeU4WC3ReBEaCJC9gS/nhpeEL9AbdEAztuoCA9qeZpYrQQ0ek7jLTBKyjnEPDZ3Pvj34M7OIDejqzxE4D7WD0lJ6iCT0B9F0m1w/WILONY1Nm35J6IdKao2zJlUdyaMgn0Jq3Ec7DSYQCuqskfCYlMP644Tih8nosAd7zAaf1MROj2F1C6QppL5w34Txwcv6TPZzQdpOlPzKVosxX/ebqsRFN3rriYgMToDAlqRKRwPyn3KVbpNB+Wu4Bm7YcBzZ9vxtvdacg7FzXZsyQir9pST5BWHmOP68XxjX7OgLoN+YVCFWbFDFmv+vzx25Vl4IeS3hal8L6l+4dnT/XGSICw+CzoU0uDfHc+VNIwU0RIFuiMEtL2tRc2bBzEpjdFMKNVE3c3tMzYW8fNbr7fNkmvVOtJqx9nTS+YPr3FxTK0e10pCYnLNoeUFpXXX+C8VFMyrRbqYeZqk9PUWcwAQ+n3BHzByfewOsPKAS7/XMjpO6+2zScBxo7EOf5yl8NMBlgHMuY3Pu3rGsfaziYQ+k738KusYXZu0G3ehbus+3VyiT9fblWnbAcrNEEX979ZX9Kw=
