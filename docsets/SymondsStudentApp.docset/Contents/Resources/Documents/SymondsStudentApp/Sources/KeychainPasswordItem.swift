@@ -8,9 +8,12 @@
 
 import Foundation
 
+/// :nodoc:
 struct KeychainPasswordItem {
+    
     // MARK: Types
     
+    /// :nodoc:
     enum KeychainError: Error {
         case noPassword
         case unexpectedPasswordData
@@ -20,14 +23,18 @@ struct KeychainPasswordItem {
     
     // MARK: Properties
     
+    /// :nodoc:
     let service: String
     
+    /// :nodoc:
     private(set) var account: String
     
+    /// :nodoc:
     let accessGroup: String?
     
     // MARK: Intialization
     
+    /// :nodoc:
     init(service: String, account: String, accessGroup: String? = nil) {
         self.service = service
         self.account = account
@@ -36,6 +43,7 @@ struct KeychainPasswordItem {
     
     // MARK: Keychain access
     
+    /// :nodoc:
     func readPassword() throws -> String {
         /*
          Build a query to find the item that matches the service, account and
@@ -70,6 +78,7 @@ struct KeychainPasswordItem {
         return password
     }
     
+    /// :nodoc:
     func savePassword(_ password: String) throws {
         // Encode the password into an Data object.
         let encodedPassword = password.data(using: String.Encoding.utf8)!
@@ -109,6 +118,7 @@ struct KeychainPasswordItem {
         }
     }
     
+    /// :nodoc:
     mutating func renameAccount(_ newAccountName: String) throws {
         // Try to update an existing item with the new account name.
         var attributesToUpdate = [String: AnyObject]()
@@ -128,6 +138,7 @@ struct KeychainPasswordItem {
         self.account = newAccountName
     }
     
+    /// :nodoc:
     func deleteItem() throws {
         // Delete the existing item from the keychain.
         let query = KeychainPasswordItem.keychainQuery(
@@ -142,6 +153,7 @@ struct KeychainPasswordItem {
         }
     }
     
+    /// :nodoc:
     static func passwordItems(forService service: String,
                               accessGroup: String? = nil) throws -> [KeychainPasswordItem] {
         // Build a query for all items that match the service and access group.
@@ -188,6 +200,7 @@ struct KeychainPasswordItem {
     
     // MARK: Convenience
     
+    /// :nodoc:
     private static func keychainQuery(withService service: String,
                                       account: String? = nil,
                                       accessGroup: String? = nil) -> [String : AnyObject] {
