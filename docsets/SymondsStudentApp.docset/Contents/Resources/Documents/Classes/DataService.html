@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DataService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DataService" class="dashAnchor"></a>
+    <a title="DataService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SymondsStudentApp Docs</a> (74% documented)</p>
+        <p class="header-right"><a href="https://www.github.com/geosor/SymondsStudentApp"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SymondsStudentApp Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DataService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataService.html">DataService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataService/AuthenticationResult.html">– AuthenticationResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataService/GrantType.html">– GrantType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataService/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SplashViewController.html">SplashViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/KeychainConfiguration.html">KeychainConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeychainPasswordItem.html">KeychainPasswordItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeychainPasswordItem/KeychainError.html">– KeychainError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DataService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DataService</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>DataService</code> class provides functionality for interfacing with the Peter Symonds College
+data service.</p>
+
+<p>This includes authentication and retrieval of information from the Timetable, Find, Room
+Timetable, and User services.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C17SymondsStudentApp11DataService24AuthenticationCompletion"></a>
+                    <a name="//apple_ref/swift/Alias/AuthenticationCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17SymondsStudentApp11DataService24AuthenticationCompletion">AuthenticationCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A typealias used only in <code><a href="../Classes/DataService.html#/s:FC17SymondsStudentApp11DataService28authenticateFromSavedDetailsFT10completionFGSqOS0_5Error_T__T_">authenticateFromSavedDetails(completion:)</a></code> to simplify the
+declaration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">AuthenticationCompletion</span> <span class="o">=</span> <span class="p">(</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error if one occurred during the request; otherwise <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C17SymondsStudentApp11DataService18ExchangeCompletion"></a>
+                    <a name="//apple_ref/swift/Alias/ExchangeCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17SymondsStudentApp11DataService18ExchangeCompletion">ExchangeCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A typealias used only in exchangeCodeForToken(_:completion:) in order to simplify the
+declaration of the completion block.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ExchangeCompletion</span> <span class="o">=</span> <span class="p">(</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The authentication result.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error, if one occurred.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SymondsStudentApp11DataService6sharedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SymondsStudentApp11DataService6sharedS0_">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Singleton instance of <code>DataService</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">DataService</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataService17getAccessTokenURLV10Foundation3URL"></a>
+                    <a name="//apple_ref/swift/Property/getAccessTokenURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataService17getAccessTokenURLV10Foundation3URL">getAccessTokenURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL used for retrieving an access token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">getAccessTokenURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataService11redirectURLV10Foundation3URL"></a>
+                    <a name="//apple_ref/swift/Property/redirectURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataService11redirectURLV10Foundation3URL">redirectURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The redirect URL, passed to the Symonds Data Service in authentication requests.</p>
+
+<p>Apart from being required by the Data Service, this redirect URL enables a return to the
+host application after authenticating externally.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">redirectURL</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"app://com.sorenmortensen.SymondsStudentApp"</span><span class="p">)</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663644keysGSqT8clientIDSS6secretSS__"></a>
+                    <a name="//apple_ref/swift/Property/keys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663644keysGSqT8clientIDSS6secretSS__">keys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A pair of keys used for authentication with the Symonds Data Service.</p>
+
+<p>These keys are secret and are therefore loaded from a JSON file that is copied into the main
+bundle at build time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">(</span><span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="kt">String</span><span class="p">)?</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636420authenticationResultGSqVS0_20AuthenticationResult_"></a>
+                    <a name="//apple_ref/swift/Property/authenticationResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636420authenticationResultGSqVS0_20AuthenticationResult_">authenticationResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The result of the most recent authentication.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">authenticationResult</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataService/AuthenticationResult.html">AuthenticationResult</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663647sessionCSo10URLSession"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663647sessionCSo10URLSession">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A shared session used for sending network requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">session</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663647authURLV10Foundation3URL"></a>
+                    <a name="//apple_ref/swift/Property/authURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663647authURLV10Foundation3URL">authURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL where authentication requests are sent.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">authURL</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://data.psc.ac.uk/oauth/v2/auth"</span><span class="p">)</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663648tokenURLV10Foundation3URL"></a>
+                    <a name="//apple_ref/swift/Property/tokenURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD2663648tokenURLV10Foundation3URL">tokenURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL where token exchange requests are sent.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">tokenURL</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://data.psc.ac.uk/oauth/v2/token"</span><span class="p">)</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:VC17SymondsStudentApp11DataService20AuthenticationResult"></a>
+                    <a name="//apple_ref/swift/Struct/AuthenticationResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:VC17SymondsStudentApp11DataService20AuthenticationResult">AuthenticationResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The result of an authentication request sent to the Symonds Data Service.</p>
+
+                        <a href="../Classes/DataService/AuthenticationResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AuthenticationResult</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC17SymondsStudentApp11DataService9GrantType"></a>
+                    <a name="//apple_ref/swift/Enum/GrantType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC17SymondsStudentApp11DataService9GrantType">GrantType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A type of grant that can be used to request an access token from the Symonds Data Service.</p>
+
+                        <a href="../Classes/DataService/GrantType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GrantType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC17SymondsStudentApp11DataService5Error"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC17SymondsStudentApp11DataService5Error">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An error.</p>
+
+                        <a href="../Classes/DataService/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialisers"></a>
+                <a name="//apple_ref/swift/Section/Initialisers" class="dashAnchor"></a>
+                <a href="#/Initialisers">
+                  <h3 class="section-name">Initialisers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SymondsStudentApp11DataServicecFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SymondsStudentApp11DataServicecFT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A private initialiser to ensure that access to <code>DataService</code> is only through the <code><a href="../Classes/DataService.html#/s:ZvC17SymondsStudentApp11DataService6sharedS0_">shared</a></code>
+singleton.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Authentication"></a>
+                <a name="//apple_ref/swift/Section/Authentication" class="dashAnchor"></a>
+                <a href="#/Authentication">
+                  <h3 class="section-name">Authentication</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SymondsStudentApp11DataService28authenticateFromSavedDetailsFT10completionFGSqOS0_5Error_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/authenticateFromSavedDetails(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SymondsStudentApp11DataService28authenticateFromSavedDetailsFT10completionFGSqOS0_5Error_T__T_">authenticateFromSavedDetails(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to use saved authentication details from Keychain to authenticate with the Data
+Service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authenticateFromSavedDetails</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DataService.html#/s:C17SymondsStudentApp11DataService24AuthenticationCompletion">AuthenticationCompletion</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the request completes.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SymondsStudentApp11DataService20exchangeCodeForTokenFTSS9grantTypeOS0_9GrantType10completionFTGSqVS0_20AuthenticationResult_GSqOS0_5Error__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/exchangeCodeForToken(_:grantType:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SymondsStudentApp11DataService20exchangeCodeForTokenFTSS9grantTypeOS0_9GrantType10completionFTGSqVS0_20AuthenticationResult_GSqOS0_5Error__T__T_">exchangeCodeForToken(_:grantType:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exchanges an authorisation code for an access token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exchangeCodeForToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                     <span class="nv">grantType</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataService/GrantType.html">GrantType</a></span><span class="p">,</span>
+                                     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DataService.html#/s:C17SymondsStudentApp11DataService18ExchangeCompletion">ExchangeCompletion</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The authorisation code to exchange.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the network request completes.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636426generateExchangePOSTStringFzT4withSS9grantTypeOS0_9GrantType_SS"></a>
+                    <a name="//apple_ref/swift/Method/generateExchangePOSTString(with:grantType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636426generateExchangePOSTStringFzT4withSS9grantTypeOS0_9GrantType_SS">generateExchangePOSTString(with:grantType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generates an HTTP POST string to exchange an authorisation code for an access token.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>An error of type <code>AuthenticationError</code> in the event of a relevant error.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">generateExchangePOSTString</span><span class="p">(</span><span class="n">with</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                            <span class="nv">grantType</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataService/GrantType.html">GrantType</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The authorisation code to use for authentication when requesting a token.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The generated string.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636422serializeLoginResponseFzT4fromV10Foundation4Data_VS0_20AuthenticationResult"></a>
+                    <a name="//apple_ref/swift/Method/serializeLoginResponse(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SymondsStudentApp11DataServiceP33_9F086764730749F9476DEA2ACD26636422serializeLoginResponseFzT4fromV10Foundation4Data_VS0_20AuthenticationResult">serializeLoginResponse(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/DataService/AuthenticationResult.html">AuthenticationResult</a></code> instance from a JSON object returned by the Symonds Data
+Service.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws errors of type <code>AuthenticationError</code> in the event of a relevant error.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">serializeLoginResponse</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DataService/AuthenticationResult.html">AuthenticationResult</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data returned by the Symonds Data Service.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Søren Mortensen, George Taylor</a>. All rights reserved. (Last updated: 2017-03-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
