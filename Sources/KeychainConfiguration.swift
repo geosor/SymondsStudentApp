@@ -8,7 +8,10 @@
 
 import Foundation
 
+/// :nodoc:
 struct KeychainConfiguration {
+    
+    /// :nodoc:
     static let serviceName = "SymondsStudentApp"
     
     /// Specifying an access group to use with `KeychainPasswordItem` instances
@@ -21,4 +24,5 @@ struct KeychainConfiguration {
     /// Not specifying an access group to use with `KeychainPasswordItem` instances
     /// will create items specific to each app.
     static let accessGroup: String? = nil
+    
 }
