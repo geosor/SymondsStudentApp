@@ -7,6 +7,7 @@ notifications:
   email: false
 before_install:
 - xcodebuild -showsdks
+- xcrun instruments -s
 - SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 7 (10.2) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
 - echo "Prelaunching iOS simulator with UDID $SIMULATOR_ID"
 - open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
