@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// :nodoc:
+/// The delegate of the currently running `UIApplication` instance.
 @UIApplicationMain
 internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
