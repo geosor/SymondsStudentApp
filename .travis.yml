@@ -3,6 +3,7 @@ osx_image: xcode8.2
 branches:
   only:
   - master
+  - /^develop-.*$/
 notifications:
   email: false
 before_install:
