@@ -8,8 +8,8 @@
 
 import UIKit
 
-@UIApplicationMain
 /// :nodoc:
+@UIApplicationMain
 internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Properties
