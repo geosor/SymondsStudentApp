@@ -352,7 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Scripts/decrypt-keys\necho $BUILT_PRODUCTS_DIR";
+			shellScript = "Scripts/decrypt-keys.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
