@@ -1,5 +1,6 @@
 # SymondsStudentApp
-An app for Peter Symonds College students to view their timetable, find free rooms, and see when their friends are free.
+An iOS app that Peter Symonds College students can use to view their timetable, find free rooms, and
+see when their friends are free.
 
 ## Documentation
 
