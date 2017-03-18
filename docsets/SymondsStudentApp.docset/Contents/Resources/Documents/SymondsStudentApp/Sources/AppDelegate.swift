@@ -14,12 +14,12 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Properties
     
-    /// The current instance of `SplashViewController` to register itself with `AppDelegate`. This
-    /// is the instance to which completion callbacks will be sent.
+    /// The current instance of `SplashViewController` that has registered itself with
+    /// `AppDelegate`. This is the instance to which completion callbacks will be sent.
     internal weak var splashViewController: SplashViewController?
     
-    /// The current instance of `LoginViewController` to register itself with `AppDelegate`. This is
-    /// the instance to which completion callbacks will be sent.
+    /// The current instance of `LoginViewController` that has registered itself with `AppDelegate`.
+    /// This the instance to which completion callbacks will be sent.
     internal weak var loginViewController: LoginViewController?
     
     // MARK: - UIApplicationDelegate
