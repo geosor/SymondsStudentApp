@@ -1,8 +1,8 @@
-if [[ $TRAVIS_BUILD != "0" ]] && [[ -z $ST_KEYS_JSON_PASSWORD ]]; then
+if [[ $TRAVIS_BUILD != "0" ]] && [[ -z $SSA_KEYS_JSON_PASSWORD ]]; then
   source ~/.bash_profile
 fi
 
-if [[ -z $ST_KEYS_JSON_PASSWORD ]]; then
+if [[ -z $SSA_KEYS_JSON_PASSWORD ]]; then
   echo "error: Decryption password for keys.json not found."
   exit 1
 elif [[ -f Resources/keys.json.enc ]]; then

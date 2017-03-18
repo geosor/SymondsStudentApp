@@ -14,6 +14,8 @@
 		45073E581E7C073500D3AEA0 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E571E7C073500D3AEA0 /* URLRequest.swift */; };
 		45073E5B1E7C074600D3AEA0 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E5A1E7C074600D3AEA0 /* URLComponents.swift */; };
 		45073E5D1E7C092B00D3AEA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */; };
+		455CD1771E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */; };
+		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
 		45AFDD5A1E785C5C003D0618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD591E785C5C003D0618 /* AppDelegate.swift */; };
 		45AFDD5C1E785C5C003D0618 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */; };
 		45AFDD5F1E785C5C003D0618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD5D1E785C5C003D0618 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		45073E571E7C073500D3AEA0 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		45073E5A1E7C074600D3AEA0 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
 		45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppTests.swift; sourceTree = "<group>"; };
+		455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppUITests.swift; sourceTree = "<group>"; };
 		45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymondsStudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AFDD591E785C5C003D0618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		45AFDD6D1E785C5C003D0618 /* SymondsStudentAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */,
 				45AFDD701E785C5C003D0618 /* Info.plist */,
 			);
 			path = SymondsStudentAppTests;
@@ -168,6 +173,7 @@
 		45AFDD781E785C5C003D0618 /* SymondsStudentAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */,
 				45AFDD7B1E785C5C003D0618 /* Info.plist */,
 			);
 			path = SymondsStudentAppUITests;
@@ -258,12 +264,14 @@
 					45AFDD691E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 45AFDD551E785C5C003D0618;
 					};
 					45AFDD741E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 45AFDD551E785C5C003D0618;
 					};
@@ -368,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455CD1771E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +465,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -537,11 +547,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Tests/SymondsStudentAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
@@ -552,6 +564,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Tests/SymondsStudentAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -566,11 +579,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Tests/SymondsStudentAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SymondsStudentApp;
 			};
@@ -580,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Tests/SymondsStudentAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
