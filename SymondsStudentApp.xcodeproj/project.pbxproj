@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45073E4E1E7B120800D3AEA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		45073E501E7BECE900D3AEA0 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		45073E521E7BED3600D3AEA0 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
@@ -59,9 +59,9 @@
 		45AFDD631E785C5C003D0618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45AFDD651E785C5C003D0618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45AFDD6A1E785C5C003D0618 /* SymondsStudentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymondsStudentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45AFDD701E785C5C003D0618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AFDD701E785C5C003D0618 /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
 		45AFDD751E785C5C003D0618 /* SymondsStudentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymondsStudentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45AFDD7B1E785C5C003D0618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AFDD7B1E785C5C003D0618 /* Info-UITests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-UITests.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,23 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4501993C1E79559C00B768E6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				45AFDD621E785C5C003D0618 /* LaunchScreen.storyboard */,
-				45AFDD601E785C5C003D0618 /* Assets.xcassets */,
-				45AFDD651E785C5C003D0618 /* Info.plist */,
-				45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		4501993E1E79704400B768E6 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
 				4501993F1E79705400B768E6 /* Gemfile */,
+				45AFDD651E785C5C003D0618 /* Info.plist */,
+				45AFDD701E785C5C003D0618 /* Info-Tests.plist */,
+				45AFDD7B1E785C5C003D0618 /* Info-UITests.plist */,
+				45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */,
 			);
-			name = Metadata;
+			path = Metadata;
 			sourceTree = "<group>";
 		};
 		45073E541E7C050100D3AEA0 /* Keychain */ = {
@@ -126,10 +119,21 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		45524B5C1EAD4D0C006A4952 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45AFDD5D1E785C5C003D0618 /* Main.storyboard */,
+				45AFDD621E785C5C003D0618 /* LaunchScreen.storyboard */,
+				45AFDD601E785C5C003D0618 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		45AFDD4D1E785C5C003D0618 = {
 			isa = PBXGroup;
 			children = (
 				4501993E1E79704400B768E6 /* Metadata */,
+				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
 				45F23E031E785C8A005503EF /* Tests */,
 				45AFDD571E785C5C003D0618 /* Products */,
@@ -150,13 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				45AFDD591E785C5C003D0618 /* AppDelegate.swift */,
-				45AFDD5D1E785C5C003D0618 /* Main.storyboard */,
 				45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */,
 				45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */,
 				45073E4E1E7B120800D3AEA0 /* DataService.swift */,
 				45073E541E7C050100D3AEA0 /* Keychain */,
 				45073E591E7C073D00D3AEA0 /* Extensions */,
-				4501993C1E79559C00B768E6 /* Supporting Files */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -165,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */,
-				45AFDD701E785C5C003D0618 /* Info.plist */,
 			);
 			path = SymondsStudentAppTests;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */,
-				45AFDD7B1E785C5C003D0618 /* Info.plist */,
 			);
 			path = SymondsStudentAppUITests;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Søren Mortensen, George Taylor";
 				TargetAttributes = {
 					45AFDD551E785C5C003D0618 = {
@@ -463,9 +463,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -507,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -521,7 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,7 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,7 +549,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = Tests/SymondsStudentAppTests/Info.plist;
+				INFOPLIST_FILE = "Metadata/Info-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,7 +566,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = Tests/SymondsStudentAppTests/Info.plist;
+				INFOPLIST_FILE = "Metadata/Info-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,7 +581,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = Tests/SymondsStudentAppUITests/Info.plist;
+				INFOPLIST_FILE = "Metadata/Info-UITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,7 +597,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
-				INFOPLIST_FILE = Tests/SymondsStudentAppUITests/Info.plist;
+				INFOPLIST_FILE = "Metadata/Info-UITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
