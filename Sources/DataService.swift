@@ -8,11 +8,10 @@
 
 import Foundation
 
-/// The `DataService` class provides functionality for interfacing with the Peter Symonds College
-/// data service.
+/// The `DataService` class provides functionality for interfacing with the Peter Symonds College data service.
 ///
-/// This includes authentication and retrieval of information from the Timetable, Find, Room
-/// Timetable, and User services.
+/// This includes authentication and retrieval of information from the Timetable, Find, Room Timetable, and User
+/// services.
 public class DataService {
     
     // MARK: - Properties
@@ -43,14 +42,14 @@ public class DataService {
     
     /// The redirect URL, passed to the Symonds Data Service in authentication requests.
     ///
-    /// Apart from being required by the Data Service, this redirect URL enables a return to the
-    /// host application after authenticating externally.
+    /// Apart from being required by the Data Service, this redirect URL enables a return to the host application after
+    /// authenticating externally.
     public let redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
     
     /// A pair of keys used for authentication with the Symonds Data Service.
     ///
-    /// These keys are secret and are therefore loaded from a JSON file that is copied into the main
-    /// bundle at build time.
+    /// These keys are secret and are therefore loaded from a JSON file that is copied into the main bundle at build
+    /// time.
     private let keys: (clientID: String, secret: String)? = {
         guard let keysURL = Bundle.main.url(forResource: "keys", withExtension: "json") else {
             NSLog("Data Service could not retrieve keys.json resource.")
@@ -214,16 +213,14 @@ public class DataService {
     
     // MARK: - Initialisers
     
-    /// A private initialiser to ensure that access to `DataService` is only through the `shared`
-    /// singleton.
+    /// A private initialiser to ensure that access to `DataService` is only through the `shared` singleton.
     private init() {}
     
     // MARK: - Functions
     
     // MARK: Authentication
     
-    /// A typealias used only in `authenticateFromSavedDetails(completion:)` to simplify the
-    /// declaration.
+    /// A typealias used only in `authenticateFromSavedDetails(completion:)` to simplify the declaration.
     ///
     /// - Parameters:
     ///   - error: An error if one occurred during the request; otherwise `nil`.
@@ -231,8 +228,7 @@ public class DataService {
         _ error: DataService.Error?
     ) -> Void
     
-    /// Attempts to use saved authentication details from Keychain to authenticate with the Data
-    /// Service.
+    /// Attempts to use saved authentication details from Keychain to authenticate with the Data Service.
     ///
     /// - Parameters:
     ///   - completion: Called when the request completes.
@@ -243,7 +239,7 @@ public class DataService {
         }
         
         self.exchangeCodeForToken(refreshToken, grantType: .refreshToken) { _, error in
-            if let _ = error {
+            if error != nil {
                 NSLog("Authentication failed!")
                 completion(.authenticationFailed)
             } else {
@@ -252,8 +248,8 @@ public class DataService {
         }
     }
     
-    /// A typealias used only in exchangeCodeForToken(_:completion:) in order to simplify the
-    /// declaration of the completion block.
+    /// A typealias used only in exchangeCodeForToken(_:completion:) in order to simplify the declaration of the
+    /// completion block.
     ///
     /// - Parameters:
     ///   - result: The authentication result.
@@ -303,7 +299,7 @@ public class DataService {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
-                NSLog("Error retrieving access token: \(error)")
+                NSLog("Error retrieving access token: \(error!)")
                 return
             }
             
@@ -363,8 +359,7 @@ public class DataService {
         return components.query!
     }
     
-    /// Creates an `AuthenticationResult` instance from a JSON object returned by the Symonds Data
-    /// Service.
+    /// Creates an `AuthenticationResult` instance from a JSON object returned by the Symonds Data Service.
     ///
     /// - Parameter data: The data returned by the Symonds Data Service.
     ///

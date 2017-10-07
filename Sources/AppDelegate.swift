@@ -14,12 +14,12 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Properties
     
-    /// The current instance of `SplashViewController` that has registered itself with
-    /// `AppDelegate`. This is the instance to which completion callbacks will be sent.
+    /// The current instance of `SplashViewController` that has registered itself with `AppDelegate`. This is the
+    /// instance to which completion callbacks will be sent.
     internal weak var splashViewController: SplashViewController?
     
-    /// The current instance of `LoginViewController` that has registered itself with `AppDelegate`.
-    /// This the instance to which completion callbacks will be sent.
+    /// The current instance of `LoginViewController` that has registered itself with `AppDelegate`. This the instance
+    /// to which completion callbacks will be sent.
     internal weak var loginViewController: LoginViewController?
     
     // MARK: - UIApplicationDelegate
@@ -33,8 +33,7 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
                      options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         // Parse the URL to extract its components.
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            // Returning false indicates that we were not able to handle the URL
-            // correctly.
+            // Returning false indicates that we were not able to handle the URL correctly.
             return false
         }
         
@@ -46,8 +45,8 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        // The data service gives us back an authorization code by putting it in a query item with
-        // the name "code". So check if one of the query items has the name "code".
+        // The data service gives us back an authorization code by putting it in a query item with the name "code". So
+        // check if one of the query items has the name "code".
         guard let codeItem = components.queryItems?.first(where: { $0.name == "code" }) else {
             return false
         }

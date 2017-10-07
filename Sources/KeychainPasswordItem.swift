@@ -46,8 +46,7 @@ struct KeychainPasswordItem {
     /// :nodoc:
     func readPassword() throws -> String {
         /*
-         Build a query to find the item that matches the service, account and
-         access group.
+         Build a query to find the item that matches the service, account and access group.
          */
         var query = KeychainPasswordItem.keychainQuery(
             withService: service,
@@ -101,8 +100,7 @@ struct KeychainPasswordItem {
             guard status == noErr else { throw KeychainError.unhandledError(status: status) }
         } catch KeychainError.noPassword {
             /*
-             No password was found in the keychain. Create a dictionary to save
-             as a new keychain item.
+             No password was found in the keychain. Create a dictionary to save as a new keychain item.
              */
             var newItem = KeychainPasswordItem.keychainQuery(
                 withService: service,

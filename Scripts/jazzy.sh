@@ -1,3 +1,5 @@
+#!/bin/sh
+
 bundle install
 
 bundle exec jazzy \

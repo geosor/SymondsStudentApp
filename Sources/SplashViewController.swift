@@ -40,7 +40,7 @@ internal class SplashViewController: UIViewController {
         // Try to authenticate from details saved in Keychain.
         DataService.shared.authenticateFromSavedDetails { error in
             // Check if authentication was successful.
-            if let _ = error {
+            if error != nil {
                 // Authentication was unsuccessful.
                 DispatchQueue.main.async {
                     // Show the view controller containing the web view for login.
@@ -110,8 +110,7 @@ internal class SplashViewController: UIViewController {
         
         // Round the corners of the login button a little bit.
         loginButton.layer.cornerRadius = 5
-        // If this property isn't set to true, the button won't look right at
-        // the rounded corners.
+        // If this property isn't set to true, the button won't look right at the rounded corners.
         loginButton.clipsToBounds = true
     }
     

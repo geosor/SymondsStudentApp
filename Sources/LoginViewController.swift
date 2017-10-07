@@ -62,9 +62,7 @@ internal class LoginViewController: UIViewController, UIWebViewDelegate {
         self.activityIndicator = activityIndicator
         
         webView.delegate = self
-        webView.loadRequest(
-            URLRequest(url: DataService.shared.getAccessTokenURL)
-        )
+        webView.loadRequest(URLRequest(url: DataService.shared.getAccessTokenURL))
     }
     
     // MARK: - UIWebViewDelegate

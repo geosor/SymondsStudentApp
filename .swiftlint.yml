@@ -10,7 +10,7 @@ included:
 excluded:
   
 line_length:
-  warning: 100
+  warning: 120
   error: 180
 opening_brace: error
 trailing_whitespace:
