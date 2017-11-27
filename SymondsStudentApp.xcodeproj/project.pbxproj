@@ -7,23 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45073E4F1E7B120800D3AEA0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E4E1E7B120800D3AEA0 /* DataService.swift */; };
-		45073E511E7BECE900D3AEA0 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E501E7BECE900D3AEA0 /* KeychainPasswordItem.swift */; };
-		45073E531E7BED3600D3AEA0 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E521E7BED3600D3AEA0 /* KeychainConfiguration.swift */; };
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
-		45073E581E7C073500D3AEA0 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E571E7C073500D3AEA0 /* URLRequest.swift */; };
-		45073E5B1E7C074600D3AEA0 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E5A1E7C074600D3AEA0 /* URLComponents.swift */; };
-		45073E5D1E7C092B00D3AEA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */; };
 		455CD1771E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */; };
 		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
-		45AFDD5A1E785C5C003D0618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD591E785C5C003D0618 /* AppDelegate.swift */; };
-		45AFDD5C1E785C5C003D0618 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */; };
-		45AFDD5F1E785C5C003D0618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD5D1E785C5C003D0618 /* Main.storyboard */; };
+		455E93CE1FCA0C6200D3D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93C81FCA0C4200D3D046 /* Main.storyboard */; };
+		455E93CF1FCA0C6200D3D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */; };
+		455E93F11FCA111300D3D046 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93E91FCA111300D3D046 /* URLComponents.swift */; };
+		455E93F21FCA111300D3D046 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EA1FCA111300D3D046 /* URLRequest.swift */; };
+		455E93F31FCA111300D3D046 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EB1FCA111300D3D046 /* DataService.swift */; };
+		455E93F41FCA111300D3D046 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */; };
+		455E93F51FCA111300D3D046 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */; };
+		455E93F61FCA111300D3D046 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EE1FCA111300D3D046 /* SplashViewController.swift */; };
+		455E93F71FCA111300D3D046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EF1FCA111300D3D046 /* LoginViewController.swift */; };
+		455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93F01FCA111300D3D046 /* AppDelegate.swift */; };
+		455E94001FCA11E300D3D046 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455E93B51FCA06A600D3D046 /* NotificationCenter.framework */; };
+		455E940A1FCA11E300D3D046 /* TimetableTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455E93FF1FCA11E300D3D046 /* TimetableTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		455E94131FCA121800D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E94121FCA121800D3D046 /* TodayViewController.swift */; };
+		455E94171FCA122C00D3D046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E94151FCA122C00D3D046 /* MainInterface.storyboard */; };
+		455E941E1FCA16F200D3D046 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455E93B51FCA06A600D3D046 /* NotificationCenter.framework */; };
+		455E94281FCA16F200D3D046 /* FreeRoomsTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		455E943B1FCA176800D3D046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E94391FCA176800D3D046 /* MainInterface.storyboard */; };
+		455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E943D1FCA178100D3D046 /* TodayViewController.swift */; };
+		455E94421FCA193B00D3D046 /* TimetableTodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */; };
 		45AFDD611E785C5C003D0618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD601E785C5C003D0618 /* Assets.xcassets */; };
-		45AFDD641E785C5C003D0618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD621E785C5C003D0618 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		455E94081FCA11E300D3D046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455E93FE1FCA11E300D3D046;
+			remoteInfo = TimetableTodayExtension;
+		};
+		455E94261FCA16F200D3D046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455E941C1FCA16F200D3D046;
+			remoteInfo = FreeRoomsTodayExtension;
+		};
 		45AFDD6B1E785C5C003D0618 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
@@ -40,23 +63,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		455E93C41FCA06A600D3D046 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				455E940A1FCA11E300D3D046 /* TimetableTodayExtension.appex in Embed App Extensions */,
+				455E94281FCA16F200D3D046 /* FreeRoomsTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		45073E4E1E7B120800D3AEA0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		45073E501E7BECE900D3AEA0 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
-		45073E521E7BED3600D3AEA0 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-Keychain"; sourceTree = "<group>"; };
-		45073E571E7C073500D3AEA0 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
-		45073E5A1E7C074600D3AEA0 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
-		45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppTests.swift; sourceTree = "<group>"; };
 		455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppUITests.swift; sourceTree = "<group>"; };
+		455E93B51FCA06A600D3D046 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		455E93C91FCA0C4200D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		455E93CB1FCA0C4200D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		455E93E91FCA111300D3D046 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		455E93EA1FCA111300D3D046 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		455E93EB1FCA111300D3D046 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
+		455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		455E93EE1FCA111300D3D046 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		455E93EF1FCA111300D3D046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		455E93F01FCA111300D3D046 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		455E93FF1FCA11E300D3D046 /* TimetableTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimetableTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		455E94121FCA121800D3D046 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		455E94161FCA122C00D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		455E94181FCA126D00D3D046 /* Info-TimetableTodayExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-TimetableTodayExtension.plist"; sourceTree = "<group>"; };
+		455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FreeRoomsTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		455E943A1FCA176800D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		455E943D1FCA178100D3D046 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-FreeRoomsTodayExtension.plist"; sourceTree = "<group>"; };
+		455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTodayTableViewCell.swift; sourceTree = "<group>"; };
 		45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymondsStudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		45AFDD591E785C5C003D0618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		45AFDD5E1E785C5C003D0618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45AFDD601E785C5C003D0618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		45AFDD631E785C5C003D0618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45AFDD651E785C5C003D0618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45AFDD6A1E785C5C003D0618 /* SymondsStudentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymondsStudentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AFDD701E785C5C003D0618 /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
@@ -65,6 +113,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		455E93FC1FCA11E300D3D046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E94001FCA11E300D3D046 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		455E941A1FCA16F200D3D046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E941E1FCA16F200D3D046 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AFDD531E785C5C003D0618 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,37 +160,103 @@
 				45AFDD651E785C5C003D0618 /* Info.plist */,
 				45AFDD701E785C5C003D0618 /* Info-Tests.plist */,
 				45AFDD7B1E785C5C003D0618 /* Info-UITests.plist */,
+				455E94181FCA126D00D3D046 /* Info-TimetableTodayExtension.plist */,
+				455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */,
 				45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */,
 			);
 			path = Metadata;
 			sourceTree = "<group>";
 		};
-		45073E541E7C050100D3AEA0 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-				45073E501E7BECE900D3AEA0 /* KeychainPasswordItem.swift */,
-				45073E521E7BED3600D3AEA0 /* KeychainConfiguration.swift */,
-			);
-			name = Keychain;
-			sourceTree = "<group>";
-		};
-		45073E591E7C073D00D3AEA0 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				45073E571E7C073500D3AEA0 /* URLRequest.swift */,
-				45073E5A1E7C074600D3AEA0 /* URLComponents.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		45524B5C1EAD4D0C006A4952 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				45AFDD5D1E785C5C003D0618 /* Main.storyboard */,
-				45AFDD621E785C5C003D0618 /* LaunchScreen.storyboard */,
-				45AFDD601E785C5C003D0618 /* Assets.xcassets */,
+				455E93C61FCA078D00D3D046 /* SymondsStudentApp */,
+				455E94141FCA122C00D3D046 /* TimetableTodayExtension */,
+				455E94381FCA176800D3D046 /* FreeRoomsTodayExtension */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		455E93B41FCA06A600D3D046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				455E93B51FCA06A600D3D046 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455E93C61FCA078D00D3D046 /* SymondsStudentApp */ = {
+			isa = PBXGroup;
+			children = (
+				455E93C81FCA0C4200D3D046 /* Main.storyboard */,
+				455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */,
+				45AFDD601E785C5C003D0618 /* Assets.xcassets */,
+			);
+			path = SymondsStudentApp;
+			sourceTree = "<group>";
+		};
+		455E93E81FCA111300D3D046 /* SymondsStudentApp */ = {
+			isa = PBXGroup;
+			children = (
+				455E93F01FCA111300D3D046 /* AppDelegate.swift */,
+				455E93EE1FCA111300D3D046 /* SplashViewController.swift */,
+				455E93EF1FCA111300D3D046 /* LoginViewController.swift */,
+				455E93EB1FCA111300D3D046 /* DataService.swift */,
+				455E93FA1FCA113400D3D046 /* Keychain */,
+				455E93F91FCA112A00D3D046 /* Extensions */,
+			);
+			path = SymondsStudentApp;
+			sourceTree = "<group>";
+		};
+		455E93F91FCA112A00D3D046 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				455E93EA1FCA111300D3D046 /* URLRequest.swift */,
+				455E93E91FCA111300D3D046 /* URLComponents.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		455E93FA1FCA113400D3D046 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */,
+				455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		455E94111FCA121800D3D046 /* TimetableTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				455E94121FCA121800D3D046 /* TodayViewController.swift */,
+				455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */,
+			);
+			path = TimetableTodayExtension;
+			sourceTree = "<group>";
+		};
+		455E94141FCA122C00D3D046 /* TimetableTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				455E94151FCA122C00D3D046 /* MainInterface.storyboard */,
+			);
+			path = TimetableTodayExtension;
+			sourceTree = "<group>";
+		};
+		455E94381FCA176800D3D046 /* FreeRoomsTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				455E94391FCA176800D3D046 /* MainInterface.storyboard */,
+			);
+			path = FreeRoomsTodayExtension;
+			sourceTree = "<group>";
+		};
+		455E943C1FCA178100D3D046 /* FreeRoomsTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				455E943D1FCA178100D3D046 /* TodayViewController.swift */,
+			);
+			path = FreeRoomsTodayExtension;
 			sourceTree = "<group>";
 		};
 		45AFDD4D1E785C5C003D0618 = {
@@ -136,6 +266,7 @@
 				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
 				45F23E031E785C8A005503EF /* Tests */,
+				455E93B41FCA06A600D3D046 /* Frameworks */,
 				45AFDD571E785C5C003D0618 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +277,8 @@
 				45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */,
 				45AFDD6A1E785C5C003D0618 /* SymondsStudentAppTests.xctest */,
 				45AFDD751E785C5C003D0618 /* SymondsStudentAppUITests.xctest */,
+				455E93FF1FCA11E300D3D046 /* TimetableTodayExtension.appex */,
+				455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,12 +286,9 @@
 		45AFDD581E785C5C003D0618 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				45AFDD591E785C5C003D0618 /* AppDelegate.swift */,
-				45AFDD5B1E785C5C003D0618 /* SplashViewController.swift */,
-				45073E5C1E7C092B00D3AEA0 /* LoginViewController.swift */,
-				45073E4E1E7B120800D3AEA0 /* DataService.swift */,
-				45073E541E7C050100D3AEA0 /* Keychain */,
-				45073E591E7C073D00D3AEA0 /* Extensions */,
+				455E93E81FCA111300D3D046 /* SymondsStudentApp */,
+				455E94111FCA121800D3D046 /* TimetableTodayExtension */,
+				455E943C1FCA178100D3D046 /* FreeRoomsTodayExtension */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -191,6 +321,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455E940B1FCA11E300D3D046 /* Build configuration list for PBXNativeTarget "TimetableTodayExtension" */;
+			buildPhases = (
+				455E93FB1FCA11E300D3D046 /* Sources */,
+				455E93FC1FCA11E300D3D046 /* Frameworks */,
+				455E93FD1FCA11E300D3D046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimetableTodayExtension;
+			productName = TimetableTodayExtension;
+			productReference = 455E93FF1FCA11E300D3D046 /* TimetableTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		455E941C1FCA16F200D3D046 /* FreeRoomsTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455E94291FCA16F200D3D046 /* Build configuration list for PBXNativeTarget "FreeRoomsTodayExtension" */;
+			buildPhases = (
+				455E94191FCA16F200D3D046 /* Sources */,
+				455E941A1FCA16F200D3D046 /* Frameworks */,
+				455E941B1FCA16F200D3D046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeRoomsTodayExtension;
+			productName = FreeRoomsTodayExtension;
+			productReference = 455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		45AFDD551E785C5C003D0618 /* SymondsStudentApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45AFDD7E1E785C5C003D0618 /* Build configuration list for PBXNativeTarget "SymondsStudentApp" */;
@@ -200,10 +364,13 @@
 				45AFDD541E785C5C003D0618 /* Resources */,
 				4501993D1E79595100B768E6 /* Lint */,
 				45073E4D1E7A94F800D3AEA0 /* Decrypt and Copy Keys */,
+				455E93C41FCA06A600D3D046 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				455E94091FCA11E300D3D046 /* PBXTargetDependency */,
+				455E94271FCA16F200D3D046 /* PBXTargetDependency */,
 			);
 			name = SymondsStudentApp;
 			productName = SymondsStudentApp;
@@ -252,10 +419,20 @@
 		45AFDD4E1E785C5C003D0618 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Søren Mortensen, George Taylor";
 				TargetAttributes = {
+					455E93FE1FCA11E300D3D046 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 5K9KB5PRFV;
+						ProvisioningStyle = Automatic;
+					};
+					455E941C1FCA16F200D3D046 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 5K9KB5PRFV;
+						ProvisioningStyle = Automatic;
+					};
 					45AFDD551E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
@@ -294,19 +471,37 @@
 				45AFDD551E785C5C003D0618 /* SymondsStudentApp */,
 				45AFDD691E785C5C003D0618 /* SymondsStudentAppTests */,
 				45AFDD741E785C5C003D0618 /* SymondsStudentAppUITests */,
+				455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */,
+				455E941C1FCA16F200D3D046 /* FreeRoomsTodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		455E93FD1FCA11E300D3D046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E94171FCA122C00D3D046 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		455E941B1FCA16F200D3D046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E943B1FCA176800D3D046 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AFDD541E785C5C003D0618 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455E93CE1FCA0C6200D3D046 /* Main.storyboard in Resources */,
+				455E93CF1FCA0C6200D3D046 /* LaunchScreen.storyboard in Resources */,
 				45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */,
-				45AFDD641E785C5C003D0618 /* LaunchScreen.storyboard in Resources */,
 				45AFDD611E785C5C003D0618 /* Assets.xcassets in Resources */,
-				45AFDD5F1E785C5C003D0618 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,18 +553,35 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		455E93FB1FCA11E300D3D046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E94131FCA121800D3D046 /* TodayViewController.swift in Sources */,
+				455E94421FCA193B00D3D046 /* TimetableTodayTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		455E94191FCA16F200D3D046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AFDD521E785C5C003D0618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45073E5B1E7C074600D3AEA0 /* URLComponents.swift in Sources */,
-				45073E4F1E7B120800D3AEA0 /* DataService.swift in Sources */,
-				45073E511E7BECE900D3AEA0 /* KeychainPasswordItem.swift in Sources */,
-				45AFDD5C1E785C5C003D0618 /* SplashViewController.swift in Sources */,
-				45073E5D1E7C092B00D3AEA0 /* LoginViewController.swift in Sources */,
-				45073E581E7C073500D3AEA0 /* URLRequest.swift in Sources */,
-				45AFDD5A1E785C5C003D0618 /* AppDelegate.swift in Sources */,
-				45073E531E7BED3600D3AEA0 /* KeychainConfiguration.swift in Sources */,
+				455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */,
+				455E93F71FCA111300D3D046 /* LoginViewController.swift in Sources */,
+				455E93F51FCA111300D3D046 /* KeychainPasswordItem.swift in Sources */,
+				455E93F31FCA111300D3D046 /* DataService.swift in Sources */,
+				455E93F11FCA111300D3D046 /* URLComponents.swift in Sources */,
+				455E93F61FCA111300D3D046 /* SplashViewController.swift in Sources */,
+				455E93F41FCA111300D3D046 /* KeychainConfiguration.swift in Sources */,
+				455E93F21FCA111300D3D046 /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +604,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		455E94091FCA11E300D3D046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */;
+			targetProxy = 455E94081FCA11E300D3D046 /* PBXContainerItemProxy */;
+		};
+		455E94271FCA16F200D3D046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 455E941C1FCA16F200D3D046 /* FreeRoomsTodayExtension */;
+			targetProxy = 455E94261FCA16F200D3D046 /* PBXContainerItemProxy */;
+		};
 		45AFDD6C1E785C5C003D0618 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45AFDD551E785C5C003D0618 /* SymondsStudentApp */;
@@ -405,25 +627,125 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45AFDD5D1E785C5C003D0618 /* Main.storyboard */ = {
+		455E93C81FCA0C4200D3D046 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				45AFDD5E1E785C5C003D0618 /* Base */,
+				455E93C91FCA0C4200D3D046 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		45AFDD621E785C5C003D0618 /* LaunchScreen.storyboard */ = {
+		455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				45AFDD631E785C5C003D0618 /* Base */,
+				455E93CB1FCA0C4200D3D046 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		455E94151FCA122C00D3D046 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455E94161FCA122C00D3D046 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		455E94391FCA176800D3D046 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455E943A1FCA176800D3D046 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		455E940C1FCA11E300D3D046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-TimetableTodayExtension.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		455E940D1FCA11E300D3D046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-TimetableTodayExtension.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		455E942A1FCA16F200D3D046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-FreeRoomsTodayExtension.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		455E942B1FCA16F200D3D046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-FreeRoomsTodayExtension.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		45AFDD7C1E785C5C003D0618 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -532,7 +854,9 @@
 		45AFDD7F1E785C5C003D0618 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,7 +870,9 @@
 		45AFDD801E785C5C003D0618 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,6 +953,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		455E940B1FCA11E300D3D046 /* Build configuration list for PBXNativeTarget "TimetableTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455E940C1FCA11E300D3D046 /* Debug */,
+				455E940D1FCA11E300D3D046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		455E94291FCA16F200D3D046 /* Build configuration list for PBXNativeTarget "FreeRoomsTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455E942A1FCA16F200D3D046 /* Debug */,
+				455E942B1FCA16F200D3D046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45AFDD511E785C5C003D0618 /* Build configuration list for PBXProject "SymondsStudentApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

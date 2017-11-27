@@ -67,7 +67,7 @@ struct KeychainPasswordItem {
         guard status == noErr else { throw KeychainError.unhandledError(status: status) }
         
         // Parse the password string from the query result.
-        guard let existingItem = queryResult as? [String : AnyObject],
+        guard let existingItem = queryResult as? [String: AnyObject],
             let passwordData = existingItem[kSecValueData as String] as? Data,
             let password = String(data: passwordData, encoding: String.Encoding.utf8)
             else {
@@ -201,7 +201,7 @@ struct KeychainPasswordItem {
     /// :nodoc:
     private static func keychainQuery(withService service: String,
                                       account: String? = nil,
-                                      accessGroup: String? = nil) -> [String : AnyObject] {
+                                      accessGroup: String? = nil) -> [String: AnyObject] {
         var query = [String: AnyObject]()
         query[kSecClass as String] = kSecClassGenericPassword
         query[kSecAttrService as String] = service as AnyObject?

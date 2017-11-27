@@ -56,12 +56,18 @@ internal class SplashViewController: UIViewController {
         }
     }
     
-    /// Unwind segue from `LoginViewController`.
-    ///
-    /// - Parameter sender: The sender of the action.
-    @IBAction internal func unwindFromLogin(_ sender: UIStoryboardSegue) {
-        self.activityIndicator.stopAnimating()
-        self.loginButton.isHidden = false
+    /// Completion callback for when an authorisation code is recieved from the Data Service.
+    internal func codeRecievedCompletion() {
+        // Get a reference to the animations queue.
+        let animationsQueue = DispatchQueue(label: "Animations")
+        // Send a block to the animations queue.
+        animationsQueue.sync { [unowned self] in
+            // Dismiss the LoginViewController.
+            self.dismiss(animated: true, completion: nil)
+            // Show the login button again.
+            self.activityIndicator.stopAnimating()
+            self.loginButton.isHidden = false
+        }
     }
     
     /// Completion handler for when an authorisation code exchange has completed.
@@ -81,12 +87,32 @@ internal class SplashViewController: UIViewController {
     
     /// Segues to an instance of `LoginViewController` to initiate the login process.
     private func initiateLogin() {
-        self.performSegue(withIdentifier: "Login", sender: nil)
+        // Get a reference to the animations queue.
+//        let animationsQueue = DispatchQueue(label: "Animations")
+        // Send a block to the animations queue, so that it doesn't execute before any other animations.
+//        animationsQueue.sync { [unowned self] in
+            // Send the block from the animations queue to the main queue, because this block performs UI updates and
+            // should not be called from a background thread.
+//            DispatchQueue.main.async {
+                // Segue to the login view.
+                self.performSegue(withIdentifier: "Login", sender: nil)
+//            }
+//        }
     }
     
     /// Segues to the main view when the login process has completed successfully.
     private func segueToMainView() {
-        
+        // Get a reference to the animations queue.
+        let animationsQueue = DispatchQueue(label: "Animations")
+        // Send a block to the animations queue, so that it doesn't execute before any other animations.
+        animationsQueue.sync { [unowned self] in
+            // Send the block from the animations queue to the main queue, because this block performs UI updates and
+            // should not be called from a background thread.
+            DispatchQueue.main.async {
+                // Segue to the main view.
+                self.performSegue(withIdentifier: "Main", sender: nil)
+            }
+        }
     }
     
     // MARK: - Initialisers

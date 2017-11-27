@@ -279,7 +279,7 @@ public class DataService {
             query = try generateExchangePOSTString(
                 with: code,
                 grantType: grantType)
-        } catch(let error as DataService.Error) {
+        } catch let error as DataService.Error {
             completion(nil, error)
             return
         } catch {
@@ -315,7 +315,7 @@ public class DataService {
                 self.authenticationResult = authResult
                 self.authenticationResult!.saveRefreshTokenToKeychain()
                 completion(authResult, nil)
-            } catch(let error as DataService.Error) {
+            } catch let error as DataService.Error {
                 completion(nil, error)
                 return
             } catch {

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://data.psc.ac.uk/service/student-timetable/returned-data -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>PSC Data Service</title><link rel="stylesheet" href="./Student Timetable Returned Data_files/06935bc.css" media="screen" type="text/css"><link rel="stylesheet" href="./Student Timetable Returned Data_files/pscdata.css"><link rel="stylesheet" href="./Student Timetable Returned Data_files/4567798.css" media="screen"><!-- ****** faviconit.com favicons ****** --><link rel="shortcut icon" href="https://data.psc.ac.uk/images/favicon/favicon.ico"><link rel="icon" sizes="16x16 32x32 64x64" href="https://data.psc.ac.uk/images/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="196x196" href="https://data.psc.ac.uk/images/favicon/favicon-192.png"><link rel="icon" type="image/png" sizes="160x160" href="https://data.psc.ac.uk/images/favicon/favicon-160.png"><link rel="icon" type="image/png" sizes="96x96" href="https://data.psc.ac.uk/images/favicon/favicon-96.png"><link rel="icon" type="image/png" sizes="64x64" href="https://data.psc.ac.uk/images/favicon/favicon-64.png"><link rel="icon" type="image/png" sizes="32x32" href="https://data.psc.ac.uk/images/favicon/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://data.psc.ac.uk/images/favicon/favicon-16.png"><link rel="apple-touch-icon" href="https://data.psc.ac.uk/images/favicon/favicon-57.png"><link rel="apple-touch-icon" sizes="114x114" href="https://data.psc.ac.uk/images/favicon/favicon-114.png"><link rel="apple-touch-icon" sizes="72x72" href="https://data.psc.ac.uk/images/favicon/favicon-72.png"><link rel="apple-touch-icon" sizes="144x144" href="https://data.psc.ac.uk/images/favicon/favicon-144.png"><link rel="apple-touch-icon" sizes="60x60" href="https://data.psc.ac.uk/images/favicon/favicon-60.png"><link rel="apple-touch-icon" sizes="120x120" href="https://data.psc.ac.uk/images/favicon/favicon-120.png"><link rel="apple-touch-icon" sizes="76x76" href="https://data.psc.ac.uk/images/favicon/favicon-76.png"><link rel="apple-touch-icon" sizes="152x152" href="https://data.psc.ac.uk/images/favicon/favicon-152.png"><link rel="apple-touch-icon" sizes="180x180" href="https://data.psc.ac.uk/images/favicon/favicon-180.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="/images/favicon/favicon-144.png"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml"><!-- ****** faviconit.com favicons ****** --></head>
+    <body class="sidebar">
+
+                <header id="PageHeader">
+            <h1><a href="https://data.psc.ac.uk/">data.psc.ac.uk</a></h1>
+            <nav>                            <a href="https://data.psc.ac.uk/user/" id="UserProfile-link"></a>
+                
+</nav>
+        </header>
+        
+        
+        
+        <div class="body">
+            <nav class="sidemenu service">
+    <a href="https://data.psc.ac.uk/">Home</a>
+    <h3>Documentation...</h3>
+            <ul>
+                <li class="first">        <a href="https://data.psc.ac.uk/docs/getting-started">Getting Started</a>        
+    </li>
+
+        <li>        <a href="https://data.psc.ac.uk/docs/android-java">Android Java</a>        
+    </li>
+
+        <li class="last">        <a href="https://data.psc.ac.uk/docs/javascript">Javascript</a>        
+    </li>
+
+
+    </ul>
+
+    <h3>Services...</h3>
+            <ul>
+                <li class="first">        <a href="https://data.psc.ac.uk/service/find">Find</a>        
+    </li>
+
+        <li>        <a href="https://data.psc.ac.uk/service/room-timetable">Room Timetable</a>        
+    </li>
+
+        <li>        <a href="https://data.psc.ac.uk/service/student-timetable">Student Timetable</a>            <ul class="menu_level_1">
+                <li class="first">        <a href="https://data.psc.ac.uk/service/student-timetable/parameters">Parameters</a>        
+    </li>
+
+        <li class="current">        <a href="https://data.psc.ac.uk/service/student-timetable/returned-data" class="current">Returned Data</a>        
+    </li>
+
+        <li class="last">        <a href="https://data.psc.ac.uk/service/student-timetable/demo">Demo</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+        <li class="last">        <a href="https://data.psc.ac.uk/service/user">User</a>        
+    </li>
+
+
+    </ul>
+
+</nav>
+
+    <article class="content">
+                <section xmlns:schema="http://schema.org/" typeof="schema:WebPage" about="phpcr|/service/Services/Student Timetable/Returned Data">
+            <h2 property="schema:headline">Returned Data</h2>
+            <div property="schema:text" class="content"><p>The JSON data that is returned always contains 1 dictionary ("boundaries") and 3 arrays ("clashing", "floating" and "timetable"). &nbsp;The arrays contain timetable items dictionaries. &nbsp;See the <a href="https://data.psc.ac.uk/service/student-timetable/demo">demo page</a> for an example data set.</p>
+
+<h3>Boundaries</h3>
+
+<p>The boundaries dictionary&nbsp;lists all of the time boundaries that exist in the data set. &nbsp;This is useful when you are displaying the data in a grid as it lets you know how to set up that grid. &nbsp;All items in your dataset will start and end at one of the times that are listed.</p>
+
+<p>For example, something like this might be returned:</p>
+
+<p><samp><span class="string">"boundaries"</span>: {<br>
+&nbsp;&nbsp;<span class="string">"830"</span>: <span class="integer">1431675000</span>,<br>
+&nbsp;&nbsp;<span class="string">"925"</span>: <span class="integer">1431678300</span>,<br>
+&nbsp;&nbsp;<span class="string">"1135"</span>: <span class="integer">1431686100</span>,<br>
+&nbsp;&nbsp;<span class="string">"1230"</span>: <span class="integer">1431689400</span>,<br>
+&nbsp;&nbsp;<span class="string">"1635"</span>: <span class="integer">1431704100</span><br>
+} </samp></p>
+
+<p>This is a list of times in string format to an example timestamp for that time (you can ignore the date part of the timestamp, it is meaningless).&nbsp; What this particular dictionary is saying is that there is at least one item in your dataset that starts or finishes&nbsp;at 8:30am, at least one that starts or finishes at 9:25am and so on. &nbsp;There are no items in the dataset that start or finish at a time that isn't listed in the dictionary.</p>
+
+<h3>Clashing</h3>
+
+<p>The clashing array is a list of timetable items (see below) that clash with an item in the timetable array. &nbsp;Items in this array don't need to be included in a timetable grid but should be displayed to the user so that they are aware of it. &nbsp;Clashing items are rare, so this array is usually empty.</p>
+
+<h3>Floating</h3>
+
+<p>The floating array is a list of timetable items (see below) that don't have a set start and end time. &nbsp;These are things like drop in workshops or the multigym activity. &nbsp;It is a lesson that the student is expected to attend once per week. &nbsp;You can mostly ignore the start and end times for a floating item, although the date part of the timestamp will give you the week that it occurs in.</p>
+
+<h3>Timetable</h3>
+
+<p>This is the main array, it contains the items that should be displayed on the user's timetable. &nbsp;It contains an ordered list of timetable item dictionaries:</p>
+
+<h3>Timetable Items</h3>
+
+<p>A timetable item is a dictionary of key / value fields. &nbsp;For example:</p>
+
+<p><samp>{<br>
+&nbsp;&nbsp;<span class="string">"Type"</span>: <span class="string">"lesson"</span>,<br>
+&nbsp;&nbsp;<span class="string">"Id"</span>: <span class="uniteid">38000550273774</span>,<br>
+&nbsp;&nbsp;<span class="string">"Title"</span>: <span class="string">"English Literature"</span>,<br>
+&nbsp;&nbsp;<span class="string">"Subtitle"</span>: <span class="string">""</span>,<br>
+&nbsp;&nbsp;<span class="string">"Start"</span>: <span class="integer">1431332700</span>,<br>
+&nbsp;&nbsp;<span class="string">"End"</span>: <span class="integer">1431336000</span>,<br>
+&nbsp;&nbsp;<span class="string">"Room"</span>: <span class="string">"VY105"</span>,<br>
+&nbsp;&nbsp;<span class="string">"Staff"</span>: <span class="string">"Graeme Hodgson, Tom Prentki"</span>,<br>
+&nbsp;&nbsp;<span class="string">"IsBlank"</span>: <span class="boolean">false</span>,<br>
+&nbsp;&nbsp;<span class="string">"IsCancelled"</span>: <span class="boolean">false</span>,<br>
+&nbsp;&nbsp;<span class="string">"IsRoomChange"</span>: <span class="boolean">false</span><br>
+}</samp></p>
+
+<p>What the fields mean:</p>
+
+<p><strong>Type</strong>:</p>
+
+<p>Type describes what the&nbsp;item it is. &nbsp;Currently this will be one of:</p>
+
+<ul>
+	<li><strong>"activity"</strong> - An extra&nbsp;curricular activity&nbsp;or sports team.</li>
+	<li><strong>"artexambooking"</strong> - A&nbsp;booking made by a student for their art exam.</li>
+	<li><strong>"bankholiday"</strong> - A national bank holiday.</li>
+	<li><strong>"boardingleave"</strong> - Boarding student is on leave from one of the boarding houses.</li>
+	<li><strong>"break"</strong> - College break time.</li>
+	<li><strong>"careersappointment"</strong> - Appointment with a Careers adviser.</li>
+	<li><strong>"careersweek"</strong> - Careers week talk.</li>
+	<li><strong>"exam"</strong> - An exam.</li>
+	<li><strong>"holiday"</strong> - One of the college holidays.</li>
+	<li><strong>"lesson"</strong> - A normal college lesson.</li>
+	<li><strong>"studyperiod"</strong>&nbsp;- The spare time between lessons.</li>
+	<li><strong>"studyskills"</strong> - A Study Skills appointment.</li>
+	<li><strong>"studysupport"</strong> - A Study Support appointment.</li>
+	<li><strong>"trip"</strong> - A college trip.</li>
+	<li><strong>"tutorgroup"&nbsp;</strong>- Tutor time.&nbsp;</li>
+</ul>
+
+<p><strong>Id</strong>:</p>
+
+<p>The id is normally either going to be a 14 digit integer starting "3800" or a shorter integer. &nbsp;It will be unique among other items of the same type.</p>
+
+<p><strong>Title </strong>and<strong> Subtitle</strong>:<strong>&nbsp;</strong></p>
+
+<p>This will be some short descriptive text for the item. &nbsp;Often the subtitle will be blank, but for things like trips you will find that the title is "Trip" and the subtitle is the actual name of the trip.</p>
+
+<p><strong>Start</strong> and <strong>End</strong>:</p>
+
+<p>This is a unix timestamp for when the item starts and ends.</p>
+
+<p><strong>Room</strong>:</p>
+
+<p>Which room is the item happening in. &nbsp;Some items don't have rooms.</p>
+
+<p><strong>Staff</strong>:</p>
+
+<p>Which teachers are running the item.</p>
+
+<p><strong>IsBlank</strong>:</p>
+
+<p>Is the item not actually a timetabled item?&nbsp; For instance&nbsp;break time,&nbsp;study periods and college holidays are all considered to be blank. &nbsp;The value of this field will either be true or false.</p>
+
+<p><strong>IsCancelled</strong>:</p>
+
+<p>Has the lesson been cancelled? &nbsp;If the lesson has been cancelled you should display a message to the user saying so. &nbsp;<span style="font-family: &#39;Open Sans&#39;, sans-serif; font-size: 19.2000007629395px; font-style: normal; font-variant: normal; line-height: 30.7200012207031px; background-color: rgba(255, 255, 255, 0.701961);">The value of this field will either be true or false.</span></p>
+
+<p><strong>IsRoomChange</strong>:</p>
+
+<p>Sometimes lessons need to switch rooms from their normal room. &nbsp;If this item has switched room you should display an appropriate message to make the user aware.&nbsp;&nbsp;<span style="font-family: &#39;Open Sans&#39;, sans-serif; font-size: 19.2000007629395px; font-style: normal; font-variant: normal; line-height: 30.7200012207031px; background-color: rgba(255, 255, 255, 0.701961);">The value of this field will either be true or false.</span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+        </section>
+        
+        
+                    </article>
+        </div>
+
+                <footer>
+            <nav>
+                            </nav>
+        </footer>
+        
+                                            <script src="./Student Timetable Returned Data_files/jquery.js"></script>
+                
+</body></html>

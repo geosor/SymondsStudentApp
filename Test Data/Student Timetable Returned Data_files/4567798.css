@@ -1,0 +1,188 @@
+/* line 4, assetic_compasshsPv5s.scss */
+nav.service {
+  background-color: #422;
+}
+/* line 7, assetic_compasshsPv5s.scss */
+nav.service ul li {
+  color: #663333;
+}
+/* line 11, assetic_compasshsPv5s.scss */
+nav.service div.editmode {
+  border-top: 1px solid #663333;
+  border-bottom: 1px solid #663333;
+}
+
+/* line 17, assetic_compasshsPv5s.scss */
+nav.documentation {
+  background-color: #242;
+}
+/* line 20, assetic_compasshsPv5s.scss */
+nav.documentation ul li {
+  color: #336633;
+}
+/* line 24, assetic_compasshsPv5s.scss */
+nav.documentation div.editmode {
+  border-top: 1px solid #336633;
+  border-bottom: 1px solid #336633;
+}
+
+/* line 31, assetic_compasshsPv5s.scss */
+nav.service h3, nav.documentation h3 {
+  color: white;
+}
+
+/* line 37, assetic_compasshsPv5s.scss */
+nav.sidemenu div.editmode {
+  margin: 0.5em 0;
+}
+/* line 39, assetic_compasshsPv5s.scss */
+nav.sidemenu div.editmode a {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+/* line 46, assetic_compasshsPv5s.scss */
+h3, h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+/* line 52, assetic_compasshsPv5s.scss */
+aside.comments h3 {
+  border-top: #422 2px solid;
+}
+
+/* line 58, assetic_compasshsPv5s.scss */
+form.parametersForm label {
+  width: 29%;
+  display: inline-block;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 1%;
+}
+/* line 66, assetic_compasshsPv5s.scss */
+form.parametersForm button[type=submit] {
+  margin-left: 30%;
+}
+/* line 70, assetic_compasshsPv5s.scss */
+form.parametersForm input[type=text] {
+  width: 57%;
+}
+/* line 74, assetic_compasshsPv5s.scss */
+form.parametersForm div div {
+  margin-bottom: 1em;
+}
+/* line 78, assetic_compasshsPv5s.scss */
+form.parametersForm div div div {
+  margin: 0;
+  width: 70%;
+  display: inline-block;
+}
+/* line 83, assetic_compasshsPv5s.scss */
+form.parametersForm div div div div {
+  width: auto;
+}
+
+/* line 90, assetic_compasshsPv5s.scss */
+div#Demo div.input {
+  display: none;
+}
+/* line 94, assetic_compasshsPv5s.scss */
+div#Demo div.input.current {
+  display: block;
+}
+/* line 98, assetic_compasshsPv5s.scss */
+div#Demo nav.tabs {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: -1.1em;
+  height: 2em;
+}
+/* line 104, assetic_compasshsPv5s.scss */
+div#Demo nav.tabs a {
+  margin: 0;
+  padding: 0.5em 1em;
+  background: #bbbbbb;
+  border: 1px solid #ddd;
+}
+/* line 113, assetic_compasshsPv5s.scss */
+div#Demo nav.tabs a.current {
+  background: #eee;
+  text-decoration: none;
+  font-weight: bold;
+  color: #111;
+}
+
+/* line 121, assetic_compasshsPv5s.scss */
+samp {
+  background: #eee;
+  border: 1px solid #ddd;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  display: block;
+  padding: 0.5em;
+  line-height: 1.5em;
+  margin: 1em 0 2em 0;
+}
+/* line 131, assetic_compasshsPv5s.scss */
+samp span.string {
+  color: darkorange;
+}
+/* line 135, assetic_compasshsPv5s.scss */
+samp span.boolean, samp span.keyword {
+  color: darkblue;
+}
+/* line 139, assetic_compasshsPv5s.scss */
+samp span.integer, samp span.uniteid {
+  color: black;
+}
+/* line 143, assetic_compasshsPv5s.scss */
+samp span.comment, samp span.ignore {
+  color: #999;
+}
+/* line 147, assetic_compasshsPv5s.scss */
+samp img.loading {
+  vertical-align: middle;
+}
+
+/* line 153, assetic_compasshsPv5s.scss */
+samp.java span.string {
+  color: darkgreen;
+}
+/* line 157, assetic_compasshsPv5s.scss */
+samp.java span.keyword {
+  color: darkblue;
+}
+/* line 161, assetic_compasshsPv5s.scss */
+samp.java span.variable {
+  color: darkmagenta;
+}
+/* line 165, assetic_compasshsPv5s.scss */
+samp.java span.annotation {
+  color: darkkhaki;
+}
+/* line 169, assetic_compasshsPv5s.scss */
+samp.java span.integer {
+  color: blue;
+}
+/* line 173, assetic_compasshsPv5s.scss */
+samp.java span.comment, samp.java span.constant {
+  font-style: italic;
+}
+
+/* line 179, assetic_compasshsPv5s.scss */
+samp.html span.meta {
+  color: gray;
+}
+/* line 183, assetic_compasshsPv5s.scss */
+samp.html span.keyword {
+  color: darkblue;
+}
+/* line 187, assetic_compasshsPv5s.scss */
+samp.html span.attribute {
+  color: green;
+}
+/* line 191, assetic_compasshsPv5s.scss */
+samp.html span.variable {
+  color: darkmagenta;
+}

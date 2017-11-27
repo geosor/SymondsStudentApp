@@ -27,6 +27,12 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
     /// :nodoc:
     internal var window: UIWindow?
     
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        // Dynamic shortcut items. The static ones are defined in Metadata/Info.plist under the
+        // UIApplicationShortcutItems key.
+        UIApplication.shared.shortcutItems = []
+    }
+    
     /// :nodoc:
     func application(_ app: UIApplication,
                      open url: URL,
@@ -56,7 +62,7 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Tell the login view controller that the code has been recieved.
-        self.loginViewController?.codeRecievedCompletion()
+        self.splashViewController?.codeRecievedCompletion()
         
         guard let splash = self.splashViewController else {
             return false
@@ -68,6 +74,19 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
             completion: splash.codeExchangeCompletion)
         
         return true
+    }
+    
+    func application(_ application: UIApplication,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: @escaping (Bool) -> Void) {
+        switch shortcutItem.type {
+        case "com.sorenmortensen.SymondsStudentApp.opentimetable":
+            break
+        case "com.sorenmortensen.SymondsStudentApp.openfreerooms":
+            break
+        default:
+            print("Unrecognised shortcut")
+        }
     }
     
 }
