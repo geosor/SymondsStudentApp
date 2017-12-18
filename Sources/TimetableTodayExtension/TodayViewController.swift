@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UITableViewController, NCWidgetProviding {
+class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
-        self.tableView.reloadData()
-        completionHandler(NCUpdateResult.newData)
+        completionHandler(.noData)
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
@@ -40,24 +39,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         case .expanded:
             self.preferredContentSize = CGSize(width: self.preferredContentSize.width, height: 350)
         }
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    override func tableView(_ tableView: UITableView,
-                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "item") as? TimetableTodayTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        cell.nameLabel.text = "Item \(indexPath.row)"
-        return cell
     }
     
 }

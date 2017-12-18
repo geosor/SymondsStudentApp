@@ -38,6 +38,7 @@ internal class SplashViewController: UIViewController {
         self.activityIndicator.startAnimating()
         
         // Try to authenticate from details saved in Keychain.
+        /*
         DataService.shared.authenticateFromSavedDetails { error in
             // Check if authentication was successful.
             if error != nil {
@@ -54,6 +55,9 @@ internal class SplashViewController: UIViewController {
                 }
             }
         }
+        */
+        
+        self.segueToMainView()
     }
     
     /// Completion callback for when an authorisation code is recieved from the Data Service.

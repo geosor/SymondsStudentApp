@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
-		455CD1771E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */; };
+		454818371FE55C8700041617 /* ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818361FE55C8700041617 /* ExampleProviding.swift */; };
+		454818391FE55CF200041617 /* TimetableItem+ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */; };
+		454E60571FE562F900178CF6 /* CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60561FE562F900178CF6 /* CounterexampleProviding.swift */; };
+		454E60591FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */; };
+		454E605B1FE5654500178CF6 /* Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605A1FE5654500178CF6 /* Attributions.swift */; };
+		454E605D1FE58A5700178CF6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605C1FE58A5700178CF6 /* Day.swift */; };
 		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
 		455E93CE1FCA0C6200D3D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93C81FCA0C4200D3D046 /* Main.storyboard */; };
 		455E93CF1FCA0C6200D3D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */; };
@@ -28,7 +33,13 @@
 		455E94281FCA16F200D3D046 /* FreeRoomsTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		455E943B1FCA176800D3D046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E94391FCA176800D3D046 /* MainInterface.storyboard */; };
 		455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E943D1FCA178100D3D046 /* TodayViewController.swift */; };
-		455E94421FCA193B00D3D046 /* TimetableTodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */; };
+		4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */; };
+		4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */; };
+		4568FF921FCC434F00E08D4B /* TimetableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF911FCC434F00E08D4B /* TimetableItem.swift */; };
+		4568FF941FCC7EB400E08D4B /* TimetableItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */; };
+		45A873871FE59603006E3DE6 /* DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873861FE59603006E3DE6 /* DayTests.swift */; };
+		45A873891FE596F7006E3DE6 /* CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */; };
+		45A8738B1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */; };
 		45AFDD611E785C5C003D0618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD601E785C5C003D0618 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +92,12 @@
 /* Begin PBXFileReference section */
 		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-Keychain"; sourceTree = "<group>"; };
-		455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppTests.swift; sourceTree = "<group>"; };
+		454818361FE55C8700041617 /* ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProviding.swift; sourceTree = "<group>"; };
+		454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+ExampleProviding.swift"; sourceTree = "<group>"; };
+		454E60561FE562F900178CF6 /* CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterexampleProviding.swift; sourceTree = "<group>"; };
+		454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+CounterexampleProviding.swift"; sourceTree = "<group>"; };
+		454E605A1FE5654500178CF6 /* Attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributions.swift; sourceTree = "<group>"; };
+		454E605C1FE58A5700178CF6 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppUITests.swift; sourceTree = "<group>"; };
 		455E93B51FCA06A600D3D046 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		455E93C91FCA0C4200D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +118,13 @@
 		455E943A1FCA176800D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		455E943D1FCA178100D3D046 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-FreeRoomsTodayExtension.plist"; sourceTree = "<group>"; };
-		455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTodayTableViewCell.swift; sourceTree = "<group>"; };
+		4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
+		4568FF911FCC434F00E08D4B /* TimetableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItem.swift; sourceTree = "<group>"; };
+		4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItemTests.swift; sourceTree = "<group>"; };
+		45A873861FE59603006E3DE6 /* DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTests.swift; sourceTree = "<group>"; };
+		45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProtocol.swift; sourceTree = "<group>"; };
+		45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+CalendarProtocol.swift"; sourceTree = "<group>"; };
 		45AFDD561E785C5C003D0618 /* SymondsStudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymondsStudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AFDD601E785C5C003D0618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45AFDD651E785C5C003D0618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +189,16 @@
 			path = Metadata;
 			sourceTree = "<group>";
 		};
+		4548183A1FE55D5300041617 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				454818361FE55C8700041617 /* ExampleProviding.swift */,
+				454E60561FE562F900178CF6 /* CounterexampleProviding.swift */,
+				45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		45524B5C1EAD4D0C006A4952 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,9 +233,14 @@
 				455E93F01FCA111300D3D046 /* AppDelegate.swift */,
 				455E93EE1FCA111300D3D046 /* SplashViewController.swift */,
 				455E93EF1FCA111300D3D046 /* LoginViewController.swift */,
+				4568FF8E1FCC431700E08D4B /* Timetable */,
 				455E93EB1FCA111300D3D046 /* DataService.swift */,
+				454E605C1FE58A5700178CF6 /* Day.swift */,
+				4568FF911FCC434F00E08D4B /* TimetableItem.swift */,
 				455E93FA1FCA113400D3D046 /* Keychain */,
+				4548183A1FE55D5300041617 /* Protocols */,
 				455E93F91FCA112A00D3D046 /* Extensions */,
+				454E605A1FE5654500178CF6 /* Attributions.swift */,
 			);
 			path = SymondsStudentApp;
 			sourceTree = "<group>";
@@ -211,8 +248,11 @@
 		455E93F91FCA112A00D3D046 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */,
+				454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */,
 				455E93EA1FCA111300D3D046 /* URLRequest.swift */,
 				455E93E91FCA111300D3D046 /* URLComponents.swift */,
+				45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				455E94121FCA121800D3D046 /* TodayViewController.swift */,
-				455E94401FCA193900D3D046 /* TimetableTodayTableViewCell.swift */,
 			);
 			path = TimetableTodayExtension;
 			sourceTree = "<group>";
@@ -257,6 +296,15 @@
 				455E943D1FCA178100D3D046 /* TodayViewController.swift */,
 			);
 			path = FreeRoomsTodayExtension;
+			sourceTree = "<group>";
+		};
+		4568FF8E1FCC431700E08D4B /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */,
+				4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */,
+			);
+			path = Timetable;
 			sourceTree = "<group>";
 		};
 		45AFDD4D1E785C5C003D0618 = {
@@ -296,7 +344,8 @@
 		45AFDD6D1E785C5C003D0618 /* SymondsStudentAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				455CD1761E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift */,
+				4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */,
+				45A873861FE59603006E3DE6 /* DayTests.swift */,
 			);
 			path = SymondsStudentAppTests;
 			sourceTree = "<group>";
@@ -558,7 +607,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				455E94131FCA121800D3D046 /* TodayViewController.swift in Sources */,
-				455E94421FCA193B00D3D046 /* TimetableTodayTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,11 +625,22 @@
 				455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */,
 				455E93F71FCA111300D3D046 /* LoginViewController.swift in Sources */,
 				455E93F51FCA111300D3D046 /* KeychainPasswordItem.swift in Sources */,
+				454818371FE55C8700041617 /* ExampleProviding.swift in Sources */,
 				455E93F31FCA111300D3D046 /* DataService.swift in Sources */,
+				454E605B1FE5654500178CF6 /* Attributions.swift in Sources */,
 				455E93F11FCA111300D3D046 /* URLComponents.swift in Sources */,
+				4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */,
+				454E60591FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift in Sources */,
 				455E93F61FCA111300D3D046 /* SplashViewController.swift in Sources */,
+				454818391FE55CF200041617 /* TimetableItem+ExampleProviding.swift in Sources */,
+				454E605D1FE58A5700178CF6 /* Day.swift in Sources */,
+				45A8738B1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift in Sources */,
 				455E93F41FCA111300D3D046 /* KeychainConfiguration.swift in Sources */,
+				45A873891FE596F7006E3DE6 /* CalendarProtocol.swift in Sources */,
+				454E60571FE562F900178CF6 /* CounterexampleProviding.swift in Sources */,
+				4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */,
 				455E93F21FCA111300D3D046 /* URLRequest.swift in Sources */,
+				4568FF921FCC434F00E08D4B /* TimetableItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +648,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455CD1771E7D5FD7004FE1A8 /* SymondsStudentAppTests.swift in Sources */,
+				45A873871FE59603006E3DE6 /* DayTests.swift in Sources */,
+				4568FF941FCC7EB400E08D4B /* TimetableItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +858,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -846,6 +907,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -894,7 +956,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
@@ -911,7 +972,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
@@ -928,7 +988,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = SymondsStudentApp;
 			};
@@ -944,7 +1003,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = SymondsStudentApp;
 			};
