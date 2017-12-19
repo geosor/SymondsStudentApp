@@ -2,29 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.sorenmortensen.SymondsStudentApp.opentimetable</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Timetable</string>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeDate</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>com.sorenmortensen.SymondsStudentApp.openfreerooms</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Free Rooms</string>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeLocation</string>
-		</dict>
-	</array>
-	<key>UIApplicationShortcutWidget</key>
-	<string>com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Symonds</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -52,6 +33,27 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeDate</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Timetable</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.sorenmortensen.SymondsStudentApp.opentimetable</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLocation</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Free Rooms</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.sorenmortensen.SymondsStudentApp.openfreerooms</string>
+		</dict>
+	</array>
+	<key>UIApplicationShortcutWidget</key>
+	<string>com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
