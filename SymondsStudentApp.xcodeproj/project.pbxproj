@@ -140,6 +140,7 @@
 		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-Keychain"; sourceTree = "<group>"; };
 		4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		454458091FE9CB1B00FBDAEB /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		454818361FE55C8700041617 /* ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProviding.swift; sourceTree = "<group>"; };
 		454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+ExampleProviding.swift"; sourceTree = "<group>"; };
 		454E60561FE562F900178CF6 /* CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterexampleProviding.swift; sourceTree = "<group>"; };
@@ -410,6 +411,7 @@
 		45AFDD4D1E785C5C003D0618 = {
 			isa = PBXGroup;
 			children = (
+				454458091FE9CB1B00FBDAEB /* Makefile */,
 				4501993E1E79704400B768E6 /* Metadata */,
 				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
@@ -636,7 +638,7 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					45AFDD691E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1210,13 +1212,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Soren Mortensen (3JFQF766SZ)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a4b44b4-e724-422f-994a-4d4ba9bfd733";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1226,12 +1231,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Soren Mortensen (5K9KB5PRFV)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = Metadata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7333798b-8dde-4ebc-99db-0b1a0e2cde0d";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
