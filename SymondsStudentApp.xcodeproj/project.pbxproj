@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
+		4517CBEA1FEC2D9300619A3D /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */; };
 		454818371FE55C8700041617 /* ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818361FE55C8700041617 /* ExampleProviding.swift */; };
 		454818391FE55CF200041617 /* TimetableItem+ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */; };
 		454E60571FE562F900178CF6 /* CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60561FE562F900178CF6 /* CounterexampleProviding.swift */; };
@@ -138,6 +139,7 @@
 /* Begin PBXFileReference section */
 		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-Keychain"; sourceTree = "<group>"; };
+		4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		454818361FE55C8700041617 /* ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProviding.swift; sourceTree = "<group>"; };
 		454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+ExampleProviding.swift"; sourceTree = "<group>"; };
 		454E60561FE562F900178CF6 /* CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterexampleProviding.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			children = (
 				4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */,
 				45A873861FE59603006E3DE6 /* DayTests.swift */,
+				4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */,
 			);
 			path = SymondsStudentAppTests;
 			sourceTree = "<group>";
@@ -826,6 +829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4517CBEA1FEC2D9300619A3D /* DataServiceTests.swift in Sources */,
 				45A873871FE59603006E3DE6 /* DayTests.swift in Sources */,
 				4568FF941FCC7EB400E08D4B /* TimetableItemTests.swift in Sources */,
 			);

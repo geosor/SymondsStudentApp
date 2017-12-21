@@ -145,22 +145,10 @@
                         <viewControllerLayoutGuide type="top" id="vAL-hE-6cn"/>
                         <viewControllerLayoutGuide type="bottom" id="QjY-HA-jp1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wu8-WN-3nd">
+                    <view key="view" contentMode="scaleToFill" id="Wu8-WN-3nd" customClass="UIWebView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yO-vY-NEH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2yO-vY-NEH" firstAttribute="height" secondItem="Wu8-WN-3nd" secondAttribute="height" id="1zm-MG-2NO"/>
-                            <constraint firstItem="2yO-vY-NEH" firstAttribute="width" secondItem="Wu8-WN-3nd" secondAttribute="width" id="Jtu-Q3-DzC"/>
-                            <constraint firstItem="2yO-vY-NEH" firstAttribute="centerY" secondItem="Wu8-WN-3nd" secondAttribute="centerY" id="TIm-m0-EgK"/>
-                            <constraint firstItem="2yO-vY-NEH" firstAttribute="centerX" secondItem="Wu8-WN-3nd" secondAttribute="centerX" id="qFm-Xb-mCU"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="QE3-H1-HKY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EWf-wH-8fX">
@@ -170,7 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="webView" destination="2yO-vY-NEH" id="oY5-dO-ybw"/>
+                        <outlet property="webView" destination="Wu8-WN-3nd" id="2P6-3u-6PG"/>
                         <segue destination="nOA-sB-YH0" kind="unwind" identifier="Splash" unwindAction="unwindFromLogin:" id="RrJ-PM-9bI"/>
                     </connections>
                 </viewController>
