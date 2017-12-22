@@ -28,7 +28,7 @@ class DayTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_today() {
+    func testToday() {
         XCTAssertEqual(Day.dayThisWeek(for: mockCalendar.today()), Optional(.wednesday))
     }
     

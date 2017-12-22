@@ -23,233 +23,17 @@ public class DataService {
     ///
     /// Initialises an instance of `DataService` in the `.loggedOut` state.
     private init() {
-        self.state = .loggedOut
-        self.loginInformation = LoginInformation()
+        self.loginService = LoginService()
     }
     
-    // MARK: - State
+    // MARK: - Services
     
-    /// The current state of the data service interface.
-    public internal(set) var state: LoginState
+    /// The login service, for performing authentication with the Symonds Data Service.
+    public private(set) var loginService: DataService.LoginService
     
-    /// Login information that the data service has gathered so far.
-    internal var loginInformation: LoginInformation
+    // MARK: -
     
-    /// Resets the data service login state, removing all authentication information from this session, effectively
-    /// logging out.
-    public func resetState() {
-        self.state = .loggedOut
-        self.loginInformation = LoginInformation()
-    }
-    
-    /// Represents each of the states the data service interface can be in, with respect to the login process.
-    public enum LoginState {
-        /// Not logged in. The data service interface does not hold any information about credentials.
-        case loggedOut
-        /// The process of retrieving an authorization code has completed.
-        case authorized
-        /// Logged in and able to retrieve information from the data service.
-        case loggedIn
-        
-        /// Returns the next state after the state `state`.
-        internal static func nextState(after state: LoginState) -> LoginState? {
-            switch state {
-            case .loggedOut: return .authorized
-            case .authorized: return .loggedIn
-            case .loggedIn: return nil
-            }
-        }
-    }
-    
-    /// Holds onto each of the pieces of information that are gathered as part of the login process.
-    internal struct LoginInformation {
-        
-        // MARK: Life Cycle
-        
-        /// Creates a new instance of `LoginInformation` with `nil` properties.
-        init() {
-            self._authorizationCode = .none
-            self._accessToken = .none
-        }
-        
-        // MARK: Information
-        
-        /// An authorization code.
-        var authorizationCode: String? {
-            get {
-                switch self._authorizationCode {
-                case .some(let value): return value as? String
-                case .none: return nil
-                }
-            }
-            set {
-                if let value = newValue {
-                    self._authorizationCode = .some(value)
-                } else {
-                    self._authorizationCode = .none
-                }
-            }
-        }
-        
-        /// Backing store for `authorizationCode`.
-        private var _authorizationCode: Data
-        
-        /// An access token for the Symonds Data Service.
-        ///
-        /// - SeeAlso: `AccessToken`
-        var accessToken: AccessToken? {
-            get {
-                switch self._accessToken {
-                case .some(let value): return value as? AccessToken
-                case .none: return nil
-                }
-            }
-            set {
-                if let value = newValue {
-                    self._accessToken = .some(value)
-                } else {
-                    self._accessToken = .none
-                }
-            }
-        }
-        
-        /// Backing store for `accessToken`.
-        private var _accessToken: Data
-        
-        // MARK: Requirements
-        
-        /// Returns whether the currently stored set of information in `self` meets the set of requirements for the
-        /// given state `state`.
-        ///
-        /// - Parameter state: The state whose requirements should be checked.
-        /// - Returns: Whether the stored information meets the requirements for `state`.
-        func satisfiesRequirements(for state: LoginState) -> Bool {
-            let requirements = LoginInformation.requirements(for: state)
-            return self.satisfies(requirements: requirements)
-        }
-        
-        /// A set of requirements for a particular state.
-        private typealias StateRequirements = Set<KeyPath<LoginInformation, Data>>
-        
-        /// A type-erased container that acts in the same way as `Optional`.
-        private enum Data { // swiftlint:disable:this nesting
-            case none
-            case some(Any)
-        }
-        
-        /// Returns whether the currently stored set of information in `self` meets the given set of
-        /// `StateRequirements`.
-        ///
-        /// - Parameter requirements: The requirements to check against.
-        /// - Returns: Whether the stored information meets the `requirements`.
-        private func satisfies(requirements: StateRequirements) -> Bool {
-            return requirements.reduce(true) { stillSatisfied, requirement in
-                guard stillSatisfied else { return false }
-                let value = self[keyPath: requirement]
-                
-                var thisSatisfied = true
-                if case .none = value {
-                    thisSatisfied = false
-                }
-                
-                return thisSatisfied && stillSatisfied
-            }
-        }
-        
-        /// Returns the requirements for a given `LoginState`.
-        ///
-        /// Requirements are returned as a `Set` of `PartialKeyPath`s referring to `self`. Each of the values at the key
-        /// paths must be non-`nil` for the requirements to be satisfied.
-        ///
-        /// - Parameter state: The state for which to return the requirements.
-        /// - Returns: The requirements for `state`.
-        private static func requirements(for state: LoginState) -> StateRequirements {
-            switch state {
-            case .loggedOut: return []
-            case .authorized: return [\LoginInformation._authorizationCode]
-            case .loggedIn: return requirements(for: .authorized).union([\LoginInformation._accessToken])
-            }
-        }
-        
-    }
-    
-    /// A token that provides access to the Symonds Data Service.
-    public struct AccessToken {
-        
-        // MARK: Properties
-        
-        /// The provided access token, usable for the amount of time specified by `expiresIn`.
-        public let accessToken: String
-        
-        /// The amount of time after which the access token will expire.
-        public let expiresIn: Int
-        
-        /// The type of token provided.
-        public let tokenType: String
-        
-        /// The scope of the provided token.
-        public let scope: String
-        
-        /// A refresh token that can be used to retrieve another access token.
-        public let refreshToken: String
-        
-        /// A string key used for persisting `refreshToken` in Keychain.
-        private static let refreshTokenKey = "refreshToken"
-        
-        // MARK: Initialisers
-        
-        /// Creates an instance of `AccessToken`.
-        ///
-        /// - Parameters:
-        ///   - accessToken: The access token.
-        ///   - expiresIn: The amount of time before expiration.
-        ///   - tokenType: The type of token.
-        ///   - scope: The scope of the token.
-        ///   - refreshToken: The refresh token.
-        internal init(accessToken: String,
-                      expiresIn: Int,
-                      tokenType: String,
-                      scope: String,
-                      refreshToken: String) {
-            self.accessToken = accessToken
-            self.expiresIn = expiresIn
-            self.tokenType = tokenType
-            self.scope = scope
-            self.refreshToken = refreshToken
-        }
-        
-        /// Saves `refreshToken` into Keychain.
-        public func saveRefreshTokenToKeychain() {
-            do {
-                let tokenItem = KeychainPasswordItem(
-                    service: KeychainConfiguration.serviceName,
-                    account: AccessToken.refreshTokenKey,
-                    accessGroup: KeychainConfiguration.accessGroup)
-                try tokenItem.savePassword(refreshToken)
-            } catch {
-                fatalError("Could not save token")
-            }
-        }
-        
-        /// Reads a refresh token value from Keychain.
-        ///
-        /// - Returns: The token if found, otherwise `nil`.
-        public static func readRefreshToken() -> String? {
-            do {
-                let tokenItem = KeychainPasswordItem(
-                    service: KeychainConfiguration.serviceName,
-                    account: AccessToken.refreshTokenKey,
-                    accessGroup: KeychainConfiguration.accessGroup)
-                let token = try tokenItem.readPassword()
-                return token
-            } catch {
-                NSLog("Could not read token")
-                return nil
-            }
-        }
-        
-    }
-    
+    /*
     /// The URL used for retrieving an access token.
     public var getAccessTokenURL: URL {
         let queryItems = [
@@ -310,9 +94,6 @@ public class DataService {
             secret: secret
         )
     }()
-    
-    /// The result of the most recent authentication.
-    private var authenticationResult: AccessToken?
     
     /// A shared session used for sending network requests.
     private let session = URLSession(configuration: .default)
@@ -535,5 +316,6 @@ public class DataService {
         
         return auth
     }
+     */
     
 }
