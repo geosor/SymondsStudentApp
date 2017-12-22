@@ -218,6 +218,9 @@
 		457C53191FECA0B600A472E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		457C531A1FECA0C200A472E6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		457C531B1FECA0C900A472E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		457C531D1FECA24600A472E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		457C531E1FECA24600A472E6 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		457C531F1FECA24D00A472E6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		458D37F31FE846C800797D97 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D37FF1FE846C900797D97 /* WatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D381B1FE8493400797D97 /* Info-WatchExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-WatchExtension.plist"; sourceTree = "<group>"; };
@@ -442,6 +445,21 @@
 			path = Timetable;
 			sourceTree = "<group>";
 		};
+		457C531C1FECA23600A472E6 /* Top Level Files */ = {
+			isa = PBXGroup;
+			children = (
+				457C53191FECA0B600A472E6 /* Gemfile */,
+				454458091FE9CB1B00FBDAEB /* Makefile */,
+				457C53121FEC9BEA00A472E6 /* Matchfile */,
+				457C531A1FECA0C200A472E6 /* LICENSE */,
+				457C531B1FECA0C900A472E6 /* README.md */,
+				457C531F1FECA24D00A472E6 /* .gitignore */,
+				457C531D1FECA24600A472E6 /* .swiftlint.yml */,
+				457C531E1FECA24600A472E6 /* .travis.yml */,
+			);
+			name = "Top Level Files";
+			sourceTree = "<group>";
+		};
 		458D381D1FE8494100797D97 /* WatchExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,11 +524,7 @@
 		45AFDD4D1E785C5C003D0618 = {
 			isa = PBXGroup;
 			children = (
-				457C53191FECA0B600A472E6 /* Gemfile */,
-				454458091FE9CB1B00FBDAEB /* Makefile */,
-				457C53121FEC9BEA00A472E6 /* Matchfile */,
-				457C531A1FECA0C200A472E6 /* LICENSE */,
-				457C531B1FECA0C900A472E6 /* README.md */,
+				457C531C1FECA23600A472E6 /* Top Level Files */,
 				4501993E1E79704400B768E6 /* Metadata */,
 				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
