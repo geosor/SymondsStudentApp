@@ -91,13 +91,6 @@
 			remoteGlobalIDString = 4517CC1B1FEC471E00619A3D;
 			remoteInfo = SSACore;
 		};
-		457C53081FEC980A00A472E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45AFDD551E785C5C003D0618;
-			remoteInfo = SymondsStudentApp;
-		};
 		458D38011FE846C900797D97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
@@ -632,7 +625,6 @@
 			);
 			dependencies = (
 				4517CC271FEC471E00619A3D /* PBXTargetDependency */,
-				457C53091FEC980A00A472E6 /* PBXTargetDependency */,
 			);
 			name = SSACoreTests;
 			productName = SSACoreTests;
@@ -789,7 +781,6 @@
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 5K9KB5PRFV;
 						ProvisioningStyle = Manual;
-						TestTargetID = 45AFDD551E785C5C003D0618;
 					};
 					455E93FE1FCA11E300D3D046 = {
 						CreatedOnToolsVersion = 9.1;
@@ -1084,11 +1075,6 @@
 			target = 4517CC1B1FEC471E00619A3D /* SSACore */;
 			targetProxy = 457C52F01FEC496100A472E6 /* PBXContainerItemProxy */;
 		};
-		457C53091FEC980A00A472E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45AFDD551E785C5C003D0618 /* SymondsStudentApp */;
-			targetProxy = 457C53081FEC980A00A472E6 /* PBXContainerItemProxy */;
-		};
 		458D38021FE846C900797D97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 458D37FE1FE846C900797D97 /* WatchExtension */;
@@ -1240,7 +1226,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
 			name = Debug;
 		};
@@ -1264,7 +1249,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
 			name = Release;
 		};
