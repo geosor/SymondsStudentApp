@@ -1,6 +1,6 @@
 //
 //  TimetableItem+ExampleProviding.swift
-//  SymondsStudentApp
+//  SSACore
 //
 //  Created by Søren Mortensen on 16/12/2017.
 //  Copyright © 2017 Søren Mortensen, George Taylor. All rights reserved.
@@ -11,11 +11,11 @@ import Foundation
 extension TimetableItem: ExampleProviding {
     
     /// :nodoc:
-    internal typealias T = Data
+    public typealias T = Data
     // swiftlint:disable:previous type_name
     
     /// :nodoc:
-    internal static var example: T {
+    public static var example: T {
         return self.exampleString.data(using: .utf8)!
     }
     

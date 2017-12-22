@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSACore
 
 /// Displays a login page to the user.
 internal class LoginViewController: UIViewController, UIWebViewDelegate {

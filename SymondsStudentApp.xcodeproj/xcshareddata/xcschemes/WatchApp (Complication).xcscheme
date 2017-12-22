@@ -43,6 +43,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4517CC231FEC471E00619A3D"
+               BuildableName = "SSACoreTests.xctest"
+               BlueprintName = "SSACoreTests"
+               ReferencedContainer = "container:SymondsStudentApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

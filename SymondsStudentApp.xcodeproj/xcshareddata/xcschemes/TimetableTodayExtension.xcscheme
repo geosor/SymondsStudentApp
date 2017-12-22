@@ -44,13 +44,23 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4517CC231FEC471E00619A3D"
+               BuildableName = "SSACoreTests.xctest"
+               BlueprintName = "SSACoreTests"
+               ReferencedContainer = "container:SymondsStudentApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "455E93FE1FCA11E300D3D046"
-            BuildableName = "TimetableTodayExtension.appex"
-            BlueprintName = "TimetableTodayExtension"
+            BlueprintIdentifier = "45AFDD551E785C5C003D0618"
+            BuildableName = "SymondsStudentApp.app"
+            BlueprintName = "SymondsStudentApp"
             ReferencedContainer = "container:SymondsStudentApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

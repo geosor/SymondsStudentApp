@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSACore
 
 /// Timetable table view cells display the details of a specific `TimetableItem` in the timetable table view.
 class TimetableTableViewCell: UITableViewCell {

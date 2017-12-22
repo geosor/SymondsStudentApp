@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSACore
 
 /// The delegate of the currently running `UIApplication` instance.
 @UIApplicationMain

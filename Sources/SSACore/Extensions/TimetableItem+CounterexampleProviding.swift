@@ -1,6 +1,6 @@
 //
 //  TimetableItem+CounterexampleProviding.swift
-//  SymondsStudentApp
+//  SSACore
 //
 //  Created by Søren Mortensen on 16/12/2017.
 //  Copyright © 2017 Søren Mortensen, George Taylor. All rights reserved.
@@ -11,11 +11,10 @@ import Foundation
 extension TimetableItem: CounterexampleProviding {
     
     /// :nodoc:
-    typealias U = Data
-    // swiftlint:disable:previous type_name
+    public typealias Counterexample = Data
     
     /// :nodoc:
-    static var counterexample: U {
+    public static var counterexample: Counterexample {
         return self.counterexampleString.data(using: .utf8)!
     }
     

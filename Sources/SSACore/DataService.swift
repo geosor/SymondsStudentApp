@@ -1,6 +1,6 @@
 //
 //  DataService.swift
-//  SymondsStudentApp
+//  SSACore
 //
 //  Created by Søren Mortensen on 16/03/2017.
 //  Copyright © 2017 Søren Mortensen, George Taylor. All rights reserved.

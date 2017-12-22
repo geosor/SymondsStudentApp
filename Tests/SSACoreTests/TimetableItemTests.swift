@@ -1,13 +1,13 @@
 //
 //  TimetableItemTests.swift
-//  SymondsStudentAppTests
+//  SSACoreTests
 //
 //  Created by Søren Mortensen on 27/11/2017.
 //  Copyright © 2017 Søren Mortensen, George Taylor. All rights reserved.
 //
 
 import XCTest
-import SymondsStudentApp
+import SSACore
 
 class TimetableItemTests: XCTestCase {
     

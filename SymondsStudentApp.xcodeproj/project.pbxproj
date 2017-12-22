@@ -8,21 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
-		4517CBEA1FEC2D9300619A3D /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */; };
-		454818371FE55C8700041617 /* ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818361FE55C8700041617 /* ExampleProviding.swift */; };
-		454818391FE55CF200041617 /* TimetableItem+ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */; };
-		454E60571FE562F900178CF6 /* CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60561FE562F900178CF6 /* CounterexampleProviding.swift */; };
-		454E60591FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */; };
+		4517CC251FEC471E00619A3D /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
 		454E605B1FE5654500178CF6 /* Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605A1FE5654500178CF6 /* Attributions.swift */; };
-		454E605D1FE58A5700178CF6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605C1FE58A5700178CF6 /* Day.swift */; };
 		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
 		455E93CE1FCA0C6200D3D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93C81FCA0C4200D3D046 /* Main.storyboard */; };
 		455E93CF1FCA0C6200D3D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */; };
-		455E93F11FCA111300D3D046 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93E91FCA111300D3D046 /* URLComponents.swift */; };
-		455E93F21FCA111300D3D046 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EA1FCA111300D3D046 /* URLRequest.swift */; };
-		455E93F31FCA111300D3D046 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EB1FCA111300D3D046 /* DataService.swift */; };
-		455E93F41FCA111300D3D046 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */; };
-		455E93F51FCA111300D3D046 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */; };
 		455E93F61FCA111300D3D046 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EE1FCA111300D3D046 /* SplashViewController.swift */; };
 		455E93F71FCA111300D3D046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EF1FCA111300D3D046 /* LoginViewController.swift */; };
 		455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93F01FCA111300D3D046 /* AppDelegate.swift */; };
@@ -36,8 +26,28 @@
 		455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E943D1FCA178100D3D046 /* TodayViewController.swift */; };
 		4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */; };
 		4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */; };
-		4568FF921FCC434F00E08D4B /* TimetableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF911FCC434F00E08D4B /* TimetableItem.swift */; };
-		4568FF941FCC7EB400E08D4B /* TimetableItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */; };
+		457C52EE1FEC496100A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
+		457C52EF1FEC496100A472E6 /* SSACore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		457C52F31FEC49FB00A472E6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EB1FCA111300D3D046 /* DataService.swift */; };
+		457C52F51FEC4A0100A472E6 /* TimetableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF911FCC434F00E08D4B /* TimetableItem.swift */; };
+		457C52F61FEC4A0700A472E6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605C1FE58A5700178CF6 /* Day.swift */; };
+		457C52F71FEC4A2200A472E6 /* ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818361FE55C8700041617 /* ExampleProviding.swift */; };
+		457C52F81FEC4A2200A472E6 /* CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60561FE562F900178CF6 /* CounterexampleProviding.swift */; };
+		457C52F91FEC4A2200A472E6 /* CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */; };
+		457C52FA1FEC4A3C00A472E6 /* TimetableItem+ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */; };
+		457C52FB1FEC4A3C00A472E6 /* TimetableItem+CounterexampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */; };
+		457C52FC1FEC4A3C00A472E6 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EA1FCA111300D3D046 /* URLRequest.swift */; };
+		457C52FD1FEC4A3C00A472E6 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93E91FCA111300D3D046 /* URLComponents.swift */; };
+		457C52FE1FEC4A3C00A472E6 /* Calendar+CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */; };
+		457C52FF1FEC4A8F00A472E6 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */; };
+		457C53001FEC4A8F00A472E6 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */; };
+		457C53041FEC4ACE00A472E6 /* TimetableItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */; };
+		457C53051FEC4ACE00A472E6 /* DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873861FE59603006E3DE6 /* DayTests.swift */; };
+		457C53061FEC4ACE00A472E6 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */; };
+		457C53071FEC4BF500A472E6 /* SymondsStudentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591030B1FEC48DF00389DC8 /* SymondsStudentAppTests.swift */; };
+		457C530A1FEC9B6F00A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
+		457C530B1FEC9B8B00A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
+		457C53171FEC9E5E00A472E6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457C53161FEC9E5E00A472E6 /* CloudKit.framework */; };
 		458D38001FE846C900797D97 /* WatchExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 458D37FF1FE846C900797D97 /* WatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		458D38121FE846C900797D97 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 458D37F31FE846C800797D97 /* WatchApp.app */; };
 		458D38241FE8494B00797D97 /* WatchApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458D38211FE8494100797D97 /* WatchApp.xcassets */; };
@@ -48,13 +58,18 @@
 		458D382F1FE8498100797D97 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D382B1FE8498000797D97 /* NotificationController.swift */; };
 		458D38301FE8498100797D97 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D382C1FE8498000797D97 /* ExtensionDelegate.swift */; };
 		458D38321FE8540F00797D97 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D38311FE8540F00797D97 /* MainInterfaceController.swift */; };
-		45A873871FE59603006E3DE6 /* DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873861FE59603006E3DE6 /* DayTests.swift */; };
-		45A873891FE596F7006E3DE6 /* CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */; };
-		45A8738B1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */; };
+		459103121FEC48EF00389DC8 /* SSACore.h in Headers */ = {isa = PBXBuildFile; fileRef = 459103101FEC48EF00389DC8 /* SSACore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45AFDD611E785C5C003D0618 /* SymondsStudentApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AFDD601E785C5C003D0618 /* SymondsStudentApp.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4517CC261FEC471E00619A3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4517CC1B1FEC471E00619A3D;
+			remoteInfo = SSACore;
+		};
 		455E94081FCA11E300D3D046 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
@@ -68,6 +83,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 455E941C1FCA16F200D3D046;
 			remoteInfo = FreeRoomsTodayExtension;
+		};
+		457C52F01FEC496100A472E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4517CC1B1FEC471E00619A3D;
+			remoteInfo = SSACore;
+		};
+		457C53081FEC980A00A472E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AFDD4E1E785C5C003D0618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45AFDD551E785C5C003D0618;
+			remoteInfo = SymondsStudentApp;
 		};
 		458D38011FE846C900797D97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -112,6 +141,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		457C52F21FEC496100A472E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				457C52EF1FEC496100A472E6 /* SSACore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458D38181FE846C900797D97 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,9 +177,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4501993F1E79705400B768E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-Keychain"; sourceTree = "<group>"; };
 		4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		4517CC1C1FEC471E00619A3D /* SSACore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSACore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4517CC241FEC471E00619A3D /* SSACoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSACoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		454458091FE9CB1B00FBDAEB /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		454818361FE55C8700041617 /* ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProviding.swift; sourceTree = "<group>"; };
 		454818381FE55CF200041617 /* TimetableItem+ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+ExampleProviding.swift"; sourceTree = "<group>"; };
@@ -171,6 +212,12 @@
 		4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
 		4568FF911FCC434F00E08D4B /* TimetableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItem.swift; sourceTree = "<group>"; };
 		4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItemTests.swift; sourceTree = "<group>"; };
+		457C53121FEC9BEA00A472E6 /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		457C53161FEC9E5E00A472E6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		457C53181FECA0A700A472E6 /* SymondsStudentApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymondsStudentApp.entitlements; sourceTree = "<group>"; };
+		457C53191FECA0B600A472E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		457C531A1FECA0C200A472E6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		457C531B1FECA0C900A472E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		458D37F31FE846C800797D97 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D37FF1FE846C900797D97 /* WatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D381B1FE8493400797D97 /* Info-WatchExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-WatchExtension.plist"; sourceTree = "<group>"; };
@@ -183,6 +230,8 @@
 		458D382B1FE8498000797D97 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		458D382C1FE8498000797D97 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		458D38311FE8540F00797D97 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
+		4591030B1FEC48DF00389DC8 /* SymondsStudentAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppTests.swift; sourceTree = "<group>"; };
+		459103101FEC48EF00389DC8 /* SSACore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSACore.h; sourceTree = "<group>"; };
 		45A873861FE59603006E3DE6 /* DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTests.swift; sourceTree = "<group>"; };
 		45A873881FE596F7006E3DE6 /* CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProtocol.swift; sourceTree = "<group>"; };
 		45A8738A1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+CalendarProtocol.swift"; sourceTree = "<group>"; };
@@ -196,10 +245,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4517CC181FEC471E00619A3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4517CC211FEC471E00619A3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4517CC251FEC471E00619A3D /* SSACore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		455E93FC1FCA11E300D3D046 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457C530A1FEC9B6F00A472E6 /* SSACore.framework in Frameworks */,
 				455E94001FCA11E300D3D046 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457C530B1FEC9B8B00A472E6 /* SSACore.framework in Frameworks */,
 				455E941E1FCA16F200D3D046 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +289,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457C52EE1FEC496100A472E6 /* SSACore.framework in Frameworks */,
+				457C53171FEC9E5E00A472E6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +321,7 @@
 				455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */,
 				458D381C1FE8493400797D97 /* Info-WatchApp.plist */,
 				458D381B1FE8493400797D97 /* Info-WatchExtension.plist */,
-				4501993F1E79705400B768E6 /* Gemfile */,
+				457C53181FECA0A700A472E6 /* SymondsStudentApp.entitlements */,
 				45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */,
 			);
 			path = Metadata;
@@ -284,6 +352,7 @@
 		455E93B41FCA06A600D3D046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				457C53161FEC9E5E00A472E6 /* CloudKit.framework */,
 				455E93B51FCA06A600D3D046 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -306,12 +375,6 @@
 				455E93EE1FCA111300D3D046 /* SplashViewController.swift */,
 				455E93EF1FCA111300D3D046 /* LoginViewController.swift */,
 				4568FF8E1FCC431700E08D4B /* Timetable */,
-				455E93EB1FCA111300D3D046 /* DataService.swift */,
-				454E605C1FE58A5700178CF6 /* Day.swift */,
-				4568FF911FCC434F00E08D4B /* TimetableItem.swift */,
-				455E93FA1FCA113400D3D046 /* Keychain */,
-				4548183A1FE55D5300041617 /* Protocols */,
-				455E93F91FCA112A00D3D046 /* Extensions */,
 				454E605A1FE5654500178CF6 /* Attributions.swift */,
 			);
 			path = SymondsStudentApp;
@@ -408,10 +471,46 @@
 			path = WatchExtension;
 			sourceTree = "<group>";
 		};
+		4591030A1FEC48DF00389DC8 /* SSACoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */,
+				45A873861FE59603006E3DE6 /* DayTests.swift */,
+				4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */,
+			);
+			path = SSACoreTests;
+			sourceTree = "<group>";
+		};
+		4591030D1FEC48EF00389DC8 /* SSACore */ = {
+			isa = PBXGroup;
+			children = (
+				455E93EB1FCA111300D3D046 /* DataService.swift */,
+				454E605C1FE58A5700178CF6 /* Day.swift */,
+				4568FF911FCC434F00E08D4B /* TimetableItem.swift */,
+				455E93FA1FCA113400D3D046 /* Keychain */,
+				4548183A1FE55D5300041617 /* Protocols */,
+				455E93F91FCA112A00D3D046 /* Extensions */,
+				4591030F1FEC48EF00389DC8 /* Headers */,
+			);
+			path = SSACore;
+			sourceTree = "<group>";
+		};
+		4591030F1FEC48EF00389DC8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				459103101FEC48EF00389DC8 /* SSACore.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		45AFDD4D1E785C5C003D0618 = {
 			isa = PBXGroup;
 			children = (
+				457C53191FECA0B600A472E6 /* Gemfile */,
 				454458091FE9CB1B00FBDAEB /* Makefile */,
+				457C53121FEC9BEA00A472E6 /* Matchfile */,
+				457C531A1FECA0C200A472E6 /* LICENSE */,
+				457C531B1FECA0C900A472E6 /* README.md */,
 				4501993E1E79704400B768E6 /* Metadata */,
 				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
@@ -431,6 +530,8 @@
 				455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */,
 				458D37F31FE846C800797D97 /* WatchApp.app */,
 				458D37FF1FE846C900797D97 /* WatchExtension.appex */,
+				4517CC1C1FEC471E00619A3D /* SSACore.framework */,
+				4517CC241FEC471E00619A3D /* SSACoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -439,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				455E93E81FCA111300D3D046 /* SymondsStudentApp */,
+				4591030D1FEC48EF00389DC8 /* SSACore */,
 				455E94111FCA121800D3D046 /* TimetableTodayExtension */,
 				455E943C1FCA178100D3D046 /* FreeRoomsTodayExtension */,
 				458D38281FE8498000797D97 /* WatchExtension */,
@@ -449,9 +551,7 @@
 		45AFDD6D1E785C5C003D0618 /* SymondsStudentAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */,
-				45A873861FE59603006E3DE6 /* DayTests.swift */,
-				4517CBE91FEC2D9300619A3D /* DataServiceTests.swift */,
+				4591030B1FEC48DF00389DC8 /* SymondsStudentAppTests.swift */,
 			);
 			path = SymondsStudentAppTests;
 			sourceTree = "<group>";
@@ -469,13 +569,62 @@
 			children = (
 				45AFDD6D1E785C5C003D0618 /* SymondsStudentAppTests */,
 				45AFDD781E785C5C003D0618 /* SymondsStudentAppUITests */,
+				4591030A1FEC48DF00389DC8 /* SSACoreTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4517CC191FEC471E00619A3D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459103121FEC48EF00389DC8 /* SSACore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		4517CC1B1FEC471E00619A3D /* SSACore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4517CC371FEC471E00619A3D /* Build configuration list for PBXNativeTarget "SSACore" */;
+			buildPhases = (
+				4517CC171FEC471E00619A3D /* Sources */,
+				4517CC181FEC471E00619A3D /* Frameworks */,
+				4517CC191FEC471E00619A3D /* Headers */,
+				4517CC1A1FEC471E00619A3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSACore;
+			productName = SSACore;
+			productReference = 4517CC1C1FEC471E00619A3D /* SSACore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4517CC231FEC471E00619A3D /* SSACoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4517CC391FEC471E00619A3D /* Build configuration list for PBXNativeTarget "SSACoreTests" */;
+			buildPhases = (
+				4517CC201FEC471E00619A3D /* Sources */,
+				4517CC211FEC471E00619A3D /* Frameworks */,
+				4517CC221FEC471E00619A3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4517CC271FEC471E00619A3D /* PBXTargetDependency */,
+				457C53091FEC980A00A472E6 /* PBXTargetDependency */,
+			);
+			name = SSACoreTests;
+			productName = SSACoreTests;
+			productReference = 4517CC241FEC471E00619A3D /* SSACoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 455E940B1FCA11E300D3D046 /* Build configuration list for PBXNativeTarget "TimetableTodayExtension" */;
@@ -555,6 +704,7 @@
 				45073E4D1E7A94F800D3AEA0 /* Decrypt and Copy Keys */,
 				455E93C41FCA06A600D3D046 /* Embed App Extensions */,
 				458D381A1FE846C900797D97 /* Embed Watch Content */,
+				457C52F21FEC496100A472E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -562,6 +712,7 @@
 				455E94091FCA11E300D3D046 /* PBXTargetDependency */,
 				455E94271FCA16F200D3D046 /* PBXTargetDependency */,
 				458D38111FE846C900797D97 /* PBXTargetDependency */,
+				457C52F11FEC496100A472E6 /* PBXTargetDependency */,
 			);
 			name = SymondsStudentApp;
 			productName = SymondsStudentApp;
@@ -614,44 +765,64 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Søren Mortensen, George Taylor";
 				TargetAttributes = {
+					4517CC1B1FEC471E00619A3D = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 5K9KB5PRFV;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Manual;
+					};
+					4517CC231FEC471E00619A3D = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 5K9KB5PRFV;
+						ProvisioningStyle = Manual;
+						TestTargetID = 45AFDD551E785C5C003D0618;
+					};
 					455E93FE1FCA11E300D3D046 = {
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = 5K9KB5PRFV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					455E941C1FCA16F200D3D046 = {
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = 5K9KB5PRFV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					458D37F21FE846C800797D97 = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 5K9KB5PRFV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					458D37FE1FE846C900797D97 = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 5K9KB5PRFV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					45AFDD551E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					45AFDD691E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 45AFDD551E785C5C003D0618;
 					};
 					45AFDD741E785C5C003D0618 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5K9KB5PRFV;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 45AFDD551E785C5C003D0618;
 					};
 				};
@@ -672,6 +843,8 @@
 				45AFDD551E785C5C003D0618 /* SymondsStudentApp */,
 				45AFDD691E785C5C003D0618 /* SymondsStudentAppTests */,
 				45AFDD741E785C5C003D0618 /* SymondsStudentAppUITests */,
+				4517CC1B1FEC471E00619A3D /* SSACore */,
+				4517CC231FEC471E00619A3D /* SSACoreTests */,
 				455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */,
 				455E941C1FCA16F200D3D046 /* FreeRoomsTodayExtension */,
 				458D37F21FE846C800797D97 /* WatchApp */,
@@ -681,6 +854,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4517CC1A1FEC471E00619A3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4517CC221FEC471E00619A3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		455E93FD1FCA11E300D3D046 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -774,6 +961,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4517CC171FEC471E00619A3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457C52F51FEC4A0100A472E6 /* TimetableItem.swift in Sources */,
+				457C52F91FEC4A2200A472E6 /* CalendarProtocol.swift in Sources */,
+				457C52F31FEC49FB00A472E6 /* DataService.swift in Sources */,
+				457C52FA1FEC4A3C00A472E6 /* TimetableItem+ExampleProviding.swift in Sources */,
+				457C52F61FEC4A0700A472E6 /* Day.swift in Sources */,
+				457C52FB1FEC4A3C00A472E6 /* TimetableItem+CounterexampleProviding.swift in Sources */,
+				457C52FF1FEC4A8F00A472E6 /* KeychainConfiguration.swift in Sources */,
+				457C52FC1FEC4A3C00A472E6 /* URLRequest.swift in Sources */,
+				457C52FD1FEC4A3C00A472E6 /* URLComponents.swift in Sources */,
+				457C52F71FEC4A2200A472E6 /* ExampleProviding.swift in Sources */,
+				457C52FE1FEC4A3C00A472E6 /* Calendar+CalendarProtocol.swift in Sources */,
+				457C52F81FEC4A2200A472E6 /* CounterexampleProviding.swift in Sources */,
+				457C53001FEC4A8F00A472E6 /* KeychainPasswordItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4517CC201FEC471E00619A3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457C53051FEC4ACE00A472E6 /* DayTests.swift in Sources */,
+				457C53041FEC4ACE00A472E6 /* TimetableItemTests.swift in Sources */,
+				457C53061FEC4ACE00A472E6 /* DataServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		455E93FB1FCA11E300D3D046 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -807,23 +1024,10 @@
 			files = (
 				455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */,
 				455E93F71FCA111300D3D046 /* LoginViewController.swift in Sources */,
-				455E93F51FCA111300D3D046 /* KeychainPasswordItem.swift in Sources */,
-				454818371FE55C8700041617 /* ExampleProviding.swift in Sources */,
-				455E93F31FCA111300D3D046 /* DataService.swift in Sources */,
 				454E605B1FE5654500178CF6 /* Attributions.swift in Sources */,
-				455E93F11FCA111300D3D046 /* URLComponents.swift in Sources */,
 				4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */,
-				454E60591FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift in Sources */,
 				455E93F61FCA111300D3D046 /* SplashViewController.swift in Sources */,
-				454818391FE55CF200041617 /* TimetableItem+ExampleProviding.swift in Sources */,
-				454E605D1FE58A5700178CF6 /* Day.swift in Sources */,
-				45A8738B1FE59703006E3DE6 /* Calendar+CalendarProtocol.swift in Sources */,
-				455E93F41FCA111300D3D046 /* KeychainConfiguration.swift in Sources */,
-				45A873891FE596F7006E3DE6 /* CalendarProtocol.swift in Sources */,
-				454E60571FE562F900178CF6 /* CounterexampleProviding.swift in Sources */,
 				4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */,
-				455E93F21FCA111300D3D046 /* URLRequest.swift in Sources */,
-				4568FF921FCC434F00E08D4B /* TimetableItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,9 +1035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4517CBEA1FEC2D9300619A3D /* DataServiceTests.swift in Sources */,
-				45A873871FE59603006E3DE6 /* DayTests.swift in Sources */,
-				4568FF941FCC7EB400E08D4B /* TimetableItemTests.swift in Sources */,
+				457C53071FEC4BF500A472E6 /* SymondsStudentAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +1050,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4517CC271FEC471E00619A3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4517CC1B1FEC471E00619A3D /* SSACore */;
+			targetProxy = 4517CC261FEC471E00619A3D /* PBXContainerItemProxy */;
+		};
 		455E94091FCA11E300D3D046 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 455E93FE1FCA11E300D3D046 /* TimetableTodayExtension */;
@@ -857,6 +1064,16 @@
 			isa = PBXTargetDependency;
 			target = 455E941C1FCA16F200D3D046 /* FreeRoomsTodayExtension */;
 			targetProxy = 455E94261FCA16F200D3D046 /* PBXContainerItemProxy */;
+		};
+		457C52F11FEC496100A472E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4517CC1B1FEC471E00619A3D /* SSACore */;
+			targetProxy = 457C52F01FEC496100A472E6 /* PBXContainerItemProxy */;
+		};
+		457C53091FEC980A00A472E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45AFDD551E785C5C003D0618 /* SymondsStudentApp */;
+			targetProxy = 457C53081FEC980A00A472E6 /* PBXContainerItemProxy */;
 		};
 		458D38021FE846C900797D97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -924,6 +1141,119 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4517CC331FEC471E00619A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Soren Mortensen (3JFQF766SZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-SSACore.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SSACore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4517CC341FEC471E00619A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Soren Mortensen (5K9KB5PRFV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-SSACore.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SSACore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4517CC351FEC471E00619A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-SSACoreTests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SSACoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
+			};
+			name = Debug;
+		};
+		4517CC361FEC471E00619A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5K9KB5PRFV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Metadata/Info-SSACoreTests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SSACoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
+			};
+			name = Release;
+		};
 		455E940C1FCA11E300D3D046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -931,14 +1261,15 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-TimetableTodayExtension.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b77baaf9-02d5-40cf-a14f-95487bb26a64";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -952,14 +1283,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-TimetableTodayExtension.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0b35d2d5-cd89-49c2-85f8-d6dc3eb51307";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp.TimetableTodayExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -973,14 +1306,15 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-FreeRoomsTodayExtension.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f96aba3-8513-4dc3-8be5-3ae493fed7b6";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -994,14 +1328,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-FreeRoomsTodayExtension.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7c427547-b8a7-4983-a1df-8fd9af366c10";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp.FreeRoomsTodayExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1017,18 +1353,20 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "Metadata/Info-WatchApp.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "001e45a1-8c98-4cb1-80eb-20d321699957";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp.watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1041,18 +1379,21 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "Metadata/Info-WatchApp.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58ca866d-7f85-4684-bb8a-b930c4d89a0c";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp.watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1063,18 +1404,22 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Soren Mortensen (3JFQF766SZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-WatchExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "9a4ede51-b1c9-4a5a-8f8a-01c60065a694";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp.watchkitapp.watchkitextension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1085,18 +1430,22 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Soren Mortensen (5K9KB5PRFV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Metadata/Info-WatchExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "14240f24-99ec-4c73-981c-d8c1207cbaa6";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp.watchkitapp.watchkitextension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1212,6 +1561,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Metadata/SymondsStudentApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Soren Mortensen (3JFQF766SZ)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
@@ -1220,7 +1570,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a4b44b4-e724-422f-994a-4d4ba9bfd733";
+				PROVISIONING_PROFILE = "5dc00339-eb28-4e53-9ba2-0e8882f6083f";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentApp";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1231,6 +1581,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Metadata/SymondsStudentApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Soren Mortensen (5K9KB5PRFV)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
@@ -1250,11 +1601,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = "Metadata/Info-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
@@ -1267,11 +1621,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = "Metadata/Info-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SymondsStudentApp.app/SymondsStudentApp";
 			};
@@ -1282,11 +1639,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = "Metadata/Info-UITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "338523e3-aaf4-42ef-8b94-7c5d95efa62f";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentAppUITests";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = SymondsStudentApp;
@@ -1298,11 +1659,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5K9KB5PRFV;
 				INFOPLIST_FILE = "Metadata/Info-UITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "338523e3-aaf4-42ef-8b94-7c5d95efa62f";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.sorenmortensen.SymondsStudentAppUITests";
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = SymondsStudentApp;
 			};
@@ -1311,6 +1676,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4517CC371FEC471E00619A3D /* Build configuration list for PBXNativeTarget "SSACore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4517CC331FEC471E00619A3D /* Debug */,
+				4517CC341FEC471E00619A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4517CC391FEC471E00619A3D /* Build configuration list for PBXNativeTarget "SSACoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4517CC351FEC471E00619A3D /* Debug */,
+				4517CC361FEC471E00619A3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		455E940B1FCA11E300D3D046 /* Build configuration list for PBXNativeTarget "TimetableTodayExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

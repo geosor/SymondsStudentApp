@@ -1,13 +1,13 @@
 //
 //  DataServiceTests.swift
-//  SymondsStudentAppTests
+//  SSACoreTests
 //
 //  Created by Søren Mortensen on 21/12/2017.
 //  Copyright © 2017 Søren Mortensen, George Taylor. All rights reserved.
 //
 
 import XCTest
-@testable import SymondsStudentApp
+@testable import SSACore
 
 class DataServiceTests: XCTestCase {
     

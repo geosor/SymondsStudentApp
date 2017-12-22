@@ -1,6 +1,6 @@
 //
 //  Copyright (C) 2016 Apple Inc. All Rights Reserved.
-//  See LICENSE-keychain file for this sample’s licensing information
+//  See LICENSE-Keychain file for this sample’s licensing information
 //
 //  Abstract:
 //  A simple struct that defines the service and access group to be used by the sample apps.

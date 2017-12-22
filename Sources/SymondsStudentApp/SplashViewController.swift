@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSACore
 
 /// Displays a title and a login button to the user.
 ///
