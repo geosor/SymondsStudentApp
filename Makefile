@@ -3,8 +3,8 @@ default: build
 AUTHOR="Søren Mortensen & George Taylor"
 GITHUB_URL="https://github.com/geosor/SymondsStudentApp"
 PROJECT_NAME="SymondsStudentApp"
-SCHEME=$(PROJECT_NAME)
-MODULE=$(PROJECT_NAME)
+SCHEME="SSACore"
+MODULE=$(SCHEME)
 DOCS_DIR="docs"
 DEV_TEAM_ID="3JFQF766SZ"
 
@@ -19,9 +19,9 @@ build:
 test:
 	if which xcpretty >/dev/null; \
 	  then \
-	  xcodebuild test -project "FAB.xcodeproj" -scheme "FAB" -sdk "macosx" -configuration Debug | xcpretty;\
+	  xcodebuild test -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug | xcpretty;\
 	else\
-	  xcodebuild test -project "FAB.xcodeproj" -scheme "FAB" -sdk "macosx" -configuration Debug;\
+	  xcodebuild test -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug;\
 	fi
 
 jazzy:
