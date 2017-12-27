@@ -31,6 +31,17 @@ public class DataService {
     /// The login service, for performing authentication with the Symonds Data Service.
     public private(set) var loginService: DataService.LoginService
     
+    // MARK: - Constants
+    
+    /// A shared session used for sending network requests.
+    let session = URLSession(configuration: .default)
+    
+    /// The redirect URL, passed to the Symonds Data Service in authentication requests.
+    ///
+    /// Apart from being required by the Data Service, this redirect URL enables a return to the host application after
+    /// authenticating externally.
+    let redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
+    
     // MARK: -
     
     /*
@@ -54,55 +65,6 @@ public class DataService {
         components.queryItems = queryItems
         return components.url!
     }
-    
-    /// The redirect URL, passed to the Symonds Data Service in authentication requests.
-    ///
-    /// Apart from being required by the Data Service, this redirect URL enables a return to the host application after
-    /// authenticating externally.
-    public let redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
-    
-    /// A pair of keys used for authentication with the Symonds Data Service.
-    ///
-    /// These keys are secret and are therefore loaded from a JSON file that is copied into the main bundle at build
-    /// time.
-    private let keys: (clientID: String, secret: String)? = {
-        guard let keysURL = Bundle.main.url(forResource: "keys", withExtension: "json") else {
-            NSLog("Data Service could not retrieve keys.json resource.")
-            return nil
-        }
-        
-        guard
-            let data = try? Data(contentsOf: keysURL),
-            let keys = try? JSONSerialization.jsonObject(with: data) as? [String: String]
-            else {
-                NSLog("Data from keys.json is invalid.")
-                return nil
-        }
-        
-        guard let clientID: String = keys?["client_id"] else {
-            NSLog("Could not retrieve client ID from keys.json.")
-            return nil
-        }
-        
-        guard let secret: String = keys?["secret"] else {
-            NSLog("Could not retrieve secret from keys.json.")
-            return nil
-        }
-        
-        return (
-            clientID: clientID,
-            secret: secret
-        )
-    }()
-    
-    /// A shared session used for sending network requests.
-    private let session = URLSession(configuration: .default)
-    
-    /// The URL where authentication requests are sent.
-    private let authURL = URL(string: "https://data.psc.ac.uk/oauth/v2/auth")!
-    
-    /// The URL where token exchange requests are sent.
-    private let tokenURL = URL(string: "https://data.psc.ac.uk/oauth/v2/token")!
     
     // MARK: - Types
     
