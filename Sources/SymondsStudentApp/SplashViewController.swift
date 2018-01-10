@@ -38,23 +38,25 @@ internal class SplashViewController: UIViewController {
         // Start animating the activity indicator.
         self.activityIndicator.startAnimating()
         
+        self.initiateLogin()
+        
         // Try to authenticate from details saved in Keychain.
-        DataService.shared.authenticateFromSavedDetails { [unowned self] error in
-            // Check if authentication was successful.
-            if error != nil {
-                // Authentication was unsuccessful.
-                DispatchQueue.main.async { [unowned self] in
-                    // Show the view controller containing the web view for login.
-                    self.initiateLogin()
-                }
-            } else {
-                // Authentication was successful!
-                DispatchQueue.main.async { [unowned self] in
-                    // Show the timetable view controller.
-                    self.segueToMainView()
-                }
-            }
-        }
+//        DataService.shared.authenticateFromSavedDetails { [unowned self] error in
+//            // Check if authentication was successful.
+//            if error != nil {
+//                // Authentication was unsuccessful.
+//                DispatchQueue.main.async { [unowned self] in
+//                    // Show the view controller containing the web view for login.
+//                    self.initiateLogin()
+//                }
+//            } else {
+//                // Authentication was successful!
+//                DispatchQueue.main.async { [unowned self] in
+//                    // Show the timetable view controller.
+//                    self.segueToMainView()
+//                }
+//            }
+//        }
     }
     
     /// Completion callback for when an authorisation code is recieved from the Data Service.
@@ -76,14 +78,15 @@ internal class SplashViewController: UIViewController {
     /// - Parameters:
     ///   - result: The result of the exchange.
     ///   - error: The error, if one occurred.
-    internal func codeExchangeCompletion(_ result: DataService.AccessToken?,
-                                         _ error: DataService.Error?) {
-        guard error == nil else {
-            self.loginFailedLabel.isHidden = false
-            return
+    internal func accessTokenCompletion(_ result: LoginService.Result<LoginService.AccessToken>) {
+        switch result {
+        case .success: self.segueToMainView()
+        case .error(let error):
+            print(error)
+            DispatchQueue.main.async {
+                self.loginFailedLabel.isHidden = false
+            }
         }
-        
-        self.segueToMainView()
     }
     
     /// Segues to an instance of `LoginViewController` to initiate the login process.

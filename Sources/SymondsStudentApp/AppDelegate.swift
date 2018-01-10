@@ -23,6 +23,14 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
     /// to which completion callbacks will be sent.
     internal weak var loginViewController: LoginViewController?
     
+    internal let keys: Keys = {
+        // swiftlint:disable force_try
+        let url = Bundle.main.url(forResource: "keys", withExtension: "json")!
+        let fileData = try! Data(contentsOf: url)
+        return try! JSONDecoder().decode(Keys.self, from: fileData)
+        // swiftlint:enable force_try
+    }()
+    
     // MARK: - UIApplicationDelegate
     
     /// :nodoc:
@@ -69,10 +77,10 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        DataService.shared.exchangeCodeForToken(
-            code,
-            grantType: .authorisationCode,
-            completion: splash.codeExchangeCompletion)
+        LoginService(keys: self.keys, redirectURL: URL(string: "app://com.sorenmortensen.SymondsStudentApp")!)
+            .retrieveAccessToken(code,
+                                 grantType: .authorisationCode,
+                                 completion: splash.accessTokenCompletion(_:))
         
         return true
     }

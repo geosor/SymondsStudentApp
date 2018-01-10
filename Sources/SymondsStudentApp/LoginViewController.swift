@@ -63,7 +63,11 @@ internal class LoginViewController: UIViewController, UIWebViewDelegate {
         self.activityIndicator = activityIndicator
         
         webView.delegate = self
-        webView.loadRequest(URLRequest(url: DataService.shared.getAccessTokenURL))
+        // swiftlint:disable:next force_cast
+        let keys = (UIApplication.shared.delegate! as! AppDelegate).keys
+        let redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
+        let url = LoginService(keys: keys, redirectURL: redirectURL).getAccessTokenURL
+        webView.loadRequest(URLRequest(url: url))
     }
     
     // MARK: - UIWebViewDelegate

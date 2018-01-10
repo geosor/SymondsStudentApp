@@ -24,11 +24,17 @@
 		455E94281FCA16F200D3D046 /* FreeRoomsTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455E941D1FCA16F200D3D046 /* FreeRoomsTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		455E943B1FCA176800D3D046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E94391FCA176800D3D046 /* MainInterface.storyboard */; };
 		455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E943D1FCA178100D3D046 /* TodayViewController.swift */; };
+		45685C922006693200489E17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C912006693200489E17 /* User.swift */; };
+		45685C962006699800489E17 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C952006699800489E17 /* UserDetails.swift */; };
+		45685C982006709900489E17 /* UserAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C972006709800489E17 /* UserAuthenticator.swift */; };
+		45685C9A2006717D00489E17 /* PrimaryUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C992006717D00489E17 /* PrimaryUser.swift */; };
+		45685C9D2006798100489E17 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C9C2006798100489E17 /* DataService.swift */; };
+		45685C9F200679B200489E17 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C9E200679B200489E17 /* LoginService.swift */; };
+		45685CA120067C8500489E17 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685CA020067C8500489E17 /* Keys.swift */; };
 		4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */; };
 		4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */; };
 		457C52EE1FEC496100A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
 		457C52EF1FEC496100A472E6 /* SSACore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		457C52F31FEC49FB00A472E6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E93EB1FCA111300D3D046 /* DataService.swift */; };
 		457C52F51FEC4A0100A472E6 /* TimetableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF911FCC434F00E08D4B /* TimetableItem.swift */; };
 		457C52F61FEC4A0700A472E6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605C1FE58A5700178CF6 /* Day.swift */; };
 		457C52F71FEC4A2200A472E6 /* ExampleProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454818361FE55C8700041617 /* ExampleProviding.swift */; };
@@ -48,7 +54,6 @@
 		457C530A1FEC9B6F00A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
 		457C530B1FEC9B8B00A472E6 /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
 		457C53171FEC9E5E00A472E6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457C53161FEC9E5E00A472E6 /* CloudKit.framework */; };
-		457C532A1FECA83300A472E6 /* DataService+LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C53291FECA83300A472E6 /* DataService+LoginService.swift */; };
 		458D38001FE846C900797D97 /* WatchExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 458D37FF1FE846C900797D97 /* WatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		458D38121FE846C900797D97 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 458D37F31FE846C800797D97 /* WatchApp.app */; };
 		458D38241FE8494B00797D97 /* WatchApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458D38211FE8494100797D97 /* WatchApp.xcassets */; };
@@ -188,7 +193,6 @@
 		455E93CB1FCA0C4200D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455E93E91FCA111300D3D046 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
 		455E93EA1FCA111300D3D046 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
-		455E93EB1FCA111300D3D046 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		455E93EC1FCA111300D3D046 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		455E93ED1FCA111300D3D046 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		455E93EE1FCA111300D3D046 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,13 @@
 		455E943A1FCA176800D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		455E943D1FCA178100D3D046 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-FreeRoomsTodayExtension.plist"; sourceTree = "<group>"; };
+		45685C912006693200489E17 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45685C952006699800489E17 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		45685C972006709800489E17 /* UserAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthenticator.swift; sourceTree = "<group>"; };
+		45685C992006717D00489E17 /* PrimaryUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryUser.swift; sourceTree = "<group>"; };
+		45685C9C2006798100489E17 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		45685C9E200679B200489E17 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		45685CA020067C8500489E17 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
 		4568FF911FCC434F00E08D4B /* TimetableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItem.swift; sourceTree = "<group>"; };
@@ -215,7 +226,6 @@
 		457C531D1FECA24600A472E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		457C531E1FECA24600A472E6 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		457C531F1FECA24D00A472E6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		457C53291FECA83300A472E6 /* DataService+LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataService+LoginService.swift"; sourceTree = "<group>"; };
 		458D37F31FE846C800797D97 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D37FF1FE846C900797D97 /* WatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		458D381B1FE8493400797D97 /* Info-WatchExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-WatchExtension.plist"; sourceTree = "<group>"; };
@@ -431,6 +441,26 @@
 			path = FreeRoomsTodayExtension;
 			sourceTree = "<group>";
 		};
+		45685C902006692000489E17 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				45685C912006693200489E17 /* User.swift */,
+				45685C992006717D00489E17 /* PrimaryUser.swift */,
+				45685C972006709800489E17 /* UserAuthenticator.swift */,
+				45685C952006699800489E17 /* UserDetails.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		45685C9B200673DF00489E17 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				454E605C1FE58A5700178CF6 /* Day.swift */,
+				4568FF911FCC434F00E08D4B /* TimetableItem.swift */,
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
 		4568FF8E1FCC431700E08D4B /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,8 +488,9 @@
 		457C532B1FECA84B00A472E6 /* Data Service */ = {
 			isa = PBXGroup;
 			children = (
-				455E93EB1FCA111300D3D046 /* DataService.swift */,
-				457C53291FECA83300A472E6 /* DataService+LoginService.swift */,
+				45685C9C2006798100489E17 /* DataService.swift */,
+				45685C9E200679B200489E17 /* LoginService.swift */,
+				45685CA020067C8500489E17 /* Keys.swift */,
 			);
 			path = "Data Service";
 			sourceTree = "<group>";
@@ -507,8 +538,8 @@
 			isa = PBXGroup;
 			children = (
 				457C532B1FECA84B00A472E6 /* Data Service */,
-				454E605C1FE58A5700178CF6 /* Day.swift */,
-				4568FF911FCC434F00E08D4B /* TimetableItem.swift */,
+				45685C902006692000489E17 /* User */,
+				45685C9B200673DF00489E17 /* Timetable */,
 				455E93FA1FCA113400D3D046 /* Keychain */,
 				4548183A1FE55D5300041617 /* Protocols */,
 				455E93F91FCA112A00D3D046 /* Extensions */,
@@ -983,18 +1014,23 @@
 			files = (
 				457C52F51FEC4A0100A472E6 /* TimetableItem.swift in Sources */,
 				457C52F91FEC4A2200A472E6 /* CalendarProtocol.swift in Sources */,
-				457C52F31FEC49FB00A472E6 /* DataService.swift in Sources */,
 				457C52FA1FEC4A3C00A472E6 /* TimetableItem+ExampleProviding.swift in Sources */,
 				457C52F61FEC4A0700A472E6 /* Day.swift in Sources */,
 				457C52FB1FEC4A3C00A472E6 /* TimetableItem+CounterexampleProviding.swift in Sources */,
+				45685C982006709900489E17 /* UserAuthenticator.swift in Sources */,
+				45685CA120067C8500489E17 /* Keys.swift in Sources */,
 				457C52FF1FEC4A8F00A472E6 /* KeychainConfiguration.swift in Sources */,
 				457C52FC1FEC4A3C00A472E6 /* URLRequest.swift in Sources */,
+				45685C9A2006717D00489E17 /* PrimaryUser.swift in Sources */,
+				45685C922006693200489E17 /* User.swift in Sources */,
 				457C52FD1FEC4A3C00A472E6 /* URLComponents.swift in Sources */,
 				457C52F71FEC4A2200A472E6 /* ExampleProviding.swift in Sources */,
 				457C52FE1FEC4A3C00A472E6 /* Calendar+CalendarProtocol.swift in Sources */,
-				457C532A1FECA83300A472E6 /* DataService+LoginService.swift in Sources */,
+				45685C9F200679B200489E17 /* LoginService.swift in Sources */,
 				457C52F81FEC4A2200A472E6 /* CounterexampleProviding.swift in Sources */,
+				45685C962006699800489E17 /* UserDetails.swift in Sources */,
 				457C53001FEC4A8F00A472E6 /* KeychainPasswordItem.swift in Sources */,
+				45685C9D2006798100489E17 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

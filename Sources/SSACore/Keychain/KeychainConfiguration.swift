@@ -5,14 +5,16 @@
 //  Abstract:
 //  A simple struct that defines the service and access group to be used by the sample apps.
 //
+//  Modified on 10 January 2018 by Søren Mortensen.
+//
 
 import Foundation
 
 /// :nodoc:
-struct KeychainConfiguration {
+public struct KeychainConfiguration {
     
     /// :nodoc:
-    static let serviceName = "SymondsStudentApp"
+    let serviceName: String
     
     /// Specifying an access group to use with `KeychainPasswordItem` instances will create items shared accross both
     /// apps.
@@ -23,6 +25,16 @@ struct KeychainConfiguration {
     ///
     /// Not specifying an access group to use with `KeychainPasswordItem` instances will create items specific to each
     /// app.
-    static let accessGroup: String? = nil
+    let accessGroup: String?
+    
+    /// Creates an instance of `KeychainConfiguration` with a specified service name and access group.
+    ///
+    /// - Parameters:
+    ///   - serviceName: The service name.
+    ///   - accessGroup: The access group. The default value of this parameter is `nil`.
+    init(serviceName: String, accessGroup: String? = nil) {
+        self.serviceName = serviceName
+        self.accessGroup = accessGroup
+    }
     
 }

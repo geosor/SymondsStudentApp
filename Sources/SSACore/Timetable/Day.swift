@@ -8,8 +8,19 @@
 
 import Foundation
 
+/// A day of the week.
+///
+/// This enum is fully equipped for specialised use in tracking the days of the week on which particular
+/// `TimetableItem`s take place. This includes the raw values of the cases, which represent days of the week,
+/// `Day.today`, which returns the day of the week at the current moment, and the methods `dateThisWeek(from:)` and
+/// `dayThisWeek(for:)`, which are used for converting between `Day`s and `Date`s.
+///
+/// - SeeAlso: `TimetableItem`
 public enum Day: Int {
+    
     case monday = 0, tuesday, wednesday, thursday, friday, saturday, sunday
+    
+    // MARK: - Static Properties
     
     /// The day of the week for today.
     public static var today: Day {
@@ -24,6 +35,10 @@ public enum Day: Int {
     
     /// The days of the week in an array, going from Monday to Sunday.
     public static var week: [Day] = [.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
+    
+    internal static var calendar: CalendarProtocol = Calendar.current
+    
+    // MARK: - Static Functions
     
     /// Calculates this week's date for a particular day of the week, going backwards if necessary.
     ///
@@ -51,8 +66,6 @@ public enum Day: Int {
         
         return Day(rawValue: today.rawValue + differenceDays)
     }
-    
-    internal static var calendar: CalendarProtocol = Calendar.current
     
 }
 
