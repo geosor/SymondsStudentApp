@@ -11,10 +11,14 @@ import Foundation
 /// Assembles a user as various pieces of information, including authentication information and details, are gathered.
 public final class UserAuthenticator {
     
-    // MARK: Login Information
+    // MARK: - Properties
     
     /// The current point in the login process the user is at.
-    public private(set) var loginState: LoginState = .loggedOut
+    public private(set) var loginState: LoginState = .loggedOut {
+        didSet {
+            self.completions[self.loginState]?()
+        }
+    }
     
     /// This user's data service authorization code.
     public private(set) var authorizationCode: String?
@@ -23,7 +27,12 @@ public final class UserAuthenticator {
     public private(set) var accessToken: LoginService.AccessToken?
     
     /// This user's user details.
-    public private(set) var userDetails: UserDetails?
+    public private(set) var userDetails: UserService.UserDetails?
+    
+    /// Completion handlers to be run when various login states are reached.
+    private var completions: [LoginState: () -> Void] = [:]
+    
+    // MARK: User
     
     /// Gets the user, given that the login state is `.haveDetails`.
     ///
@@ -45,7 +54,7 @@ public final class UserAuthenticator {
     /// `self.userDetails`.
     private var user: User?
     
-    // MARK: Login Process
+    // MARK: - Methods
     
     /// Receive an authorization code for this user, and set the user's state to `.authorizationCode` if it was
     /// `.loggedOut`.
@@ -85,7 +94,7 @@ public final class UserAuthenticator {
     /// - Parameter userDetails: The user details.
     /// - Throws: An error of type `UserAuthenticator.Error` if `self.loginState` is not such that this authenticator is
     ///           able to accept user details.
-    public func receiveUserDetails<T>(_ userDetails: UserDetails,
+    public func receiveUserDetails<T>(_ userDetails: UserService.UserDetails,
                                       forUserOfType userType: T.Type) throws where T: AuthenticatedUser {
         guard case .loggedIn = self.loginState else {
             switch self.loginState {
@@ -110,6 +119,26 @@ public final class UserAuthenticator {
         self.loginState = .loggedOut
     }
     
+    /// Registers the given completion handler `completion` to run when the given state `state` is reached.
+    ///
+    /// - Parameters:
+    ///   - state: The state to register the completion for.
+    ///   - completion: The completion handler.
+    /// - Throws: Throws an error if `state` is already associated with a completion handler.
+    public func registerCompletion(for state: LoginState, completion: @escaping () -> Void) throws {
+        guard self.completions[state] == nil else {
+            throw Error.duplicateCompletion
+        }
+        
+        self.completions[state] = completion
+    }
+    
+    // MARK: - Initialisers
+    
+    public init() { }
+    
+    // MARK: - Types
+    
     /// Defined points in the login process.
     public enum LoginState {
         /// The user has not logged in.
@@ -127,7 +156,7 @@ public final class UserAuthenticator {
         case missingDetails(forState: LoginState)
         case wrongState(actual: LoginState, expected: LoginState)
         case noUser
+        case duplicateCompletion
     }
     
 }
-

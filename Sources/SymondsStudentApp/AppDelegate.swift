@@ -13,33 +13,33 @@ import SSACore
 @UIApplicationMain
 internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    // MARK: - Properties
-    
-    /// The current instance of `SplashViewController` that has registered itself with `AppDelegate`. This is the
-    /// instance to which completion callbacks will be sent.
-    internal weak var splashViewController: SplashViewController?
-    
-    /// The current instance of `LoginViewController` that has registered itself with `AppDelegate`. This the instance
-    /// to which completion callbacks will be sent.
-    internal weak var loginViewController: LoginViewController?
-    
-    internal let keys: Keys = {
-        // swiftlint:disable force_try
-        let url = Bundle.main.url(forResource: "keys", withExtension: "json")!
-        let fileData = try! Data(contentsOf: url)
-        return try! JSONDecoder().decode(Keys.self, from: fileData)
-        // swiftlint:enable force_try
-    }()
+    var userAuthenticator: UserAuthenticator?
     
     // MARK: - UIApplicationDelegate
     
     /// :nodoc:
     internal var window: UIWindow?
     
+    /// :nodoc:
     func applicationDidFinishLaunching(_ application: UIApplication) {
         // Dynamic shortcut items. The static ones are defined in Metadata/Info.plist under the
         // UIApplicationShortcutItems key.
         UIApplication.shared.shortcutItems = []
+        
+        // Set the redirect URL.
+        LoginService.redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
+        
+        // Set the keys.
+        do {
+            guard let url = Bundle.main.url(forResource: "keys", withExtension: "json") else {
+                throw NSError(domain: "com.sorenmortensen.SymondsStudentApp", code: 314159, userInfo: nil)
+            }
+            
+            let fileData = try Data(contentsOf: url)
+            Keys.shared = try JSONDecoder().decode(Keys.self, from: fileData)
+        } catch {
+            print("Error while settings keys: \(error)")
+        }
     }
     
     /// :nodoc:
@@ -70,21 +70,16 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        // Tell the login view controller that the code has been recieved.
-        self.splashViewController?.codeRecievedCompletion()
-        
-        guard let splash = self.splashViewController else {
-            return false
+        do {
+            try self.userAuthenticator?.receiveAuthorizationCode(code)
+        } catch {
+            print(error)
         }
-        
-        LoginService(keys: self.keys, redirectURL: URL(string: "app://com.sorenmortensen.SymondsStudentApp")!)
-            .retrieveAccessToken(code,
-                                 grantType: .authorisationCode,
-                                 completion: splash.accessTokenCompletion(_:))
         
         return true
     }
     
+    /// :nodoc:
     func application(_ application: UIApplication,
                      performActionFor shortcutItem: UIApplicationShortcutItem,
                      completionHandler: @escaping (Bool) -> Void) {

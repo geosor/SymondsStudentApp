@@ -28,6 +28,8 @@ public struct Keys: Decodable {
     /// The secret.
     public var secret: String
     
+    public static var shared: Keys?
+    
     // MARK: - Decodable
     
     private enum CodingKeys: String, CodingKey {

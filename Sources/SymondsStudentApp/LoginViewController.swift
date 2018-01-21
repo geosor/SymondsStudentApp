@@ -37,24 +37,11 @@ internal class LoginViewController: UIViewController, UIWebViewDelegate {
         self.performSegue(withIdentifier: "Splash", sender: nil)
     }
     
-    // MARK: - Initialisers
-    
-    /// :nodoc:
-    deinit {
-        // swiftlint:disable:next force_cast
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginViewController = nil
-    }
-    
     // MARK: - UIViewController
     
     /// :nodoc:
     override internal func viewDidLoad() {
         super.viewDidLoad()
-        
-        // swiftlint:disable:next force_cast
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginViewController = self
         
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         self.navigationItem.setRightBarButton(
@@ -63,10 +50,7 @@ internal class LoginViewController: UIViewController, UIWebViewDelegate {
         self.activityIndicator = activityIndicator
         
         webView.delegate = self
-        // swiftlint:disable:next force_cast
-        let keys = (UIApplication.shared.delegate! as! AppDelegate).keys
-        let redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
-        let url = LoginService(keys: keys, redirectURL: redirectURL).getAccessTokenURL
+        let url = LoginService(keys: Keys.shared!).getAccessTokenURL
         webView.loadRequest(URLRequest(url: url))
     }
     
@@ -83,3 +67,4 @@ internal class LoginViewController: UIViewController, UIWebViewDelegate {
     }
     
 }
+

@@ -29,78 +29,113 @@ internal class SplashViewController: UIViewController {
     
     /// Initiates the login process by performing a segue to a `LoginViewController`.
     ///
+    /// This method is called when the login button is tapped.
+    ///
     /// - Parameter sender: The sender of the IBAction.
     @IBAction internal func login(_ sender: UIButton) {
-        // This method is called when the login button is tapped.
+        self.indicateLoginFailed(false)
+        self.indicateProgress(true)
         
-        // Hide the login button.
-        self.loginButton.isHidden = true
-        // Start animating the activity indicator.
-        self.activityIndicator.startAnimating()
+        let userAuthenticator = UserAuthenticator()
         
-        self.initiateLogin()
+        // swiftlint:disable:next force_cast
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        appDelegate.userAuthenticator = userAuthenticator
         
-        // Try to authenticate from details saved in Keychain.
-//        DataService.shared.authenticateFromSavedDetails { [unowned self] error in
-//            // Check if authentication was successful.
-//            if error != nil {
-//                // Authentication was unsuccessful.
-//                DispatchQueue.main.async { [unowned self] in
-//                    // Show the view controller containing the web view for login.
-//                    self.initiateLogin()
-//                }
-//            } else {
-//                // Authentication was successful!
-//                DispatchQueue.main.async { [unowned self] in
-//                    // Show the timetable view controller.
-//                    self.segueToMainView()
-//                }
-//            }
-//        }
+        // swiftlint:disable:next force_try
+        try! userAuthenticator.registerCompletion(for: .authorizationCode, completion: self.codeRecievedCompletion)
+        
+        let url = LoginService(keys: Keys.shared!).getAccessTokenURL
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     /// Completion callback for when an authorisation code is recieved from the Data Service.
     internal func codeRecievedCompletion() {
-        // Get a reference to the animations queue.
-        let animationsQueue = DispatchQueue(label: "Animations")
-        // Send a block to the animations queue.
-        animationsQueue.sync { [unowned self] in
-            // Dismiss the LoginViewController.
-            self.dismiss(animated: true, completion: nil)
-            // Show the login button again.
-            self.activityIndicator.stopAnimating()
-            self.loginButton.isHidden = false
+        self.indicateProgress(false)
+        
+        guard let keys = Keys.shared else {
+            print("Could not retrieve keys when attempting to initate access token exchange.")
+            self.indicateLoginFailed(true)
+            return
         }
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let userAuthenticator = appDelegate.userAuthenticator else {
+            print("Could not retrieve user authenticator when attempting to initiate access token exchange.")
+            self.indicateLoginFailed(true)
+            return
+        }
+        
+        guard let authCode = userAuthenticator.authorizationCode else {
+            print("Could not retrieve authorization code when attempting to initiate access token exchange.")
+            self.indicateLoginFailed(true)
+            return
+        }
+        
+        self.indicateProgress(true)
+        LoginService(keys: keys).retrieveAccessToken(authCode,
+                                                     grantType: .authorisationCode,
+                                                     completion: self.accessTokenCompletion(_:))
     }
     
     /// Completion handler for when an authorisation code exchange has completed.
     ///
     /// - Parameters:
     ///   - result: The result of the exchange.
-    ///   - error: The error, if one occurred.
     internal func accessTokenCompletion(_ result: LoginService.Result<LoginService.AccessToken>) {
+        self.indicateProgress(false)
+        
         switch result {
-        case .success: self.segueToMainView()
+        case .success(let token):
+            DispatchQueue.main.async {
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+                    let userAuthenticator = appDelegate.userAuthenticator else {
+                    print("Could not retrieve user authenticator when attempting to register access token.")
+                    self.indicateLoginFailed(true)
+                    return
+                }
+                
+                do {
+                    try userAuthenticator.receiveAccessToken(token)
+                    UserService(accessToken: token).makeRequest(completion: self.userDetailsCompletion(_:))
+                } catch {
+                    print(error)
+                    self.indicateLoginFailed(true)
+                }
+            }
         case .error(let error):
             print(error)
-            DispatchQueue.main.async {
-                self.loginFailedLabel.isHidden = false
-            }
+            self.indicateLoginFailed(true)
         }
     }
     
-    /// Segues to an instance of `LoginViewController` to initiate the login process.
-    private func initiateLogin() {
-        // Get a reference to the animations queue.
-        let animationsQueue = DispatchQueue(label: "Animations")
-        // Send a block to the animations queue, so that it doesn't execute before any other animations.
-        animationsQueue.sync { [unowned self] in
-            // Send the block from the animations queue to the main queue, because this block performs UI updates and
-            // should not be called from a background thread.
-            DispatchQueue.main.async { [unowned self] in
-                // Segue to the login view.
-                self.performSegue(withIdentifier: "Login", sender: nil)
+    /// Completion handler for when a user details request has completed.
+    ///
+    /// - Parameter result: The result of the request.
+    internal func userDetailsCompletion(_ result: UserService.Result<UserService.UserDetails>) {
+        switch result {
+        case .success(let details):
+            DispatchQueue.main.async {
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+                    let userAuthenticator = appDelegate.userAuthenticator else {
+                        print("Could not retrieve user authenticator when attempting to register user details.")
+                        self.indicateLoginFailed(true)
+                        return
+                }
+                
+                do {
+                    try userAuthenticator.receiveUserDetails(details, forUserOfType: PrimaryUser.self)
+                    let user = try userAuthenticator.getUser() as! PrimaryUser // swiftlint:disable:this force_cast
+                    PrimaryUser.loggedIn = user
+                    self.segueToMainView()
+                } catch {
+                    print(error)
+                    self.indicateLoginFailed(true)
+                }
             }
+        case .error(let error):
+            print(error)
+            self.indicateLoginFailed(true)
         }
     }
     
@@ -119,12 +154,31 @@ internal class SplashViewController: UIViewController {
         }
     }
     
-    // MARK: - Initialisers
+    /// Indicates to the user that an operation is in progress.
+    ///
+    /// - Parameter indicate: Determines whether to show progress or stop showing progress.
+    private func indicateProgress(_ indicate: Bool) {
+        DispatchQueue.main.async {
+            // Hide/show the login button.
+            self.loginButton.isHidden = indicate
+            
+            if indicate {
+                // Start animating the activity indicator.
+                self.activityIndicator.startAnimating()
+            } else {
+                // Stop animating the activity indicator.
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
     
-    /// :nodoc:
-    deinit {
-        // Remove the app delegate's reference to this view controller.
-        (UIApplication.shared.delegate as? AppDelegate)?.splashViewController = nil
+    /// Indicates to the user that a login attempt failed.
+    ///
+    /// - Parameter indicate: Determines whether to show the failure message or hide it.
+    private func indicateLoginFailed(_ indicate: Bool) {
+        DispatchQueue.main.async {
+            self.loginFailedLabel.isHidden = !indicate
+        }
     }
     
     // MARK: - UIViewController
@@ -132,9 +186,6 @@ internal class SplashViewController: UIViewController {
     /// :nodoc:
     override internal func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Give the app delegate a reference to this view controller.
-        (UIApplication.shared.delegate as? AppDelegate)?.splashViewController = self
         
         // Round the corners of the login button a little bit.
         loginButton.layer.cornerRadius = 5

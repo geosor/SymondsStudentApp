@@ -13,6 +13,8 @@ public final class PrimaryUser: AuthenticatedUser {
     
     // MARK: - Properties
     
+    public static var loggedIn: PrimaryUser?
+    
     // MARK: - User
     
     public var id: Int
@@ -31,7 +33,7 @@ public final class PrimaryUser: AuthenticatedUser {
     
     public var email: String
     
-    public init(userDetails: UserDetails, authenticator: UserAuthenticator) {
+    public init(userDetails: UserService.UserDetails, authenticator: UserAuthenticator) {
         self.authenticator = authenticator
         
         (self.id,

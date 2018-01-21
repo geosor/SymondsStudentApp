@@ -9,7 +9,7 @@
 import Foundation
 
 /// Service that handles authentication/login with the Symonds data service.
-public final class LoginService: DataService {
+public final class LoginService {
     
     // MARK: - Properties
     
@@ -23,7 +23,7 @@ public final class LoginService: DataService {
     /// authenticating externally.
     ///
     /// The default value of this property is the URL `app://localhost`.
-    public var redirectURL = URL(string: "app://localhost")!
+    public static var redirectURL = URL(string: "app://localhost")!
     
     /// The URL used for retrieving an access token.
     public var getAccessTokenURL: URL {
@@ -36,7 +36,7 @@ public final class LoginService: DataService {
                 value: "code"),
             URLQueryItem(
                 name: "redirect_uri",
-                value: self.redirectURL.absoluteString)
+                value: LoginService.redirectURL.absoluteString)
         ]
         
         var components = URLComponents(
@@ -44,13 +44,6 @@ public final class LoginService: DataService {
             resolvingAgainstBaseURL: false)!
         components.queryItems = queryItems
         return components.url!
-    }
-    
-    // MARK: - Initialisers
-    
-    public convenience init(keys: Keys, redirectURL: URL) {
-        self.init(keys: keys)
-        self.redirectURL = redirectURL
     }
     
     // MARK: - Authentication
@@ -121,12 +114,18 @@ public final class LoginService: DataService {
             URLQueryItem(name: "client_id", value: self.keys.clientID),
             URLQueryItem(name: "client_secret", value: self.keys.secret),
             URLQueryItem(name: "grant_type", value: grantType.rawValue),
-            URLQueryItem(name: "redirect_uri", value: redirectURL.absoluteString),
+            URLQueryItem(name: "redirect_uri", value: LoginService.redirectURL.absoluteString),
             URLQueryItem(name: "code", value: code)
         ]
         
         let components = URLComponents(string: "", queryItems: queryItems)!
         return components.query!
+    }
+    
+    // MARK: - Initialisers
+    
+    public init(keys: Keys) {
+        self.keys = keys
     }
     
     // MARK: - Constants
@@ -252,12 +251,6 @@ public final class LoginService: DataService {
     public enum Result<T> {
         case success(T)
         case error(LoginService.Error)
-    }
-    
-    // MARK: - DataService
-    
-    public init(keys: Keys) {
-        self.keys = keys
     }
     
 }

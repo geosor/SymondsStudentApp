@@ -73,6 +73,6 @@ public protocol AuthenticatedUser: class, User {
     /// - Parameters:
     ///   - userDetails: Details of the user.
     ///   - authenticator: The authenticator that was used to log in and construct this user.
-    init(userDetails: UserDetails, authenticator: UserAuthenticator)
+    init(userDetails: UserService.UserDetails, authenticator: UserAuthenticator)
     
 }

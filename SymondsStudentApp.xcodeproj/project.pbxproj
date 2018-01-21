@@ -10,6 +10,7 @@
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
 		4517CC251FEC471E00619A3D /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
 		454E605B1FE5654500178CF6 /* Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605A1FE5654500178CF6 /* Attributions.swift */; };
+		455366F12010DB210097D0AB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455366F02010DB210097D0AB /* UserService.swift */; };
 		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
 		455E93CE1FCA0C6200D3D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93C81FCA0C4200D3D046 /* Main.storyboard */; };
 		455E93CF1FCA0C6200D3D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E93CA1FCA0C4200D3D046 /* LaunchScreen.storyboard */; };
@@ -25,10 +26,8 @@
 		455E943B1FCA176800D3D046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455E94391FCA176800D3D046 /* MainInterface.storyboard */; };
 		455E943E1FCA178100D3D046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E943D1FCA178100D3D046 /* TodayViewController.swift */; };
 		45685C922006693200489E17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C912006693200489E17 /* User.swift */; };
-		45685C962006699800489E17 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C952006699800489E17 /* UserDetails.swift */; };
 		45685C982006709900489E17 /* UserAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C972006709800489E17 /* UserAuthenticator.swift */; };
 		45685C9A2006717D00489E17 /* PrimaryUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C992006717D00489E17 /* PrimaryUser.swift */; };
-		45685C9D2006798100489E17 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C9C2006798100489E17 /* DataService.swift */; };
 		45685C9F200679B200489E17 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685C9E200679B200489E17 /* LoginService.swift */; };
 		45685CA120067C8500489E17 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45685CA020067C8500489E17 /* Keys.swift */; };
 		4568FF8C1FCC423C00E08D4B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */; };
@@ -187,6 +186,7 @@
 		454E60581FE5635800178CF6 /* TimetableItem+CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimetableItem+CounterexampleProviding.swift"; sourceTree = "<group>"; };
 		454E605A1FE5654500178CF6 /* Attributions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributions.swift; sourceTree = "<group>"; };
 		454E605C1FE58A5700178CF6 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		455366F02010DB210097D0AB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsStudentAppUITests.swift; sourceTree = "<group>"; };
 		455E93B51FCA06A600D3D046 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		455E93C91FCA0C4200D3D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,10 +207,8 @@
 		455E943D1FCA178100D3D046 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		455E943F1FCA178A00D3D046 /* Info-FreeRoomsTodayExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-FreeRoomsTodayExtension.plist"; sourceTree = "<group>"; };
 		45685C912006693200489E17 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		45685C952006699800489E17 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		45685C972006709800489E17 /* UserAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthenticator.swift; sourceTree = "<group>"; };
 		45685C992006717D00489E17 /* PrimaryUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryUser.swift; sourceTree = "<group>"; };
-		45685C9C2006798100489E17 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		45685C9E200679B200489E17 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		45685CA020067C8500489E17 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
@@ -447,7 +445,6 @@
 				45685C912006693200489E17 /* User.swift */,
 				45685C992006717D00489E17 /* PrimaryUser.swift */,
 				45685C972006709800489E17 /* UserAuthenticator.swift */,
-				45685C952006699800489E17 /* UserDetails.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -488,8 +485,8 @@
 		457C532B1FECA84B00A472E6 /* Data Service */ = {
 			isa = PBXGroup;
 			children = (
-				45685C9C2006798100489E17 /* DataService.swift */,
 				45685C9E200679B200489E17 /* LoginService.swift */,
+				455366F02010DB210097D0AB /* UserService.swift */,
 				45685CA020067C8500489E17 /* Keys.swift */,
 			);
 			path = "Data Service";
@@ -1025,12 +1022,11 @@
 				45685C922006693200489E17 /* User.swift in Sources */,
 				457C52FD1FEC4A3C00A472E6 /* URLComponents.swift in Sources */,
 				457C52F71FEC4A2200A472E6 /* ExampleProviding.swift in Sources */,
+				455366F12010DB210097D0AB /* UserService.swift in Sources */,
 				457C52FE1FEC4A3C00A472E6 /* Calendar+CalendarProtocol.swift in Sources */,
 				45685C9F200679B200489E17 /* LoginService.swift in Sources */,
 				457C52F81FEC4A2200A472E6 /* CounterexampleProviding.swift in Sources */,
-				45685C962006699800489E17 /* UserDetails.swift in Sources */,
 				457C53001FEC4A8F00A472E6 /* KeychainPasswordItem.swift in Sources */,
-				45685C9D2006798100489E17 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
