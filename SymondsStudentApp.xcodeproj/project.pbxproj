@@ -743,10 +743,11 @@
 			buildConfigurationList = 45AFDD7E1E785C5C003D0618 /* Build configuration list for PBXNativeTarget "SymondsStudentApp" */;
 			buildPhases = (
 				45AFDD521E785C5C003D0618 /* Sources */,
-				45AFDD531E785C5C003D0618 /* Frameworks */,
-				45AFDD541E785C5C003D0618 /* Resources */,
 				4501993D1E79595100B768E6 /* Lint */,
+				45AFDD531E785C5C003D0618 /* Frameworks */,
 				45073E4D1E7A94F800D3AEA0 /* Decrypt and Copy Keys */,
+				4595B4E22015124E00EF9276 /* Update Sketch Slices */,
+				45AFDD541E785C5C003D0618 /* Resources */,
 				455E93C41FCA06A600D3D046 /* Embed App Extensions */,
 				458D381A1FE846C900797D97 /* Embed Watch Content */,
 				457C52F21FEC496100A472E6 /* Embed Frameworks */,
@@ -1001,6 +1002,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "Scripts/decrypt-keys.sh";
+		};
+		4595B4E22015124E00EF9276 /* Update Sketch Slices */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Sketch Slices";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Updating Sketch slices\"\npython \"${PROJECT_DIR}/Scripts/slice.py\" \"${PROJECT_DIR}/Resources/SymondsStudentApp.sketch\" \"${PROJECT_DIR}/Resources/SymondsStudentApp/SymondsStudentApp.xcassets\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
