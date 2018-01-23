@@ -12,7 +12,7 @@ import Foundation
 ///
 /// The documentation of the type that implements this protocol should describe in what way the data is incorrect or
 /// corrupted.
-protocol CounterexampleProviding: ExampleProviding {
+internal protocol CounterexampleProviding: ExampleProviding {
     
     /// The type of the counterexample data that the implementing type provides.
     associatedtype Counterexample

@@ -13,7 +13,7 @@ class TimetableItemTests: XCTestCase {
     
     func testDecodingNotNil() {
         let decoder = JSONDecoder()
-        let decoded = try? decoder.decode([TimetableItem].self, from: allTestItems)
+        let decoded = try? decoder.decode([Timetable.Item].self, from: allTestItems)
         
         XCTAssertNotNil(decoded)
     }
@@ -62,7 +62,7 @@ class TimetableItemTests: XCTestCase {
     ]
     """.data(using: .utf8)!
     
-    private var sampleItemsExpected: [TimetableItem] = [
+    private var sampleItemsExpected: [Timetable.Item] = [
         
     ]
     

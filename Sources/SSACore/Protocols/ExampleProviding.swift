@@ -9,7 +9,7 @@
 import Foundation
 
 /// A type that is `ExampleProviding` is a type that provides example data.
-protocol ExampleProviding {
+internal protocol ExampleProviding {
     
     /// The type of the example data that the implementing type provides.
     associatedtype T

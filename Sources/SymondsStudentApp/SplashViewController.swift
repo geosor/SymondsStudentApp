@@ -45,19 +45,13 @@ internal class SplashViewController: UIViewController {
         // swiftlint:disable:next force_try
         try! userAuthenticator.registerCompletion(for: .authorizationCode, completion: self.codeRecievedCompletion)
         
-        let url = LoginService(keys: Keys.shared!).getAccessTokenURL
+        let url = LoginService(keys: Keys.shared).accessTokenURL
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     /// Completion callback for when an authorisation code is recieved from the Data Service.
     internal func codeRecievedCompletion() {
         self.indicateProgress(false)
-        
-        guard let keys = Keys.shared else {
-            print("Could not retrieve keys when attempting to initate access token exchange.")
-            self.indicateLoginFailed(true)
-            return
-        }
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let userAuthenticator = appDelegate.userAuthenticator else {
@@ -73,9 +67,9 @@ internal class SplashViewController: UIViewController {
         }
         
         self.indicateProgress(true)
-        LoginService(keys: keys).retrieveAccessToken(authCode,
-                                                     grantType: .authorisationCode,
-                                                     completion: self.accessTokenCompletion(_:))
+        LoginService(keys: Keys.shared).retrieveAccessToken(authCode,
+                                                            grantType: .authorisationCode,
+                                                            completion: self.accessTokenCompletion(_:))
     }
     
     /// Completion handler for when an authorisation code exchange has completed.
@@ -112,7 +106,7 @@ internal class SplashViewController: UIViewController {
     /// Completion handler for when a user details request has completed.
     ///
     /// - Parameter result: The result of the request.
-    internal func userDetailsCompletion(_ result: UserService.Result<UserService.UserDetails>) {
+    internal func userDetailsCompletion(_ result: DataService.Result<UserService.UserDetails>) {
         switch result {
         case .success(let details):
             DispatchQueue.main.async {

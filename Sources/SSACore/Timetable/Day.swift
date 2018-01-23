@@ -16,7 +16,7 @@ import Foundation
 /// `dayThisWeek(for:)`, which are used for converting between `Day`s and `Date`s.
 ///
 /// - SeeAlso: `TimetableItem`
-public enum Day: Int {
+public enum Day: Int, CustomStringConvertible {
     
     case monday = 0, tuesday, wednesday, thursday, friday, saturday, sunday
     
@@ -65,6 +65,21 @@ public enum Day: Int {
         }
         
         return Day(rawValue: today.rawValue + differenceDays)
+    }
+    
+    // MARK: - CustomStringConvertible
+    
+    /// :nodoc:
+    public var description: String {
+        switch self {
+        case .monday: return "Monday"
+        case .tuesday: return "Tuesday"
+        case .wednesday: return "Wednesday"
+        case .thursday: return "Thursday"
+        case .friday: return "Friday"
+        case .saturday: return "Saturday"
+        case .sunday: return "Sunday"
+        }
     }
     
 }

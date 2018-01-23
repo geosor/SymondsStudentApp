@@ -26,7 +26,7 @@ public final class LoginService {
     public static var redirectURL = URL(string: "app://localhost")!
     
     /// The URL used for retrieving an access token.
-    public var getAccessTokenURL: URL {
+    public var accessTokenURL: URL {
         let queryItems = [
             URLQueryItem(
                 name: "client_id",
@@ -81,7 +81,7 @@ public final class LoginService {
         let body = query.data(using: .utf8)!
         let request = URLRequest(url: LoginService.tokenURL, httpMethod: "POST", httpBody: body)
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 return completion(.error(.unexpectedError(error)))
             }
@@ -97,9 +97,7 @@ public final class LoginService {
             } catch {
                 return completion(.error(.invalidAccessToken))
             }
-        }
-        
-        task.resume()
+        }.resume()
     }
     
     /// Generates an HTTP POST string to exchange a code for an access token.
@@ -226,6 +224,13 @@ public final class LoginService {
         
     }
     
+    /// The result of an operation. The result is either a success, in which it contains an instance of type `T`, the
+    /// payload type, or an error, in which case it contains a `LoginService.Error` describing the error.
+    public enum Result<T> {
+        case success(T)
+        case error(LoginService.Error)
+    }
+    
     /// Errors thrown by `LoginService`.
     public enum Error: Swift.Error {
         
@@ -244,13 +249,6 @@ public final class LoginService {
         /// An unexpected error.
         case unexpectedError(Swift.Error?)
         
-    }
-    
-    /// The result of an operation. The result is either a success, in which it contains an instance of type `T`, the
-    /// payload type, or an error, in which case it contains a `LoginService.Error` describing the error.
-    public enum Result<T> {
-        case success(T)
-        case error(LoginService.Error)
     }
     
 }

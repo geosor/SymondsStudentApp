@@ -21,34 +21,9 @@ public final class UserService {
     /// Makes a request to the API to return user information.
     ///
     /// - Parameter completion: A completion handler to run to handle the result of the request.
-    public func makeRequest(completion: @escaping (Result<UserDetails>) -> Void) {
-        var request = URLRequest(url: UserService.apiURL)
-        request.addValue("Bearer \(self.accessToken.accessToken)",
-            forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(.error(.unexpected(error)))
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.error(.unexpected(nil)))
-                return
-            }
-            
-            guard httpResponse.statusCode == 200 else {
-                completion(.error(.httpStatus(httpResponse.statusCode)))
-                return
-            }
-            
-            do {
-                let userDetails = try JSONDecoder().decode(UserDetails.self, from: data)
-                completion(.success(userDetails))
-            } catch {
-                completion(.error(.invalidData(error)))
-            }
-        }.resume()
+    public func makeRequest(completion: @escaping (DataService.Result<UserDetails>) -> Void) {
+        DataService(accessToken: self.accessToken)
+            .call(.user, parameters: [:], completion: completion)
     }
     
     // MARK: - Initialisers
@@ -63,7 +38,7 @@ public final class UserService {
     // MARK: - Types
     
     /// Details about a user, as received from the data service.
-    public struct UserDetails: Codable {
+    public struct UserDetails: Decodable {
         
         /// The user's ID number.
         public let id: Int
@@ -83,7 +58,31 @@ public final class UserService {
         /// The user's full name.
         public let name: String
         
-        // MARK: Codable
+        // MARK: Decodable
+        
+        public init(from decoder: Decoder) throws {
+            let sampleContainer = try decoder.container(keyedBy: SampleCodingKeys.self)
+            
+            let id = try sampleContainer.decode(Int.self, forKey: .id)
+            guard id != 0 else {
+                self.id = 0
+                self.username = "testuser"
+                self.email = "testuser@example.com"
+                self.forename = "Test"
+                self.surname = "User"
+                self.name = "Test User"
+                return
+            }
+            
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            
+            self.id = try container.decode(Int.self, forKey: .id)
+            self.username = try container.decode(String.self, forKey: .username)
+            self.email = try container.decode(String.self, forKey: .email)
+            self.forename = try container.decode(String.self, forKey: .forename)
+            self.surname = try container.decode(String.self, forKey: .surname)
+            self.name = try container.decode(String.self, forKey: .name)
+        }
         
         private enum CodingKeys: String, CodingKey {
             case id = "Id"
@@ -94,23 +93,10 @@ public final class UserService {
             case name = "Name"
         }
         
-    }
-    
-    /// A result type, consisting either of a `.success`, containing some value, or an `.error`, containing an error.
-    public enum Result<T> {
-        case success(T)
-        case error(UserService.Error)
-    }
-    
-    /// Errors that might arise during `UserService` operations.
-    public enum Error: Swift.Error {
-        /// The data received from the user service is invalid.
-        case invalidData(Swift.Error)
-        /// An incorrect HTTP status code was received.
-        case httpStatus(Int)
-        /// An unexpected error occurred. If information was provided about the error, it is contained in the associated
-        /// value.
-        case unexpected(Swift.Error?)
+        private enum SampleCodingKeys: String, CodingKey {
+            case id = "Id"
+        }
+        
     }
     
     // MARK: - Constants

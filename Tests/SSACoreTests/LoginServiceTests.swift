@@ -72,7 +72,8 @@ class LoginServiceTests: XCTestCase {
 //                """)
 //        }
 //
-//        // Now check that it's not possible to advance to the `.loggedIn` state, because we're missing an access token.
+//        // Now check that it's not possible to advance to the `.loggedIn` state, because we're missing an access
+//        // token.
 //        do {
 //            try DataService.shared.loginService.advanceState()
 //            XCTFail("""

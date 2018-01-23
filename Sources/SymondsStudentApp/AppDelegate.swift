@@ -28,18 +28,6 @@ internal class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Set the redirect URL.
         LoginService.redirectURL = URL(string: "app://com.sorenmortensen.SymondsStudentApp")!
-        
-        // Set the keys.
-        do {
-            guard let url = Bundle.main.url(forResource: "keys", withExtension: "json") else {
-                throw NSError(domain: "com.sorenmortensen.SymondsStudentApp", code: 314159, userInfo: nil)
-            }
-            
-            let fileData = try Data(contentsOf: url)
-            Keys.shared = try JSONDecoder().decode(Keys.self, from: fileData)
-        } catch {
-            print("Error while settings keys: \(error)")
-        }
     }
     
     /// :nodoc:

@@ -30,7 +30,7 @@ class TimetableTableViewCell: UITableViewCell {
     /// Updates the contents of this cell to match the details in the given `TimetableItem`.
     ///
     /// - Parameter item: The timetable item to use as the basis for the update.
-    func updateContents(toMatch item: TimetableItem) {
+    func updateContents(toMatch item: Timetable.Item) {
         self.startTimeLabel.text = item.startTimeLabel
         self.endTimeLabel.text = item.endTimeLabel
         self.titleLabel.text = item.title

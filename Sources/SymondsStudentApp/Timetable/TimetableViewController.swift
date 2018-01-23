@@ -12,16 +12,40 @@ import SSACore
 class TimetableViewController: UITableViewController {
     
     /// The items being displayed in the view controller.
-    var items: [TimetableItem] {
-        do {
-            let decoder = JSONDecoder()
-            return try decoder.decode([TimetableItem].self, from: TimetableItem.example)
-        } catch DecodingError.dataCorrupted(let context) {
-            print("Unable to decode example timetable items due to corrupted data. Context: \(context)")
-            return []
-        } catch {
-            print("Unable to decode example timetable items. Error: \(error).")
-            return []
+    var timetable: Timetable?
+//    {
+//        do {
+//            let decoder = JSONDecoder()
+//            return try decoder.decode([TimetableItem].self, from: TimetableItem.example)
+//        } catch DecodingError.dataCorrupted(let context) {
+//            print("Unable to decode example timetable items due to corrupted data. Context: \(context)")
+//            return []
+//        } catch {
+//            print("Unable to decode example timetable items. Error: \(error).")
+//            return []
+//        }
+//    }
+    
+    @objc func updateTimetable() {
+        guard let accessToken = PrimaryUser.loggedIn?.authenticator.accessToken else {
+            self.tableView.refreshControl?.endRefreshing()
+            return
+        }
+        
+        StudentTimetableService(accessToken: accessToken).makeRequest { result in
+            switch result {
+            case .success(let timetable):
+                self.timetable = timetable
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .error(let error):
+                print(error)
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+            }
         }
     }
     
@@ -29,22 +53,19 @@ class TimetableViewController: UITableViewController {
     
     /// :nodoc:
     override func numberOfSections(in tableView: UITableView) -> Int {
-        let days: Set<Day> = self.items
-            .flatMap { $0.day }
-            .reduce(Set()) { acc, next in
-                if !acc.contains(next) {
-                    return acc.union([next])
-                } else {
-                    return acc
-                }
-            }
+        guard let timetable = self.timetable else {
+            return 0
+        }
         
-        return days.count
+        let count = Day.week.filter { timetable.itemsOccur(in: .normalItems, on: $0) }.count
+        return count
     }
     
     /// :nodoc:
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        guard let timetable = self.timetable else { return 0 }
+        
+        return timetable[.normalItems, section].count
     }
     
     /// :nodoc:
@@ -53,9 +74,18 @@ class TimetableViewController: UITableViewController {
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
         
-        cell.updateContents(toMatch: self.items[indexPath.row])
+        guard let timetable = self.timetable else {
+            return super.tableView(tableView, cellForRowAt: indexPath)
+        }
+        
+        cell.updateContents(toMatch: timetable[.normalItems, indexPath.section][indexPath.row])
         
         return cell
+    }
+    
+    /// :nodoc:
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.timetable?.normalItemDays[section].description
     }
     
     // MARK: - UIViewController
@@ -64,7 +94,14 @@ class TimetableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(updateTimetable), for: .valueChanged)
+        
+        self.tableView.refreshControl = refreshControl
+        self.tableView.refreshControl?.layoutIfNeeded()
+        
+        self.tableView.refreshControl?.beginRefreshing()
+        self.updateTimetable()
     }
     
     /// :nodoc:
