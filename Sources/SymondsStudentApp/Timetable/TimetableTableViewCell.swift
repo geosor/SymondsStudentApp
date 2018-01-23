@@ -41,11 +41,13 @@ class TimetableTableViewCell: UITableViewCell {
     
     /// :nodoc:
     override func setSelected(_ selected: Bool, animated: Bool) {
+        let oldColourBarColour = self.colourBar.backgroundColor
         super.setSelected(selected, animated: animated)
         
         // If the cell has been asked to select itself, now call again to deselect, or the cell gets stuck in a selected
         // state.
         if selected {
+            self.colourBar.backgroundColor = oldColourBarColour
             self.setSelected(false, animated: true)
         }
     }
