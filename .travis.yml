@@ -10,6 +10,8 @@ branches:
 notifications:
   email: false
   slack:
+    on_success: change
+    on_failure: always
     secure: N6WWUa0xzvNTUNJy/yoybAfy8tTo7wFshwrMt5z0/Uj0fWFvN4C+8SGMBOawLcv2v6j++koZLrrxKSovm79P+y4Ngkkfjm8ACtYlxqGwgQC35tc75WXwo1Y6v+eGw8Sn/UZ3ZSf1Bfzd2aOSF2bw7PVCKEJnLoK7+z9+YYRglEuyx0griQhb2j+rXZWz19BH4fBjHWcWmQITnlFUCEX3hOflmrOYWd4uMDOY+5fg805E8vti/kGWOKKo2iTR+KB6xDKKhuSppqlG2nDPrSo/TnhkVIV6Hu7ycaZRg3IuxLit44i0W5STiaUNSemwZ0xTwTrkFUzYuC0O6zONLD+aLsE8eyDACzRlQkMnW0SX/JAwLch3CNNHgu6KS39dLgbk25KGZ8oTsNW96wQOVx7qugwObNceJNi1WMTFFBA2vpGEHfJKFFfHhe3Kx5yipIRj5ukuznId7LkGsKqdha9KOz+W1tr0l2Sa26vUnIIqjY1w2SxHh3VMe1qA5Ae4ZlB1WZcsWBfF9tNCSr/XgqalmUuYOMsfP5ftto9KvY/+uGDhe2wsPIofUoHJ0gfR0Z4K8P+7tvzqKObVGswBzJhxHRKHv5cpJmbT8SjFiUs89rsVOFOukDs2mygFYqiT5aKYbdKYSgQxKo2NxbN1q0XEg5f3cW1z5iUDGHPbd9/P1V4=
 env:
   global:
