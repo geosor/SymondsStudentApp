@@ -77,6 +77,16 @@ class TimetableViewController: UITableViewController {
         return PrimaryUser.loggedIn?.timetable?.normalItemDays[section].description
     }
     
+    /// :nodoc:
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let timetable = PrimaryUser.loggedIn?.timetable else {
+            return
+        }
+        
+        let item = timetable[.normalItems, indexPath.section][indexPath.row]
+        self.performSegue(withIdentifier: "itemdetails", sender: item)
+    }
+    
     // MARK: - UIViewController
     
     /// :nodoc:
@@ -97,6 +107,24 @@ class TimetableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "itemdetails" {
+            return sender is Timetable.Item
+        }
+        
+        return true
+    }
+    
+    /// :nodoc:
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemdetails" {
+            guard let destination = segue.destination as? ItemViewController else { return }
+            guard let selectedItem = sender as? Timetable.Item else { return }
+            
+            destination.item = selectedItem
+        }
     }
     
 }

@@ -201,10 +201,26 @@ public extension Timetable {
             return Day.dayThisWeek(for: self.startTime)
         }
         
+        /// The time range of this lesson, in the format `HH:mm-HH:mm`.
+        public var timeRangeLabel: String {
+            return "\(self.startTimeLabel)—\(self.endTimeLabel)"
+        }
+        
         /// Used to format strings to display the time portion of `startTime` and `endTime`.
+        ///
+        /// The format string this formatter uses is `"HH:mm"`.
         private let timeFormatter: DateFormatter = {
             var formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
+            return formatter
+        }()
+        
+        /// Used to format strings to display the date portion of `startTime` and `endTime`.
+        ///
+        /// The format string this formatter uses is `"EEE, dd MMM yyyy"`.
+        private let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEE, dd MMM yyyy"
             return formatter
         }()
         
@@ -213,6 +229,11 @@ public extension Timetable {
         
         /// Which teachers are running the item.
         public var staff: String?
+        
+        /// The date on which the lesson occurs, in string form.
+        public var dateLabel: String {
+            return dateFormatter.string(from: self.startTime)
+        }
         
         // MARK: Internal Details
         
