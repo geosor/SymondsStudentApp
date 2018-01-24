@@ -36,14 +36,12 @@ class TimetableViewController: UITableViewController {
             switch result {
             case .success(let timetable):
                 self.timetable = timetable
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
             case .error(let error):
                 print(error)
             }
             
             DispatchQueue.main.async {
+                self.tableView.reloadData()
                 self.tableView.refreshControl?.endRefreshing()
             }
         }
