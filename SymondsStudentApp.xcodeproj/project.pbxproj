@@ -220,7 +220,6 @@
 		457C53121FEC9BEA00A472E6 /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		457C53161FEC9E5E00A472E6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		457C53181FECA0A700A472E6 /* SymondsStudentApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymondsStudentApp.entitlements; sourceTree = "<group>"; };
-		457C53191FECA0B600A472E6 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		457C531A1FECA0C200A472E6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		457C531B1FECA0C900A472E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		457C531D1FECA24600A472E6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -479,7 +478,6 @@
 		457C531C1FECA23600A472E6 /* Top Level Files */ = {
 			isa = PBXGroup;
 			children = (
-				457C53191FECA0B600A472E6 /* Gemfile */,
 				454458091FE9CB1B00FBDAEB /* Makefile */,
 				457C53121FEC9BEA00A472E6 /* Matchfile */,
 				457C531A1FECA0C200A472E6 /* LICENSE */,
