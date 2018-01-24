@@ -13,6 +13,7 @@
 		453EDD4E20151AD300FFC9E1 /* AttributionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD4D20151AD200FFC9E1 /* AttributionsTableViewController.swift */; };
 		453EDD5020153A7000FFC9E1 /* StudentTimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD4F20153A7000FFC9E1 /* StudentTimetableService.swift */; };
 		453EDD532015630700FFC9E1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD5120153BEC00FFC9E1 /* DataService.swift */; };
+		4540FA022018F0DE00B62C58 /* Keys+shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540FA012018F0DE00B62C58 /* Keys+shared.swift */; };
 		454E605B1FE5654500178CF6 /* Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E605A1FE5654500178CF6 /* Attributions.swift */; };
 		455366F12010DB210097D0AB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455366F02010DB210097D0AB /* UserService.swift */; };
 		455CD1791E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CD1781E7D5FE9004FE1A8 /* SymondsStudentAppUITests.swift */; };
@@ -184,6 +185,7 @@
 		453EDD4D20151AD200FFC9E1 /* AttributionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsTableViewController.swift; sourceTree = "<group>"; };
 		453EDD4F20153A7000FFC9E1 /* StudentTimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTimetableService.swift; sourceTree = "<group>"; };
 		453EDD5120153BEC00FFC9E1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4540FA012018F0DE00B62C58 /* Keys+shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keys+shared.swift"; sourceTree = "<group>"; };
 		454458091FE9CB1B00FBDAEB /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		454818361FE55C8700041617 /* ExampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProviding.swift; sourceTree = "<group>"; };
 		454E60561FE562F900178CF6 /* CounterexampleProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterexampleProviding.swift; sourceTree = "<group>"; };
@@ -344,6 +346,14 @@
 			path = Attributions;
 			sourceTree = "<group>";
 		};
+		4540FA002018F0CF00B62C58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4540FA012018F0DE00B62C58 /* Keys+shared.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4548183A1FE55D5300041617 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 				455E93EE1FCA111300D3D046 /* SplashViewController.swift */,
 				4568FF8E1FCC431700E08D4B /* Timetable */,
 				453EDD4A20151A1000FFC9E1 /* Attributions */,
+				4540FA002018F0CF00B62C58 /* Extensions */,
 			);
 			path = SymondsStudentApp;
 			sourceTree = "<group>";
@@ -1097,6 +1108,7 @@
 			files = (
 				455E93F81FCA111300D3D046 /* AppDelegate.swift in Sources */,
 				453EDD4C20151AC800FFC9E1 /* AttributionTableViewCell.swift in Sources */,
+				4540FA022018F0DE00B62C58 /* Keys+shared.swift in Sources */,
 				453EDD4E20151AD300FFC9E1 /* AttributionsTableViewController.swift in Sources */,
 				454E605B1FE5654500178CF6 /* Attributions.swift in Sources */,
 				4568FF901FCC433200E08D4B /* TimetableTableViewCell.swift in Sources */,

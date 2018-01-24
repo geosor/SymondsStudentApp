@@ -28,19 +28,6 @@ public struct Keys: Decodable {
     /// The secret.
     public var secret: String
     
-    public static var shared: Keys = {
-        do {
-            guard let url = Bundle.main.url(forResource: "keys", withExtension: "json") else {
-                throw NSError(domain: "com.sorenmortensen.SymondsStudentApp", code: 314159, userInfo: nil)
-            }
-            
-            let fileData = try Data(contentsOf: url)
-            return try JSONDecoder().decode(Keys.self, from: fileData)
-        } catch {
-            fatalError("Error while settings keys: \(error)")
-        }
-    }()
-    
     // MARK: - Decodable
     
     private enum CodingKeys: String, CodingKey {
