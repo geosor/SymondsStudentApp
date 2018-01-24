@@ -26,7 +26,7 @@ public struct Timetable: Codable {
     /// they are aware of it. Clashing items are rare, so this array is usually empty.
     public let clashingItems: [Item]
     
-    private var clashingItemDays: [Day]
+    public private(set) var clashingItemDays: [Day]
     
     /// The floating array is a list of timetable items (see below) that don't have a set start and end time.
     ///
@@ -35,12 +35,27 @@ public struct Timetable: Codable {
     /// of the timestamp will give you the week that it occurs in.
     public let floatingItems: [Item]
     
-    private var floatingItemDays: [Day]
+    public private(set) var floatingItemDays: [Day]
     
     // MARK: Methods
     
+    /// Returns a list of items from the specified list on the day with index `index`.
+    ///
+    /// This is essentially a convenience method for using `Timetable` instances with table views, which need to easily
+    /// index from lists using ordinal indices rather than weekdays.
+    ///
+    /// - Parameters:
+    ///   - list: The list to draw from.
+    ///   - index: The index of the day of the week on which the desired items occur.
     public subscript(list: ItemList, index: Int) -> [Item] {
-        return self.items(from: list, on: self.normalItemDays[index])
+        let daysList: [Day]
+        switch list {
+        case .normalItems: daysList = self.normalItemDays
+        case .clashingItems: daysList = self.clashingItemDays
+        case .floatingItems: daysList = self.floatingItemDays
+        }
+        
+        return self.items(from: list, on: daysList[index])
     }
     
     /// Returns the items from the specified list that occur on the specified day.
@@ -68,11 +83,21 @@ public struct Timetable: Codable {
         return list.contains(where: { $0.day == day })
     }
     
-    /// <#Description#>
+    /// Returns the number of days on which items occur.
+    public func numberOfDaysWithItems(in list: ItemList) -> Int {
+        return Day.week.filter { self.itemsOccur(in: list, on: $0) }.count
+    }
+    
+    /// Returns the number of items that occur in the specified list on the specified day.
+    public func numberOfItems(in list: ItemList, on day: Day) -> Int {
+        return self.items(from: list, on: day).count
+    }
+    
+    /// Builds a list of days on which items occur in the given list.
     ///
     /// - Note: Assumes `list` is sorted by start time.
-    /// - Parameter list: <#list description#>
-    /// - Returns: <#return value description#>
+    /// - Parameter list: A list of timetable items.
+    /// - Returns: The list of days on which items occur.
     private static func buildDayList(for list: [Item]) -> [Day] {
         return Day.week.filter { itemsOccur(in: list, on: $0) }
     }

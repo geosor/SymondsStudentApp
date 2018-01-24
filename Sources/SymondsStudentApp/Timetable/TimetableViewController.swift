@@ -9,23 +9,13 @@
 import UIKit
 import SSACore
 
+/// Displays the user's timetable.
 class TimetableViewController: UITableViewController {
     
     /// The items being displayed in the view controller.
     var timetable: Timetable?
-//    {
-//        do {
-//            let decoder = JSONDecoder()
-//            return try decoder.decode([TimetableItem].self, from: TimetableItem.example)
-//        } catch DecodingError.dataCorrupted(let context) {
-//            print("Unable to decode example timetable items due to corrupted data. Context: \(context)")
-//            return []
-//        } catch {
-//            print("Unable to decode example timetable items. Error: \(error).")
-//            return []
-//        }
-//    }
     
+    /// Updates the timetable by making a request to the student timetable service, and reloading the data in the table.
     @objc func updateTimetable() {
         guard let accessToken = PrimaryUser.loggedIn?.authenticator.accessToken else {
             self.tableView.refreshControl?.endRefreshing()
@@ -55,8 +45,7 @@ class TimetableViewController: UITableViewController {
             return 0
         }
         
-        let count = Day.week.filter { timetable.itemsOccur(in: .normalItems, on: $0) }.count
-        return count
+        return timetable.numberOfDaysWithItems(in: .normalItems)
     }
     
     /// :nodoc:
