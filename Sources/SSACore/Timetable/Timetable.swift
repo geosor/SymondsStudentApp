@@ -1668,6 +1668,8 @@ extension Timetable.Item: CounterexampleProviding {
     
 }
 
+// MARK: - FriendItem
+
 extension Timetable {
     
     /// An item that belongs to one of the primary user's friends, containing limited details to protect their privacy.
