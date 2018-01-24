@@ -60,30 +60,7 @@ public final class UserService {
         
         // MARK: Decodable
         
-        public init(from decoder: Decoder) throws {
-            let sampleContainer = try decoder.container(keyedBy: SampleCodingKeys.self)
-            
-            let id = try sampleContainer.decode(Int.self, forKey: .id)
-            guard id != 0 else {
-                self.id = 0
-                self.username = "testuser"
-                self.email = "testuser@example.com"
-                self.forename = "Test"
-                self.surname = "User"
-                self.name = "Test User"
-                return
-            }
-            
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            
-            self.id = try container.decode(Int.self, forKey: .id)
-            self.username = try container.decode(String.self, forKey: .username)
-            self.email = try container.decode(String.self, forKey: .email)
-            self.forename = try container.decode(String.self, forKey: .forename)
-            self.surname = try container.decode(String.self, forKey: .surname)
-            self.name = try container.decode(String.self, forKey: .name)
-        }
-        
+        /// Coding keys for `Decodable`.
         private enum CodingKeys: String, CodingKey {
             case id = "Id"
             case username = "Username"
@@ -91,10 +68,6 @@ public final class UserService {
             case forename = "Forename"
             case surname = "Surname"
             case name = "Name"
-        }
-        
-        private enum SampleCodingKeys: String, CodingKey {
-            case id = "Id"
         }
         
     }
