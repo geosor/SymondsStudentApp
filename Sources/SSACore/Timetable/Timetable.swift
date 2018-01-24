@@ -201,10 +201,26 @@ public extension Timetable {
             return Day.dayThisWeek(for: self.startTime)
         }
         
+        /// The time range of this lesson, in the format `HH:mm-HH:mm`.
+        public var timeRangeLabel: String {
+            return "\(self.startTimeLabel)—\(self.endTimeLabel)"
+        }
+        
         /// Used to format strings to display the time portion of `startTime` and `endTime`.
+        ///
+        /// The format string this formatter uses is `"HH:mm"`.
         private let timeFormatter: DateFormatter = {
             var formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
+            return formatter
+        }()
+        
+        /// Used to format strings to display the date portion of `startTime` and `endTime`.
+        ///
+        /// The format string this formatter uses is `"EEE, dd MMM yyyy"`.
+        private let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEE, dd MMM yyyy"
             return formatter
         }()
         
@@ -213,6 +229,11 @@ public extension Timetable {
         
         /// Which teachers are running the item.
         public var staff: String?
+        
+        /// The date on which the lesson occurs, in string form.
+        public var dateLabel: String {
+            return dateFormatter.string(from: self.startTime)
+        }
         
         // MARK: Internal Details
         
@@ -1665,5 +1686,37 @@ extension Timetable.Item: CounterexampleProviding {
           ],
         },
         """
+    
+}
+
+// MARK: - FriendItem
+
+extension Timetable {
+    
+    /// An item that belongs to one of the primary user's friends, containing limited details to protect their privacy.
+    public struct FriendItem {
+        
+        /// The ID of the item.
+        public let id: String
+        
+        /// The start time of the item.
+        public let start: Date
+        
+        /// The end time of the item.
+        public let end: Date
+        
+        /// Creates a new instance of `FriendItem`.
+        ///
+        /// - Parameters:
+        ///   - id: The item's ID.
+        ///   - start: The item's start time.
+        ///   - end: The item's end time.
+        public init(id: String, start: Date, end: Date) {
+            self.id = id
+            self.start = start
+            self.end = end
+        }
+        
+    }
     
 }

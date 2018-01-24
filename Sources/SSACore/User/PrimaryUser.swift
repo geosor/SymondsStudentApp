@@ -15,6 +15,8 @@ public final class PrimaryUser: AuthenticatedUser {
     
     public static var loggedIn: PrimaryUser?
     
+    public var timetable: Timetable?
+    
     // MARK: - User
     
     public var id: Int

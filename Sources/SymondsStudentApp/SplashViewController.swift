@@ -121,6 +121,7 @@ internal class SplashViewController: UIViewController {
                     try userAuthenticator.receiveUserDetails(details, forUserOfType: PrimaryUser.self)
                     let user = try userAuthenticator.getUser() as! PrimaryUser // swiftlint:disable:this force_cast
                     PrimaryUser.loggedIn = user
+                    appDelegate.userAuthenticator = nil
                     self.segueToMainView()
                 } catch {
                     print(error)

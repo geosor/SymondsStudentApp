@@ -13,6 +13,10 @@ import SSACore
 @UIApplicationMain
 internal class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    /// The user authenticator used (mainly by `SplashViewController` but also by `AppDelegate`) during login.
+    ///
+    /// The value of this variable is initially set to a new instance, when the user starts the login process, by
+    /// `SplashViewController.login(_:)`, and reset to `nil` by `SplashViewController.userDetailsCompletion(_:)`.
     var userAuthenticator: UserAuthenticator?
     
     // MARK: - UIApplicationDelegate

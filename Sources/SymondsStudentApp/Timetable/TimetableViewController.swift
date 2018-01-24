@@ -12,27 +12,29 @@ import SSACore
 /// Displays the user's timetable.
 class TimetableViewController: UITableViewController {
     
-    /// The items being displayed in the view controller.
-    var timetable: Timetable?
-    
     /// Updates the timetable by making a request to the student timetable service, and reloading the data in the table.
     @objc func updateTimetable() {
-        guard let accessToken = PrimaryUser.loggedIn?.authenticator.accessToken else {
+        guard let user = PrimaryUser.loggedIn else {
             self.tableView.refreshControl?.endRefreshing()
             return
         }
         
-        StudentTimetableService(accessToken: accessToken).makeRequest { result in
+        guard let accessToken = user.authenticator.accessToken else {
+            self.tableView.refreshControl?.endRefreshing()
+            return
+        }
+        
+        StudentTimetableService(accessToken: accessToken).makeRequest { [weak self, weak user] result in
             switch result {
             case .success(let timetable):
-                self.timetable = timetable
+                user?.timetable = timetable
             case .error(let error):
                 print(error)
             }
             
             DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.tableView.refreshControl?.endRefreshing()
+                self?.tableView.reloadData()
+                self?.tableView.refreshControl?.endRefreshing()
             }
         }
     }
@@ -41,7 +43,7 @@ class TimetableViewController: UITableViewController {
     
     /// :nodoc:
     override func numberOfSections(in tableView: UITableView) -> Int {
-        guard let timetable = self.timetable else {
+        guard let timetable = PrimaryUser.loggedIn?.timetable else {
             return 0
         }
         
@@ -50,7 +52,7 @@ class TimetableViewController: UITableViewController {
     
     /// :nodoc:
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let timetable = self.timetable else { return 0 }
+        guard let timetable = PrimaryUser.loggedIn?.timetable else { return 0 }
         
         return timetable[.normalItems, section].count
     }
@@ -61,7 +63,7 @@ class TimetableViewController: UITableViewController {
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
         
-        guard let timetable = self.timetable else {
+        guard let timetable = PrimaryUser.loggedIn?.timetable else {
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
         
@@ -72,7 +74,17 @@ class TimetableViewController: UITableViewController {
     
     /// :nodoc:
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.timetable?.normalItemDays[section].description
+        return PrimaryUser.loggedIn?.timetable?.normalItemDays[section].description
+    }
+    
+    /// :nodoc:
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let timetable = PrimaryUser.loggedIn?.timetable else {
+            return
+        }
+        
+        let item = timetable[.normalItems, indexPath.section][indexPath.row]
+        self.performSegue(withIdentifier: "itemdetails", sender: item)
     }
     
     // MARK: - UIViewController
@@ -95,6 +107,24 @@ class TimetableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "itemdetails" {
+            return sender is Timetable.Item
+        }
+        
+        return true
+    }
+    
+    /// :nodoc:
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemdetails" {
+            guard let destination = segue.destination as? ItemViewController else { return }
+            guard let selectedItem = sender as? Timetable.Item else { return }
+            
+            destination.item = selectedItem
+        }
     }
     
 }
