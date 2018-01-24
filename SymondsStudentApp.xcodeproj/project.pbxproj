@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45073E561E7C054E00D3AEA0 /* LICENSE-Keychain in Resources */ = {isa = PBXBuildFile; fileRef = 45073E551E7C054E00D3AEA0 /* LICENSE-Keychain */; };
 		4517CC251FEC471E00619A3D /* SSACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517CC1C1FEC471E00619A3D /* SSACore.framework */; };
+		453B329E2018F7B70023BA6D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B329D2018F7B70023BA6D /* Friend.swift */; };
 		453EDD4C20151AC800FFC9E1 /* AttributionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD4B20151AC800FFC9E1 /* AttributionTableViewCell.swift */; };
 		453EDD4E20151AD300FFC9E1 /* AttributionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD4D20151AD200FFC9E1 /* AttributionsTableViewController.swift */; };
 		453EDD5020153A7000FFC9E1 /* StudentTimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EDD4F20153A7000FFC9E1 /* StudentTimetableService.swift */; };
@@ -181,6 +182,7 @@
 		4517CBE91FEC2D9300619A3D /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
 		4517CC1C1FEC471E00619A3D /* SSACore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSACore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4517CC241FEC471E00619A3D /* SSACoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSACoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		453B329D2018F7B70023BA6D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		453EDD4B20151AC800FFC9E1 /* AttributionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionTableViewCell.swift; sourceTree = "<group>"; };
 		453EDD4D20151AD200FFC9E1 /* AttributionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsTableViewController.swift; sourceTree = "<group>"; };
 		453EDD4F20153A7000FFC9E1 /* StudentTimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTimetableService.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				45685C912006693200489E17 /* User.swift */,
 				45685C992006717D00489E17 /* PrimaryUser.swift */,
 				45685C972006709800489E17 /* UserAuthenticator.swift */,
+				453B329D2018F7B70023BA6D /* Friend.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1050,6 +1053,7 @@
 				45685C982006709900489E17 /* UserAuthenticator.swift in Sources */,
 				45685CA120067C8500489E17 /* Keys.swift in Sources */,
 				457C52FF1FEC4A8F00A472E6 /* KeychainConfiguration.swift in Sources */,
+				453B329E2018F7B70023BA6D /* Friend.swift in Sources */,
 				457C52FC1FEC4A3C00A472E6 /* URLRequest.swift in Sources */,
 				45685C9A2006717D00489E17 /* PrimaryUser.swift in Sources */,
 				45685C922006693200489E17 /* User.swift in Sources */,

@@ -1667,3 +1667,33 @@ extension Timetable.Item: CounterexampleProviding {
         """
     
 }
+
+extension Timetable {
+    
+    /// An item that belongs to one of the primary user's friends, containing limited details to protect their privacy.
+    public struct FriendItem {
+        
+        /// The ID of the item.
+        public let id: String
+        
+        /// The start time of the item.
+        public let start: Date
+        
+        /// The end time of the item.
+        public let end: Date
+        
+        /// Creates a new instance of `FriendItem`.
+        ///
+        /// - Parameters:
+        ///   - id: The item's ID.
+        ///   - start: The item's start time.
+        ///   - end: The item's end time.
+        public init(id: String, start: Date, end: Date) {
+            self.id = id
+            self.start = start
+            self.end = end
+        }
+        
+    }
+    
+}
