@@ -1,5 +1,7 @@
 language: objective-c
 osx_image: xcode9.2
+xcode_project: SymondsStudentApp.xcodeproj
+xcode_scheme: SymondsStudentApp
 before_install:
 - xcodebuild -showsdks
 - xcrun instruments -s
