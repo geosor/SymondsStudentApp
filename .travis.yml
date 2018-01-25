@@ -2,7 +2,7 @@ os: osx
 language: objective-c
 osx_image: xcode9.2
 xcode_project: SymondsStudentApp.xcodeproj
-xcode_scheme: SymondsStudentApp
+xcode_scheme: SymondsStudentAppTests
 branches:
   only:
   - master
