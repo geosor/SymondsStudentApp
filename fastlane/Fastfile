@@ -1,0 +1,91 @@
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+min_fastlane_version("2.70.3")
+
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+    ENV["MATCH_KEYCHAIN_NAME"] = "SymondsStudentApp"
+    ENV["MATCH_KEYCHAIN_PASSWORD"] = "another Churchill analyzed"
+  end
+
+  desc "Builds the app on Travis CI"
+  lane :travis do
+    if ENV["TRAVIS_BUILD"] == 0
+      create_keychain(
+        name: ENV["MATCH_KEYCHAIN_NAME"],
+        password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        add_to_search_list: true
+      )
+    end
+
+    build(release: true, clean: true)
+    test
+  end
+
+  desc "Builds the app"
+  lane :build do |options|
+    match
+
+    gym(
+      project: "SymondsStudentApp.xcodeproj",
+      scheme: "SymondsStudentApp",
+      clean: options[:clean] ? true : false,
+      configuration: options[:release] ? "Release" : "Debug",
+      skip_package_ipa: true,
+    )
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+      project: "SymondsStudentApp.xcodeproj",
+      scheme: "SymondsStudentApp"
+    )
+  end
+
+  # desc "Submit a new Beta Build to Apple TestFlight"
+  # desc "This will also make sure the profile is up to date"
+  # lane :beta do
+  #   # sync_code_signing(type: "appstore") # more information: https://codesigning.guide
+  #   build_app(scheme: "SymondsStudentApp") # more options available
+  #   upload_to_testflight
+
+  #   # sh "your_script.sh"
+  #   # You can also use other beta testing services here (run `fastlane actions`)
+  # end
+
+  # desc "Deploy a new version to the App Store"
+  # lane :release do
+  #   # sync_code_signing(type: "appstore")
+  #   capture_screenshots
+  #   build_app(scheme: "SymondsStudentApp") # more options available
+  #   upload_to_app_store(force: true)
+  #   # frame_screenshots
+  # end
+
+  after_all do |lane|
+    # Run after success
+
+    slack(
+      message: "Successfully deployed new App Update."
+    )
+  end
+
+  error do |lane, exception|
+    # Run after failure
+
+    slack(
+      message: exception.message,
+      success: false
+    )
+  end
+end
