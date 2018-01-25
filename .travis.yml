@@ -6,7 +6,7 @@ xcode_scheme: SymondsStudentApp
 branches:
   only:
   - master
-  - "/^develop-.*$/"
+  - "/^develop-.*/"
   - travis
 notifications:
   email: false
