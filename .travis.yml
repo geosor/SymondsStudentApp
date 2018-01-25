@@ -3,8 +3,9 @@ osx_image: xcode9.2
 before_install:
 - xcodebuild -showsdks
 - xcrun instruments -s
+install:
 script:
-- xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp -destination "platform=iOS Simulator" ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
+- xcodebuild clean build test -project SymondsStudentApp.xcodeproj -scheme SymondsStudentApp ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
 branches:
   only:
   - master
