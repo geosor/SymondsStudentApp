@@ -8,6 +8,7 @@ branches:
   - travis
 before_install:
 - echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
+- gem install bundler
 install:
 - make get-deps
 script:

@@ -9,14 +9,13 @@ default_platform(:ios)
 
 platform :ios do
   before_all do
-    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-    ENV["MATCH_KEYCHAIN_NAME"] = "SymondsStudentApp"
-    ENV["MATCH_KEYCHAIN_PASSWORD"] = "another Churchill analyzed"
+    ENV["SLACK_URL"] = ENV["SSA_SLACK_URL"]
+    ENV["CERTIFICATES_URL"] = "https://#{ENV["CI_USER_TOKEN"]}@github.com/sorenmortensen/certificates.git"
   end
 
   desc "Builds the app on Travis CI"
   lane :travis do
-    if ENV["TRAVIS_BUILD"] == 0
+    if ENV["TRAVIS_BUILD"] == "0"
       create_keychain(
         name: ENV["MATCH_KEYCHAIN_NAME"],
         password: ENV["MATCH_KEYCHAIN_PASSWORD"],
@@ -33,7 +32,7 @@ platform :ios do
 
   desc "Builds the app"
   lane :build do |options|
-    match
+    match(git_url: ENV["CERTIFICATES_URL"])
 
     gym(
       project: "SymondsStudentApp.xcodeproj",
