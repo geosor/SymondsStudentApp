@@ -25,19 +25,24 @@ public protocol Record {
     
     /// The record type that represents `Self` in CloudKit.
     static var recordType: String { get }
-    
 }
+
+/// The completion handler type for CloudKit-related operations performed by `Record` types.
+public typealias RecordCompletion<T> = (RecordResult<T>) -> Void
 
 /// Indicates the result of a CloudKit-related operation performed by a `Record` type.
 public enum RecordResult<T> {
+    
     /// The operation was successful.
     case success(T)
+    
     /// The operation failed. The error describes the reason why.
     case error(RecordError)
 }
 
 /// Indicates the reason for failure of a CloudKit-related operation performed by a `Record` type.
 public enum RecordError: Error {
+    
     /// An unexpected error occurred. If an `Error` is available, it is provided.
     case unexpected(Error?)
 }
