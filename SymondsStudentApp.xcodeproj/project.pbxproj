@@ -261,7 +261,12 @@
 		4568FF8B1FCC423C00E08D4B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		4568FF8F1FCC433200E08D4B /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
 		4568FF931FCC7EB400E08D4B /* TimetableItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableItemTests.swift; sourceTree = "<group>"; };
-		457C53121FEC9BEA00A472E6 /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		457AB600201A8159009C736F /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		457AB601201A8159009C736F /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		457AB602201A8159009C736F /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
+		457AB610201A9623009C736F /* jazzy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = jazzy.sh; sourceTree = "<group>"; };
+		457AB611201A9623009C736F /* slice.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = slice.py; sourceTree = "<group>"; };
+		457AB612201A9623009C736F /* decrypt-keys.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "decrypt-keys.sh"; sourceTree = "<group>"; };
 		457C53161FEC9E5E00A472E6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		457C53181FECA0A700A472E6 /* SymondsStudentApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SymondsStudentApp.entitlements; sourceTree = "<group>"; };
 		457C531A1FECA0C200A472E6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -553,11 +558,30 @@
 			path = Timetable;
 			sourceTree = "<group>";
 		};
+		457AB5FF201A8159009C736F /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				457AB600201A8159009C736F /* Appfile */,
+				457AB601201A8159009C736F /* Fastfile */,
+				457AB602201A8159009C736F /* Matchfile */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
+		457AB60F201A9623009C736F /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				457AB610201A9623009C736F /* jazzy.sh */,
+				457AB611201A9623009C736F /* slice.py */,
+				457AB612201A9623009C736F /* decrypt-keys.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		457C531C1FECA23600A472E6 /* Top Level Files */ = {
 			isa = PBXGroup;
 			children = (
 				454458091FE9CB1B00FBDAEB /* Makefile */,
-				457C53121FEC9BEA00A472E6 /* Matchfile */,
 				457C531A1FECA0C200A472E6 /* LICENSE */,
 				457C531B1FECA0C900A472E6 /* README.md */,
 				457C531F1FECA24D00A472E6 /* .gitignore */,
@@ -656,7 +680,9 @@
 			isa = PBXGroup;
 			children = (
 				457C531C1FECA23600A472E6 /* Top Level Files */,
+				457AB5FF201A8159009C736F /* fastlane */,
 				4501993E1E79704400B768E6 /* Metadata */,
+				457AB60F201A9623009C736F /* Scripts */,
 				45524B5C1EAD4D0C006A4952 /* Resources */,
 				45AFDD581E785C5C003D0618 /* Sources */,
 				45F23E031E785C8A005503EF /* Tests */,
@@ -1215,7 +1241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Updating Sketch slices\"\npython \"${PROJECT_DIR}/Scripts/slice.py\" \"${PROJECT_DIR}/Resources/SymondsStudentApp.sketch\" \"${PROJECT_DIR}/Resources/SymondsStudentApp/SymondsStudentApp.xcassets\"";
+			shellScript = "echo \"Updating Sketch slices\"\nif [[ $TRAVIS_BUILD != \"0\" ]]; then\n  python \"${PROJECT_DIR}/Scripts/slice.py\" \"${PROJECT_DIR}/Resources/SymondsStudentApp.sketch\" \"${PROJECT_DIR}/Resources/SymondsStudentApp/SymondsStudentApp.xcassets\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1885,7 +1911,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sorenmortensen.SymondsStudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7333798b-8dde-4ebc-99db-0b1a0e2cde0d";
+				PROVISIONING_PROFILE = "1ac0f2d6-cb17-4edf-bc52-0c1de856ef32";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.sorenmortensen.SymondsStudentApp";
 				SWIFT_VERSION = 4.0;
 			};
