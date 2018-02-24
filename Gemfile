@@ -3,4 +3,6 @@ source 'https://rubygems.org' do
   gem 'dotenv'
   gem 'jazzy'
   gem 'xcpretty'
+  gem 'danger'
+  gem 'danger-swiftlint'
 end
