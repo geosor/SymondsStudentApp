@@ -1087,7 +1087,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Updating Sketch slices\"\npython \"${PROJECT_DIR}/Scripts/slice.py\" \"${PROJECT_DIR}/Resources/SymondsStudentApp.sketch\" \"${PROJECT_DIR}/Resources/SymondsStudentApp/SymondsStudentApp.xcassets\"";
+			shellScript = "echo \"Updating Sketch slices\"\nif [[ $TRAVIS_BUILD != \"0\" ]]; then\n  python \"${PROJECT_DIR}/Scripts/slice.py\" \"${PROJECT_DIR}/Resources/SymondsStudentApp.sketch\" \"${PROJECT_DIR}/Resources/SymondsStudentApp/SymondsStudentApp.xcassets\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
