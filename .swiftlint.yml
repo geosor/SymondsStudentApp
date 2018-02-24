@@ -5,12 +5,11 @@ disabled_rules:
   - identifier_name
   - nesting
 opt_in_rules:
-  
 
 included:
-  
+
 excluded:
-  
+
 line_length:
   warning: 120
   error: 180

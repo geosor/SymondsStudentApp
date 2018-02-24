@@ -2,57 +2,29 @@ default: build
 
 AUTHOR="Søren Mortensen & George Taylor"
 GITHUB_URL="https://github.com/geosor/SymondsStudentApp"
-PROJECT_NAME="SymondsStudentApp"
-SCHEME="SSACore"
-MODULE=$(SCHEME)
+JAZZY_SCHEME=SSACore
+MODULE=SymondsStudentApp
 DOCS_DIR="docs"
-DEV_TEAM_ID="3JFQF766SZ"
+
+JAZZY_ARGS=--clean --author $(AUTHOR) --github_url $(GITHUB_URL) --xcodebuild-arguments -scheme,$(JAZZY_SCHEME) --module $(MODULE) --output $(DOCS_DIR)
+
+get-deps:
+	bundle install
+	brew bundle
 
 build:
-	if which xcpretty >/dev/null; \
-	  then \
-	  xcodebuild -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug | xcpretty;\
-	else\
-	  xcodebuild -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug;\
-	fi
+	bundle exec fastlane ios build
 
 test:
-	if which xcpretty >/dev/null; \
-	  then \
-	  xcodebuild test -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug | xcpretty;\
-	else\
-	  xcodebuild test -project "$(PROJECT_NAME).xcodeproj" -scheme "$(SCHEME)" -sdk "macosx" -configuration Debug;\
-	fi
+	bundle exec fastlane ios test
 
 jazzy:
-	jazzy \
-	  --clean \
-	  --author $(AUTHOR) \
-	  --github_url $(GITHUB_URL) \
-	  --xcodebuild-arguments -scheme,$(SCHEME) \
-	  --module $(MODULE) \
-	  --output $(DOCS_DIR) \
-	  --min-acl public
+	bundle exec jazzy $(JAZZY_ARGS) --min-acl public
 
 jazzy-internal:
-	jazzy \
-	  --clean \
-	  --author $(AUTHOR) \
-	  --github_url $(GITHUB_URL) \
-	  --xcodebuild-arguments -scheme,$(SCHEME) \
-	  --module $(MODULE) \
-	  --output $(DOCS_DIR) \
-	  --min-acl internal
+	bundle exec jazzy $(JAZZY_ARGS) --min-acl internal
 
 jazzy-private:
-	jazzy \
-	  --clean \
-	  --author $(AUTHOR) \
-	  --github_url $(GITHUB_URL) \
-	  --xcodebuild-arguments -scheme,$(SCHEME) \
-	  --module $(MODULE) \
-	  --output $(DOCS_DIR) \
-	  --min-acl private
+	bundle exec jazzy $(JAZZY_ARGS) --min-acl private
 
 .PHONY: build test
-

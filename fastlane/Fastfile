@@ -1,0 +1,54 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Sets up certificates and profiles."
+  lane :certs do
+    app_id_base = ENV["APP_ID_BASE"]
+
+    for type in ["development", "appstore"] do
+      match(
+        type: type,
+        app_identifier: [
+          "#{app_id_base}.SymondsStudentApp",
+          "#{app_id_base}.SymondsStudentAppUITests",
+          "#{app_id_base}.SymondsStudentApp.TimetableTodayExtension",
+          "#{app_id_base}.SymondsStudentApp.FreeRoomsTodayExtension",
+          "#{app_id_base}.SymondsStudentApp.watchkitapp",
+          "#{app_id_base}.SymondsStudentApp.watchkitapp.watchkitextension"
+        ]
+      )
+    end
+  end
+
+  desc "Builds, tests, and checks code style on Travis CI."
+  lane :travis do
+    setup_travis
+    certs
+    build(debug: false, clean: true)
+    test
+    danger(
+      github_api_token: ENV["DANGER_TOKEN"]
+    )
+  end
+
+  desc "Builds the app."
+  lane :build do |options|
+    xcodebuild(
+      project: "SymondsStudentApp.xcodeproj",
+      scheme: "SymondsStudentApp",
+      configuration: options[:debug] ? "Debug" : "Release",
+      clean: options[:clean],
+      build: true,
+      destination: "generic/platform=iOS"
+    )
+  end
+
+  desc "Runs all the tests."
+  lane :test do
+    scan(
+      project: "SymondsStudentApp.xcodeproj",
+      scheme: "SymondsStudentApp",
+      skip_slack: true
+    )
+  end
+end
