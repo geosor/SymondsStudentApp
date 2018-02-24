@@ -1,1 +1,2 @@
 brew 'xctool'
+brew 'swiftlint'

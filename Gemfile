@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-
-gem 'xcpretty'
-gem 'jazzy'
-gem 'fastlane'
+source 'https://rubygems.org' do
+  gem 'fastlane'
+  gem 'jazzy'
+  gem 'xcpretty'
+end
