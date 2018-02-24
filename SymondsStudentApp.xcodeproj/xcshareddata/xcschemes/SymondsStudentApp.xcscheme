@@ -60,6 +60,16 @@
                ReferencedContainer = "container:SymondsStudentApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45B93538201B8DB700092F3B"
+               BuildableName = "SSACloudTests.xctest"
+               BlueprintName = "SSACloudTests"
+               ReferencedContainer = "container:SymondsStudentApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
